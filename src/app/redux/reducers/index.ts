@@ -16,7 +16,7 @@ import * as fromRouter from '@ngrx/router-store';
  * notation packages up all of the exports into a single object.
  */
 
-import * as fromLayout from '@example-app/core/reducers/layout.reducer';
+import * as fromLayout from '../core/reducers/layout.reducer';
 import { InjectionToken } from '@angular/core';
 
 /**
