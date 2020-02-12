@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 // NgRx
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { StoreRouterConnectingModule } from '@ngrx/router-store'; // opcional
+import { StoreRouterConnectingModule, RouterState } from '@ngrx/router-store'; // opcional
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'; // opcional: instalar plugin chrome.
 
 // Environment
@@ -34,6 +34,13 @@ import { ROOT_REDUCERS, metaReducers } from './reducers';
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
     EffectsModule.forRoot([]),
+
+    /**
+     * @ngrx/router-store keeps router state up-to-date in the store.
+     */
+    StoreRouterConnectingModule.forRoot({
+      routerState: RouterState.Minimal,
+    }),
   ]
 })
 export class ReduxModule { }
