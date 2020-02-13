@@ -31,7 +31,7 @@ export class UserEffects {
   // se usa dispatch para eliminar posibles bucles.
   logoutIdleUser$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(UserActions.idleTimeout),
+      ofType(UserActions.idleTimeout), // si llaman a la acción idleTimeout
       tap(() => this.router.navigate(['/']))
     ),
     { dispatch: false }
