@@ -13,6 +13,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/schematics": "^9.0.2",
     "@angular/common": "~9.0.1",
     "@angular/core": "~9.0.1",
     "@angular/forms": "~9.0.1",
@@ -29,6 +30,7 @@
     "@ngrx/schematics": "^8.6.0",
     "@ngrx/store": "^8.6.0",
     "@ngrx/store-devtools": "^8.6.0",
+    "@schematics/angular": "^9.0.2",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
