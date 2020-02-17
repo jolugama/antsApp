@@ -1,5 +1,5 @@
-import * as CollectionJsonActions from './ants.actions';
+import * as AntsActions from './ants.actions';
 
 export {
-    CollectionJsonActions
+    AntsActions
 };

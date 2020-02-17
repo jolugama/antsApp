@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { CollectionJsonActions } from '@ants/actions';
+import { AntsActions } from '@ants/actions';
 import { Ant } from '@ants/models';
 import * as fromAnts from '@ants/reducers';
 
@@ -20,7 +20,7 @@ export class AntsComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.store.dispatch(CollectionJsonActions.loadAntsCollection());
+    this.store.dispatch(AntsActions.loadAntsCollection());
   }
 
 }

@@ -2,7 +2,7 @@ import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { createReducer, on } from '@ngrx/store';
 
 import {
-  CollectionJsonActions
+  AntsActions
 } from './../actions';
 import { Ant } from '@ants/models';
 
@@ -30,10 +30,10 @@ export const initialState: State = adapter.getInitialState({
 
 export const reducer = createReducer(
   initialState,
-  on(CollectionJsonActions.loadAntsCollection, state => ({
+  on(AntsActions.loadAntsCollection, state => ({
     ...state,
   })),
-  on(CollectionJsonActions.loadAntsSuccess,
+  on(AntsActions.loadAntsSuccess,
     (state, { ants }) => adapter.addMany(ants, state)
   )
 );
