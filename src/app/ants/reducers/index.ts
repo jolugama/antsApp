@@ -5,13 +5,15 @@ import {
   combineReducers,
   Action,
 } from '@ngrx/store';
-import * as fromCollection from './ants.reducer';
+import * as fromAnt from './ants.reducer';
+import * as fromCollection from './collection.reducer';
 import * as fromRoot from '@redux/reducers';
 
 export const antsFeatureKey = 'ants';
 
 export interface AntsState {
   [fromCollection.collectionFeatureKey]: fromCollection.State;
+  [fromAnt.AntsFeatureKey]: fromAnt.State;
 }
 
 export interface State extends fromRoot.State {
@@ -21,7 +23,8 @@ export interface State extends fromRoot.State {
 /** Provide reducer in AoT-compilation happy way */
 export function reducers(state: AntsState | undefined, action: Action) {
   return combineReducers({
-    [fromCollection.collectionFeatureKey]: fromCollection.reducer
+    [fromCollection.collectionFeatureKey]: fromCollection.reducer,
+    [fromAnt.AntsFeatureKey]: fromAnt.reducer
   })(state, action);
 }
 

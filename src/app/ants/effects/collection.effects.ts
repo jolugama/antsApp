@@ -44,7 +44,7 @@ export class CollectionAntsEffects {
           tap(console.log),
           map((ants: Ant[]) =>
 
-            CollectionJsonActions.loadAntsSuccess(),
+            CollectionJsonActions.loadAntsSuccess({ ants }),
           ),
           catchError((error) => of(CollectionJsonActions.loadAntsFailure({ error }))
           )

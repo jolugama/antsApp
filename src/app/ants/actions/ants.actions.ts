@@ -16,7 +16,8 @@ export const loadAntsCollection = createAction('[Collection Page] Load Ants Coll
 
 
 export const loadAntsSuccess = createAction(
-  '[Collection/API] Load Ants Success'
+  '[Collection/API] Load Ants Success',
+  props < { ants: Ant[] } > ()
 );
 
 export const loadAntsFailure = createAction(

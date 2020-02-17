@@ -1,3 +1,4 @@
+import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { createReducer, on } from '@ngrx/store';
 
 import {
@@ -5,34 +6,36 @@ import {
 } from './../actions';
 import { Ant } from '@ants/models';
 
-export const collectionFeatureKey = 'collection';
+export const AntsFeatureKey = 'ants';
 
-export interface State {
-  loaded: boolean;
-  loading: boolean;
-  ants?: Ant[];
+export interface State extends EntityState<Ant> {
+
 }
 
-const initialState: State = {
-  loaded: false,
-  loading: false,
-  ants: []
-};
+// const initialState: State = {
+//   loaded: false,
+//   loading: false,
+//   // ants: []
+// };
+
+export const adapter: EntityAdapter<Ant> = createEntityAdapter<Ant>({
+  selectId: (ant: Ant) => ant.id,
+  sortComparer: false,
+});
+
+export const initialState: State = adapter.getInitialState({
+
+});
+
 
 export const reducer = createReducer(
   initialState,
   on(CollectionJsonActions.loadAntsCollection, state => ({
     ...state,
-    loading: true
   })),
-  on(CollectionJsonActions.loadAntsSuccess, (state) => ({
-    loaded: true,
-    loading: false
-  }))
+  on(CollectionJsonActions.loadAntsSuccess,
+    (state, { ants }) => adapter.addMany(ants, state)
+  )
 );
 
-export const getLoaded = (state: State) => state.loaded;
 
-export const getLoading = (state: State) => state.loading;
-
-// export const getIds = (state: State) => state.ids;
