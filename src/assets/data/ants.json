@@ -1,0 +1,868 @@
+[
+    {
+        "id": 122,
+        "taxonomy": {
+            "subfamily": "myrmicinae",
+            "tribe": "pheidolini",
+            "specie": "messor barbarus",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "poli",
+            "queen": {
+                "size": [15, 18],
+                "colour": ["rojo", "marron", "negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [3, 14],
+                "colour": ["brillante", "negro", "rojo", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [7, 8],
+                "colour": ["negro"]
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [],
+        "habitat": {
+            "zone": ["arena", "bosque", "arbusto"],
+            "nestForm": ["suelo", "piedras"],
+            "text": "Sand and shrub areas"
+        },
+        "distribution": {
+            "continent": ["sudamerica", "europa", "africa", "asia"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "andalucia"]
+        },
+        "biology": {
+            "queen": ["monogina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [11, 2],
+            "nutrition": ["semillas", "insectos"],
+            "description": "this species is a highly granivor ant which collects all kinds of small seeds and chew them into so- called antbread. most of their waterrequirements are covered by seeds and insects. honeywater is only accepted when there is a lack of moisture. messor barbarus tends to drown in open water so it is necessary to cover waterplaces with little stones or cotton."
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["alimentacion", "condicionesClimaticas"]
+        },
+        "airhumidity": {
+            "nest": [50, 70],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 26],
+            "arena": [25, 30]
+        },
+
+        "images": ["messor_barbarus.jpg", "1186_2.jpg", "1186_3.JPG"]
+    }, 
+    {
+        "id": 109,
+        "taxonomy": {
+            "subfamily": "formicinae,",
+            "tribe": "lasiini",
+            "specie": "lasius niger",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "mono",
+            "queen": {
+                "size": [9],
+                "colour": ["negro", "marron", "brillante"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [3, 5],
+                "colour": ["negro", "marron", "brillante"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [3.5, 4.5],
+                "colour": ["negro"]
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [5, 6],
+        "habitat": {
+            "zone": ["claros", "pastizal"],
+            "nestForm": ["suelo", "piedras"],
+            "text": "prefers sunexposed openland, often on ruralareas and in anthropogenic disturbed land"
+        },
+        "distribution": {
+            "continent": ["sudamerica", "europa", "africa", "asia", "norteAmerica"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares"]
+        },
+        "biology": {
+            "queen": ["monogina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [10, 3],
+            "nutrition": ["aguamiel", "insectos"],
+            "description": "very tough and well-fortified ants, which will grow to a great colony by good support. within 3 years they can reach a population up to 10.000 workers. in nature they cultivate sap insects on roses, elder, red-/black-currant and so on."
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["principiantes"]
+        },
+        "airhumidity": {
+            "nest": [50, 60],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 24],
+            "arena": [18, 28]
+        },
+
+        "images": ["365_0.jpg", "365_1.jpg", "365_2.jpg"]
+    },
+    {
+        "id": 24,
+        "taxonomy": {
+            "subfamily": "formicinae",
+            "tribe": "camponotini",
+            "specie": "camponotus barbaricus",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "poli",
+            "queen": {
+                "size": [17],
+                "colour": ["negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [8, 17],
+                "colour": ["negro", "rojo"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [],
+                "colour": ["negro"]
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [6],
+        "habitat": {
+            "zone": ["claros"],
+            "nestForm": ["suelo"],
+            "text": "prefers open areas avoids aride areas"
+        },
+        "distribution": {
+            "continent": ["europa", "sudamerica", "africa"],
+            "country": ["españa", "portugal"],
+            "ca": ["madrid", "andalucia"]
+        },
+        "biology": {
+            "queen": ["monogina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [10, 2],
+            "nutrition": ["aguamiel", "insectos"],
+            "description": "camponotus barbaricus is one of the biggest ant species in europe. very tough! they attack only in case of nest disturbance. shows activity at day and night .they build their nests preferably underneath wood or stones. a radiant heater should heaten a stone or an area of the antfarm from time to time."
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["principiantes"]
+        },
+        "airhumidity": {
+            "nest": [50, 60],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 24],
+            "arena": [18, 28]
+        },
+        "images": ["camponotus_barbaricus.jpg", "camponotus-barbaricus.jpg"]
+    },
+
+    {
+        "id": 102,
+        "taxonomy": {
+            "subfamily": "formicinae",
+            "tribe": "lasiini",
+            "specie": "lasius flavus",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "mono",
+            "queen": {
+                "size": [7, 8],
+                "colour": ["amarillo"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [2, 4],
+                "colour": ["amarillo"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [3, 4],
+                "colour": ["amarillo"]
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [7, 9],
+        "habitat": {
+            "zone": ["claros", "pastizal"],
+            "nestForm": ["suelo", "piedras"],
+            "text": "prefers sunexposed grassland"
+        },
+        "distribution": {
+            "continent": ["sudamerica", "europa", "asia"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares"]
+        },
+        "biology": {
+            "queen": ["monogina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [10, 3],
+            "nutrition": ["aguamiel", "insectos"],
+            "description": "lasius flavus is complete subterrainean antspecie which harvest honeydew from rootaphids"
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["principiantes"]
+        },
+        "airhumidity": {
+            "nest": [60, 70],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 24],
+            "arena": [18, 28]
+        },
+        "images": ["583_0.jpg", "583_1.jpg", "583_2.jpg", "583_3.jpg"]
+    },
+    {
+        "id": 106,
+        "taxonomy": {
+            "subfamily": "formicinae",
+            "tribe": "lasiini",
+            "specie": "lasius grandis",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "mono",
+            "queen": {
+                "size": [9],
+                "colour": ["negro", "marron", "brillante"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [3, 5],
+                "colour": ["negro", "marron", "brillante"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [],
+                "colour": []
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [],
+        "habitat": {
+            "zone": ["claros", "zonaSeca", "vegetacionBaja"],
+            "nestForm": ["suelo", "piedras"],
+            "text": "avoids sunexposed and xerothermic Areas, often found in open Pineforest with a humid climate"
+        },
+        "distribution": {
+            "continent": ["sudamerica", "europa", "africa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares"]
+        },
+        "biology": {
+            "queen": ["monogina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "nutrition": ["aguamiel", "insectos"],
+            "description": "very aggressive and tough ants similar to lasius niger"
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["principiantes"]
+        },
+        "airhumidity": {
+            "nest": [50, 60],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 24],
+            "arena": [18, 28]
+        },
+        "images": ["1394_0.jpg"]
+    }, 
+    {
+        "id": 91,
+        "taxonomy": {
+            "subfamily": "formicinae",
+            "tribe": "formicini",
+            "specie": "formica cinerea",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "mono",
+            "queen": {
+                "size": [12],
+                "colour": ["negro", "gris"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [6, 8],
+                "colour": ["negro", "gris"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [],
+                "colour": []
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [5, 6],
+        "habitat": {
+            "zone": ["arena", "rio"],
+            "nestForm": ["suelo", "piedras"],
+            "text": "extremely thermophil, prefers sandy areas (e.g riverbeds, Forestedges)"
+        },
+        "distribution": {
+            "continent": ["sudamerica", "europa"],
+            "country": ["españa", "francia"]
+        },
+        "biology": {
+            "queen": ["monogina", "poligina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [10, 3],
+            "nutrition": ["aguamiel", "insectos"],
+            "description": "formica cinerea is a very aggressive ant. as a adaption to their open range habitat they use visual orientation. they overwhelm and transport large prey in small cooperating groups."
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["acidoFormico"]
+        },
+        "airhumidity": {
+            "nest": [50, 60],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 24],
+            "arena": [18, 28]
+        },
+
+        "images": ["formica_serviformica_cinerea.jpg", "formica_serviformica_cinerea_nesteingang.jpg", "formica_serviformica_cinerea_habitat.jpg", "902_3.jpg"]
+    },
+    {
+        "id": 175,
+        "taxonomy": {
+            "subfamily": "myrmicinae",
+            "tribe": "solenopsidini",
+            "specie": "solenopsis fugax",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "mono",
+            "queen": {
+                "size": [6, 6.5],
+                "colour": ["negro", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [1.5, 3],
+                "colour": ["amarillo", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [4, 4.8],
+                "colour": ["negro"]
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [8, 10],
+        "habitat": {
+            "zone": ["arena", "bosque", "arbusto"],
+            "nestForm": ["suelo", "piedras"],
+            "text": "Sand- and shrub areas"
+        },
+        "distribution": {
+            "continent": ["sudamerica", "europa", "africa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "andalucia", "baleares", "canarias"]
+        },
+        "biology": {
+            "queen": ["monogina", "poligina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [11, 2],
+            "nutrition": ["aguamiel", "insectos"],
+            "description": "this species is one of the smallest ants in germany. in their natural environment they collect brood from other ants. they are often associated with their host ants e.g. lasius spec. or serviformica spec. ."
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["alimentacion", "condicionesClimaticas", "escapistas"]
+        },
+        "airhumidity": {
+            "nest": [50, 70],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 28],
+            "arena": [25, 30]
+        },
+
+        "images": ["solenopsis_cf_fugax.jpg"]
+    },
+    {
+        "id": 43,
+        "taxonomy": {
+            "subfamily": "formicinae",
+            "tribe": "camponotini",
+            "specie": "camponotus herculeanus",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "poli",
+            "queen": {
+                "size": [14, 16],
+                "colour": ["negro", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [6, 13],
+                "colour": ["rojo", "negro", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [8, 12],
+                "colour": ["negro"]
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [5, 6],
+        "habitat": {
+            "zone": ["bosque", "claros", "pastizal", "arbusto"],
+            "nestForm": ["maderaMuerta", "suelo"],
+            "text": "prefers mixed woodland with a part of spruces also in xeric and halfxeric grassland partly with shrubs"
+        },
+        "distribution": {
+            "continent": ["europa", "centroAmerica", "sudamerica"],
+            "country": ["españa", "francia"]
+        },
+        "biology": {
+            "queen": ["monogina", "poligina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [10, 3],
+            "nutrition": ["aguamiel", "insectos"],
+            "description": "camponotus herculeanus is one of the biggest ant species in europe. very inactiv and tough! they attack only in case of nest disturbance. shows activity by day and night .they build their nests preferably underneath wood or stones. a radiant heater should heat a stone or an angle of the antfarm from time to time."
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["principiantes"]
+        },
+        "airhumidity": {
+            "nest": [50, 60],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 24],
+            "arena": [18, 28]
+        },
+
+        "images": ["camponotus_herculeanus.jpg", "1179_1.jpg", "1179_2.JPG", "vergleich-ligniperdus-herculeanus.jpg"]
+    },
+    {
+        "id": 33,
+        "taxonomy": {
+            "subfamily": "formicinae,",
+            "tribe": "camponotini",
+            "specie": "camponotus cruentatus",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "poli",
+            "queen": {
+                "size": [14, 16],
+                "colour": ["gris", "negro", "naranja"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [6, 14],
+                "colour": ["gris", "negro", "naranja"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [7, 8],
+                "colour": ["negro"]
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [5, 6],
+        "habitat": {
+            "zone": ["claros"],
+            "nestForm": ["maderaPodrida", "maderaMuerta", "suelo"],
+            "text": "prefers open forest areas, Forestedges"
+        },
+        "distribution": {
+            "continent": ["europa", "sudamerica"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia"]
+        },
+        "biology": {
+            "queen": ["monogina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [11, 2],
+            "nutrition": ["aguamiel", "insectos"],
+            "description": "camponotus cruentatus is one of the biggest ant species in europe. very tough! they attack only in case of nest disturbance. they defend themselves with their strong mandibles and their acidgland"
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": ["principiantes"]
+        },
+        "airhumidity": {
+            "nest": [50, 60],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 24],
+            "arena": [21, 28]
+        },
+
+        "images": ["camponotus_cruentatus.jpg", "camponotus_cruentatus2.jpg", "1160_2.jpg", "1160_3.jpg"]
+    },
+    {
+        "id": 169,
+        "taxonomy": {
+            "subfamily": "myrmicinae",
+            "tribe": "pheidolini",
+            "specie": "pheidole pallidula",
+            "Synonyms": ""
+        },
+        "identification": {
+            "morph": "poli",
+            "queen": {
+                "size": [7, 8],
+                "colour": ["rojo", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": []
+                }
+            },
+            "worker": {
+                "size": [2, 4],
+                "colour": ["brillante", "negro", "rojo", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": ""
+                }
+            },
+            "soldier": {
+                "text": "6mm",
+                "antenna": [],
+                "eye": [],
+                "head": [],
+                "leg": [],
+                "thorax": [],
+                "gaster": []
+            },
+            "male": {
+                "size": [4, 6],
+                "colour": ["negro"]
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "matingFlight": [5, 9],
+        "habitat": {
+            "zone": ["arena", "bosque", "arbusto", "claros", "zonaSeca", "vegetacionBaja"],
+            "nestForm": ["suelo", "piedras"],
+            "text": "Sand- and shrub areas, open xerothermous places"
+        },
+        "distribution": {
+            "continent": ["sudamerica", "europa", "africa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares"]
+        },
+        "biology": {
+            "queen": ["monogina", "poligina"],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [11, 2],
+            "nutrition": ["aguamiel", "insectos", "semillas"],
+            "description": "this species is a small ant from southeurope. they are very aggressive against other ants and can recrute quickly towards feeding places. they need a huge amount of food so with a lack they try to escape very soon. therefore it is nesseccary to have a good working escape prevention."
+        },
+        "keepingLevel": {
+            "level": 2,
+            "obj": ["alimentacion", "condicionesClimaticas", "escapistas"]
+        },
+        "airhumidity": {
+            "nest": [50, 70],
+            "arena": [30, 50]
+        },
+        "temperature": {
+            "nest": [21, 28],
+            "arena": [25, 30]
+        },
+
+        "images": ["1161_0.jpg", "1161_1.jpg", "1161_3.jpg"]
+    }
+]

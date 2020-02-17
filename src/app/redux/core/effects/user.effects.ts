@@ -21,7 +21,7 @@ export class UserEffects {
   // Transcurrido ese minuto, se considera inactividad y efectua acción idleTimeOut
   idle$ = createEffect(() =>
     merge(this.clicks$, this.keys$, this.mouse$).pipe(
-      switchMapTo(timer(1 * 60 * 1000)), // Tiempo de inactividad --> 1 minuto
+      switchMapTo(timer(5 * 60 * 1000)), // Tiempo de inactividad --> 5 minuto
       map(() => UserActions.idleTimeout()),
       tap(msg => console.log('inactivity timeout', msg))
     )

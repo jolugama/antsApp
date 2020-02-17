@@ -22,6 +22,7 @@
       "@components/*": ["src/app/components/*"],
       "@pages/*": ["src/app/pages/*"],
       "@redux/*": ["src/app/redux/*"],
+      "@ants/*": ["src/app/ants/*"],
       "@environments/*": ["src/environments/*"],
     }
   },
