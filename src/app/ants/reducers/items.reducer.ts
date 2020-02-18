@@ -6,7 +6,7 @@ import {
 } from './../actions';
 import { Ant } from '@ants/models';
 
-export const AntsFeatureKey = 'ants';
+export const ItemsFeatureKey = 'items';
 
 export interface State extends EntityState<Ant> {
 

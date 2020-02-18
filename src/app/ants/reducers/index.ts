@@ -5,26 +5,26 @@ import {
   combineReducers,
   Action,
 } from '@ngrx/store';
-import * as fromAnt from './ants.reducer';
-import * as fromCollection from './collection.reducer';
+import * as fromItems from './items.reducer';
+import * as fromFavorites from './favorites.reducer';
 import * as fromRoot from '@redux/reducers';
 
-export const antsFeatureKey = 'ants';
+export const itemsFeatureKey = 'ants';
 
 export interface AntsState {
-  [fromCollection.collectionFeatureKey]: fromCollection.State;
-  [fromAnt.AntsFeatureKey]: fromAnt.State;
+  [fromFavorites.collectionFeatureKey]: fromFavorites.State;
+  [fromItems.ItemsFeatureKey]: fromItems.State;
 }
 
 export interface State extends fromRoot.State {
-  [antsFeatureKey]: AntsState;
+  [itemsFeatureKey]: AntsState;
 }
 
 /** Provide reducer in AoT-compilation happy way */
 export function reducers(state: AntsState | undefined, action: Action) {
   return combineReducers({
-    [fromCollection.collectionFeatureKey]: fromCollection.reducer,
-    [fromAnt.AntsFeatureKey]: fromAnt.reducer
+    [fromFavorites.collectionFeatureKey]: fromFavorites.reducer,
+    [fromItems.ItemsFeatureKey]: fromItems.reducer
   })(state, action);
 }
 
@@ -49,7 +49,7 @@ export function reducers(state: AntsState | undefined, action: Action) {
  * This is used for selecting feature states that are loaded eagerly or lazily.
  */
 export const selectAntsState = createFeatureSelector<State, AntsState>(
-  antsFeatureKey
+  itemsFeatureKey
 );
 
 
@@ -58,22 +58,22 @@ export const selectAntsState = createFeatureSelector<State, AntsState>(
 
 export const selectCollectionState = createSelector(
   selectAntsState,
-  (state: AntsState) => state.collection
+  (state: AntsState) => state.favorites
 );
 
 export const selectAntsArrayState = createSelector(
   selectAntsState,
-  (state: AntsState) => state.ants
+  (state: AntsState) => state.items
 );
 
 
 export const selectCollectionLoaded = createSelector(
   selectCollectionState,
-  fromCollection.getLoaded
+  fromFavorites.getLoaded
 );
 export const getCollectionLoading = createSelector(
   selectCollectionState,
-  fromCollection.getLoading
+  fromFavorites.getLoading
 );
 // export const selectCollectionBookIds = createSelector(
 //   selectCollectionState,

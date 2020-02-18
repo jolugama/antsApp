@@ -6,7 +6,7 @@ import {
 } from './../actions';
 import { Ant } from '@ants/models';
 
-export const collectionFeatureKey = 'collection';
+export const collectionFeatureKey = 'favorites';
 
 export interface State {
   loaded: boolean;

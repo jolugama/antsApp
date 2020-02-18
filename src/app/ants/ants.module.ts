@@ -21,7 +21,7 @@ import { CollectionAntsEffects, AntEffects } from './effects';
      * eagerly or lazily and will be dynamically added to
      * the existing state.
      */
-    StoreModule.forFeature(fromAnts.antsFeatureKey, fromAnts.reducers),
+    StoreModule.forFeature(fromAnts.itemsFeatureKey, fromAnts.reducers),
 
     /**
      * Effects.forFeature is used to register effects
