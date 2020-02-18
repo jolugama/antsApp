@@ -1,7 +1,7 @@
-import * as AntsActions from './ants.actions';
-import * as AntsSearchActions from './search.actions';
+import * as ItemsActions from './items.actions';
+import * as ItemsSearchActions from './search.actions';
 
 export {
-    AntsActions,
-    AntsSearchActions
+    ItemsActions,
+    ItemsSearchActions
 };

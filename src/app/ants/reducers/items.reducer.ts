@@ -2,14 +2,15 @@ import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { createReducer, on } from '@ngrx/store';
 
 import {
-  AntsActions
+  ItemsActions
 } from './../actions';
 import { Ant } from '@ants/models';
 
 export const ItemsFeatureKey = 'items';
 
 export interface State extends EntityState<Ant> {
-
+  // aparte de entities e id, se añaden estos objetos
+  selectedItemId: number | null;
 }
 
 // const initialState: State = {
@@ -24,16 +25,17 @@ export const adapter: EntityAdapter<Ant> = createEntityAdapter<Ant>({
 });
 
 export const initialState: State = adapter.getInitialState({
-
+  // se otorgan valores por defecto, al inicio.
+  selectedItemId: null,
 });
 
 
 export const reducer = createReducer(
   initialState,
-  on(AntsActions.loadAntsCollection, state => ({
+  on(ItemsActions.loadItems, state => ({
     ...state,
   })),
-  on(AntsActions.loadAntsSuccess,
+  on(ItemsActions.loadItemsSuccess,
     (state, { ants }) => adapter.addMany(ants, state)
   )
 );

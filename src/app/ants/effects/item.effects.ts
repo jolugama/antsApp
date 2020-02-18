@@ -19,8 +19,8 @@ import { Ant } from '../models';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { AntsActions, AntsSearchActions } from '@ants/actions';
-import * as fromAnts from '@ants/reducers';
+import { ItemsActions, ItemsSearchActions } from '../actions';
+import * as fromItems from '../reducers';
 
 
 
@@ -28,13 +28,13 @@ import * as fromAnts from '@ants/reducers';
 export class AntEffects {
   constructor(
     private actions$: Actions,
-    private store: Store<fromAnts.State>
+    private store: Store<fromItems.State>
   ) { }
 
   search$ = createEffect(
     () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
       this.actions$.pipe(
-        ofType(AntsSearchActions.searchAnts),
+        ofType(ItemsSearchActions.searchItems),
         // debounceTime(debounce, scheduler),
         switchMap(({ query }) => {
           if (query === '') {
@@ -42,7 +42,7 @@ export class AntEffects {
           }
 
           const nextSearch$ = this.actions$.pipe(
-            ofType(AntsSearchActions.searchAnts),
+            ofType(ItemsSearchActions.searchItems),
             skip(1)
           );
 
@@ -57,7 +57,7 @@ export class AntEffects {
           // );
         })
 
-        // ofType(AntsSearchActions.searchAnts),
+        // ofType(AntsSearchActions.searchItems),
         // withLatestFrom(this.store),
         // .filter(([action: Action, storeState: AppState]) => {
         //   return storeState.lines.length / 100 > storeState.pages.count;
@@ -70,7 +70,7 @@ export class AntEffects {
   // search$ = createEffect(
   //   () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
   //     this.actions$.pipe(
-  //       ofType(AntsSearchActions.searchAnts),
+  //       ofType(AntsSearchActions.searchItems),
   //       // debounceTime(debounce, scheduler),
   //       switchMap(({ query }) => {
 
@@ -78,7 +78,7 @@ export class AntEffects {
   //           return empty;
   //         }
   //         const nextSearch$ = this.actions$.pipe(
-  //           ofType(AntsSearchActions.searchAnts),
+  //           ofType(AntsSearchActions.searchItems),
   //           skip(1)
   //         );
   //         // recuperar del redux el array de hormigas en ants.ants.entities

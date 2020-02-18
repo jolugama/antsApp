@@ -5,7 +5,7 @@ import { defer, of } from 'rxjs';
 import { catchError, map, mergeMap, switchMap, tap } from 'rxjs/operators';
 
 import {
-  AntsActions
+  ItemsActions
 } from '../actions';
 import { Ant } from '../models';
 // import { BookStorageService } from '@example-app/core/services';
@@ -38,15 +38,15 @@ export class CollectionAntsEffects {
 
   loadCollection$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(AntsActions.loadAntsCollection),
+      ofType(ItemsActions.loadItems),
       switchMap(() =>
         this.http.get('assets/data/ants.json').pipe(
           // tap(console.log),
           map((ants: Ant[]) =>
 
-            AntsActions.loadAntsSuccess({ ants }),
+            ItemsActions.loadItemsSuccess({ ants }),
           ),
-          catchError((error) => of(AntsActions.loadAntsFailure({ error }))
+          catchError((error) => of(ItemsActions.loadItemsFailure({ error }))
           )
         )
 

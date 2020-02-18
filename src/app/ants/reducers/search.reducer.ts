@@ -1,5 +1,5 @@
 import {
-  AntsSearchActions
+  ItemsSearchActions
 } from '../actions';
 import { createReducer, on } from '@ngrx/store';
 
@@ -21,7 +21,7 @@ const initialState: State = {
 
 export const reducer = createReducer(
   initialState,
-  on(AntsSearchActions.searchAnts, (state, { query }) => {
+  on(ItemsSearchActions.searchItems, (state, { query }) => {
     return query === ''
       ? {
           ids: [],
@@ -36,13 +36,13 @@ export const reducer = createReducer(
           query,
         };
   }),
-  on(AntsSearchActions.searchSuccess, (state, { ants }) => ({
+  on(ItemsSearchActions.searchSuccess, (state, { ants }) => ({
     ids: ants.map(ant => ant.id.toString()),
     loading: false,
     error: '',
     query: state.query,
   })),
-  on(AntsSearchActions.searchFailure, (state, { error }) => ({
+  on(ItemsSearchActions.searchFailure, (state, { error }) => ({
     ...state,
     loading: false,
     error,

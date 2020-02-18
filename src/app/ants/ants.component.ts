@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { AntsActions, AntsSearchActions } from '@ants/actions';
+import { ItemsActions, ItemsSearchActions } from '@ants/actions';
 import * as fromAnts from '@ants/reducers';
 
 @Component({
@@ -23,7 +23,7 @@ export class AntsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.dispatch(AntsActions.loadAntsCollection());
+    this.store.dispatch(ItemsActions.loadItems());
     // setTimeout(() => {
     //   this.search('messor');
     // }, 1500);
@@ -31,7 +31,7 @@ export class AntsComponent implements OnInit {
   }
 
   search(query: string) {
-    this.store.dispatch(AntsSearchActions.searchAnts({ query }));
+    this.store.dispatch(ItemsSearchActions.searchItems({ query }));
   }
 
 }

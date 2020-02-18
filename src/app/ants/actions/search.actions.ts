@@ -5,7 +5,7 @@ import { Ant } from '../models';
 
 // busqueda y filtrado
 
-export const searchAnts = createAction(
+export const searchItems = createAction(
     '[Filtrado] Search Ants',
     props<{ query: string }>()
 );

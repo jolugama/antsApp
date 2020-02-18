@@ -2,7 +2,7 @@ import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { createReducer, on } from '@ngrx/store';
 
 import {
-  AntsActions
+  ItemsActions
 } from './../actions';
 import { Ant } from '@ants/models';
 
@@ -23,11 +23,11 @@ export const initialState: State = {
 
 export const reducer = createReducer(
   initialState,
-  on(AntsActions.loadAntsCollection, state => ({
+  on(ItemsActions.loadItems, state => ({
     ...state,
     loading: true
   })),
-  on(AntsActions.loadAntsSuccess,
+  on(ItemsActions.loadItemsSuccess,
     (state, ants) => ({
       // ...ants, ** no añadir. Con este linea recibo también las hormigas, pero las tengo ya en entities en ants.reducer.
       loaded: true,

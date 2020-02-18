@@ -5,17 +5,17 @@ import { Ant } from '../models';
 
 // carga de json
 
-export const loadAntsCollection = createAction(
+export const loadItems = createAction(
   '[Carga JSON] Load Ants'
 );
 
 
-export const loadAntsSuccess = createAction(
+export const loadItemsSuccess = createAction(
   '[Carga JSON] Load Ants Success',
   props<{ ants: Ant[] }>()
 );
 
-export const loadAntsFailure = createAction(
+export const loadItemsFailure = createAction(
   '[Carga JSON] Load Ants Failure',
   props<{ error: any }>()
 );
