@@ -41,7 +41,7 @@ export class CollectionAntsEffects {
       ofType(AntsActions.loadAntsCollection),
       switchMap(() =>
         this.http.get('assets/data/ants.json').pipe(
-          tap(console.log),
+          // tap(console.log),
           map((ants: Ant[]) =>
 
             AntsActions.loadAntsSuccess({ ants }),

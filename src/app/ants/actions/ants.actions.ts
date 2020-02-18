@@ -3,6 +3,8 @@ import { createAction, props } from '@ngrx/store';
 import { Ant } from '../models';
 
 
+// carga de json
+
 export const loadAntsCollection = createAction(
   '[Carga JSON] Load Ants'
 );
@@ -19,7 +21,4 @@ export const loadAntsFailure = createAction(
 );
 
 
-export const searchAnts = createAction(
-  '[Filtrar] Search Ants',
-  props<{ query: string }>()
-);
+

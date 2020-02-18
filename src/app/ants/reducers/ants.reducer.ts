@@ -39,3 +39,6 @@ export const reducer = createReducer(
 );
 
 
+
+export const getEntities = (state: State) => state.entities;
+

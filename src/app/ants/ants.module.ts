@@ -8,7 +8,7 @@ import { EffectsModule } from '@ngrx/effects';
 
 
 import * as fromAnts from './reducers';
-import { CollectionAntsEffects } from './effects';
+import { CollectionAntsEffects, AntEffects } from './effects';
 
 @NgModule({
   declarations: [AntsComponent],
@@ -31,7 +31,7 @@ import { CollectionAntsEffects } from './effects';
      * All Effects will only be instantiated once regardless of
      * whether they are registered once or multiple times.
      */
-    EffectsModule.forFeature([CollectionAntsEffects]),
+    EffectsModule.forFeature([CollectionAntsEffects, AntEffects]),
   ]
 })
 export class AntsModule { }

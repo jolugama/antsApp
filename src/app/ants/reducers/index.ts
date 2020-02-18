@@ -61,6 +61,12 @@ export const selectCollectionState = createSelector(
   (state: AntsState) => state.collection
 );
 
+export const selectAntsArrayState = createSelector(
+  selectAntsState,
+  (state: AntsState) => state.ants
+);
+
+
 export const selectCollectionLoaded = createSelector(
   selectCollectionState,
   fromCollection.getLoaded
