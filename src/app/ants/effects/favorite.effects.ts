@@ -11,7 +11,7 @@ import { Ant } from '../models';
 // import { BookStorageService } from '@example-app/core/services';
 
 @Injectable()
-export class CollectionAntsEffects {
+export class FavoriteItemEffects {
 
   constructor(
     private actions$: Actions,

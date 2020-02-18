@@ -1,3 +1,3 @@
 
-export * from './favorites.effects';
+export * from './favorite.effects';
 export * from './item.effects';
