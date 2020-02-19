@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -14,7 +16,10 @@ import * as fromAnts from '@ants/reducers';
 export class AntsComponent implements OnInit {
   ants$: Observable<any>;
 
-  constructor(private store: Store<fromAnts.State>) {
+  constructor(
+    private store: Store<fromAnts.State>
+  ) {
+
     this.ants$ = store.pipe(select(fromAnts.selectAntsArrayState));
 
     this.ants$
@@ -33,5 +38,7 @@ export class AntsComponent implements OnInit {
   search(query: string) {
     this.store.dispatch(ItemsSearchActions.searchItems({ query }));
   }
+
+
 
 }
