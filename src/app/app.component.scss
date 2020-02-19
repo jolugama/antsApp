@@ -1,3 +1,18 @@
+::ng-deep {
+    body {
+        background-color: black;
+    }
+
+    ion-app {
+        max-width: 830px;
+        margin: 0 auto;
+    }
+
+    app-ants{
+        background: #e3c297c7;
+    }
+}
+
 .my-custom-menu {
     --width: 240px;
 }
@@ -33,3 +48,4 @@
 ion-content ion-toolbar {
     --background: translucent;
 }
+

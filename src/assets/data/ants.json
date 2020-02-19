@@ -84,12 +84,12 @@
             "arena": [25, 30]
         },
 
-        "images": ["messor_barbarus.jpg", "1186_2.jpg", "1186_3.JPG"]
+        "images": ["122_1.jpg"]
     }, 
     {
         "id": 109,
         "taxonomy": {
-            "subfamily": "formicinae,",
+            "subfamily": "formicinae",
             "tribe": "lasiini",
             "specie": "lasius niger",
             "Synonyms": ""
@@ -171,7 +171,7 @@
             "arena": [18, 28]
         },
 
-        "images": ["365_0.jpg", "365_1.jpg", "365_2.jpg"]
+        "images": ["109_1.jpg", "109_2.jpg", "109_3.jpg"]
     },
     {
         "id": 24,

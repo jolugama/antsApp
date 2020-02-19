@@ -43,6 +43,11 @@ export class AntsComponent implements OnInit {
     this.store.dispatch(ItemsSearchActions.searchItems({ query }));
   }
 
+  openCard(id) {
+    console.log('click Card', id);
+
+  }
+
 
 
 }

@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// solo necesario para ionic app
+
+// solo necesario para ionic app.
 import { IonicModule } from '@ionic/angular';
+
 
 import { FormsModule } from '@angular/forms';
 
