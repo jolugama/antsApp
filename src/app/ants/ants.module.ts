@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// solo necesario para ionic app
+import { IonicModule } from '@ionic/angular';
 
-
+import { FormsModule } from '@angular/forms';
 
 import { AntsRoutingModule } from './ants-routing.module';
 import { AntsComponent } from './ants.component';
@@ -13,10 +15,14 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromAnts from './reducers';
 import { FavoriteItemEffects, ItemEffects } from './effects';
 
+
+
 @NgModule({
   declarations: [AntsComponent],
   imports: [
     CommonModule,
+    IonicModule,
+    FormsModule,
     AntsRoutingModule,
     /**
      * StoreModule.forFeature is used for composing state

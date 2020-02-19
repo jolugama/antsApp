@@ -8,6 +8,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+
+import { FormsModule } from '@angular/forms';
+
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReduxModule } from './redux/redux.module';
@@ -21,6 +25,7 @@ import { ReduxModule } from './redux/redux.module';
     HttpClientModule,
     ReduxModule,
     IonicModule.forRoot(),
+    FormsModule
   ],
   providers: [
     StatusBar,
@@ -28,5 +33,6 @@ import { ReduxModule } from './redux/redux.module';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
