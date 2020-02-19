@@ -3,6 +3,7 @@
 .list-cards {
     overflow-y: auto;
     ion-card{
+        cursor: pointer;
         img{
             max-height: 140px;
         }
