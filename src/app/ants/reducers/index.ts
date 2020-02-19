@@ -11,17 +11,17 @@ import * as fromRoot from '@redux/reducers';
 
 export const itemsFeatureKey = 'ants';
 
-export interface AntsState {
+export interface ItemsState {
   [fromFavorites.collectionFeatureKey]: fromFavorites.State;
   [fromItems.ItemsFeatureKey]: fromItems.State;
 }
 
 export interface State extends fromRoot.State {
-  [itemsFeatureKey]: AntsState;
+  [itemsFeatureKey]: ItemsState;
 }
 
 /** Provide reducer in AoT-compilation happy way */
-export function reducers(state: AntsState | undefined, action: Action) {
+export function reducers(state: ItemsState | undefined, action: Action) {
   return combineReducers({
     [fromFavorites.collectionFeatureKey]: fromFavorites.reducer,
     [fromItems.ItemsFeatureKey]: fromItems.reducer
@@ -48,7 +48,7 @@ export function reducers(state: AntsState | undefined, action: Action) {
  * The createFeatureSelector function selects a piece of state from the root of the state object.
  * This is used for selecting feature states that are loaded eagerly or lazily.
  */
-export const selectAntsState = createFeatureSelector<State, AntsState>(
+export const selectItemsState = createFeatureSelector<State, ItemsState>(
   itemsFeatureKey
 );
 
@@ -57,13 +57,13 @@ export const selectAntsState = createFeatureSelector<State, AntsState>(
 
 
 export const selectCollectionState = createSelector(
-  selectAntsState,
-  (state: AntsState) => state.favorites
+  selectItemsState,
+  (state: ItemsState) => state.favorites
 );
 
 export const selectAntsArrayState = createSelector(
-  selectAntsState,
-  (state: AntsState) => state.items
+  selectItemsState,
+  (state: ItemsState) => state.items
 );
 
 

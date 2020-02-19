@@ -42,9 +42,9 @@ export class FavoriteItemEffects {
       switchMap(() =>
         this.http.get('assets/data/ants.json').pipe(
           // tap(console.log),
-          map((ants: Ant[]) =>
+          map((items: Ant[]) =>
 
-            ItemsActions.loadItemsSuccess({ ants }),
+            ItemsActions.loadItemsSuccess({ items }),
           ),
           catchError((error) => of(ItemsActions.loadItemsFailure({ error }))
           )

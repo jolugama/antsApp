@@ -12,7 +12,7 @@ export const searchItems = createAction(
 
 export const searchSuccess = createAction(
     '[Filtrado] Search Ants Success',
-    props<{ ants: Ant[] }>()
+    props<{ items: Ant[] }>()
 );
 
 export const searchFailure = createAction(

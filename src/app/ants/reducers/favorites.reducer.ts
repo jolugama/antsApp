@@ -28,8 +28,8 @@ export const reducer = createReducer(
     loading: true
   })),
   on(ItemsActions.loadItemsSuccess,
-    (state, ants) => ({
-      // ...ants, ** no añadir. Con este linea recibo también las hormigas, pero las tengo ya en entities en ants.reducer.
+    (state, items) => ({
+     // ...items, // ** no añadir. Con este linea recibo también las hormigas, pero las tengo ya en entities en ants.reducer.
       loaded: true,
       loading: false,
 

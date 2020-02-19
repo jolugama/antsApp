@@ -36,7 +36,7 @@ export const reducer = createReducer(
     ...state,
   })),
   on(ItemsActions.loadItemsSuccess,
-    (state, { ants }) => adapter.addMany(ants, state)
+    (state, { items }) => adapter.addMany(items, state)
   )
 );
 

@@ -36,8 +36,8 @@ export const reducer = createReducer(
           query,
         };
   }),
-  on(ItemsSearchActions.searchSuccess, (state, { ants }) => ({
-    ids: ants.map(ant => ant.id.toString()),
+  on(ItemsSearchActions.searchSuccess, (state, { items }) => ({
+    ids: items.map(item => item.id.toString()),
     loading: false,
     error: '',
     query: state.query,

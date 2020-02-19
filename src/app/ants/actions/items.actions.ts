@@ -12,7 +12,7 @@ export const loadItems = createAction(
 
 export const loadItemsSuccess = createAction(
   '[Carga JSON] Load Ants Success',
-  props<{ ants: Ant[] }>()
+  props<{ items: Ant[] }>()
 );
 
 export const loadItemsFailure = createAction(

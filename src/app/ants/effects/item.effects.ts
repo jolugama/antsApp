@@ -25,7 +25,7 @@ import * as fromItems from '../reducers';
 
 
 @Injectable()
-export class AntEffects {
+export class ItemEffects {
   constructor(
     private actions$: Actions,
     private store: Store<fromItems.State>
