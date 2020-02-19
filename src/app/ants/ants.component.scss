@@ -1,5 +1,4 @@
 
-
 .list-cards {
     overflow-y: auto;
     ion-card{
@@ -11,20 +10,7 @@
             text-align: center;
         }
     }
-    // width: calc(100% - 40px);
-    // margin-left: 20px;
-    // margin-right: 20px;
-    // -webkit-box-align: center;
-    // align-items: center;
+
 }
 
 
-// ion-card-content {
-//     max-height: calc(100% - #{50px});
-//     position: relative;
-//     overflow: hidden;
-//     overflow-y: auto;
-//     ::-webkit-scrollbar {
-//       display: none;
-//     }
-//   }
