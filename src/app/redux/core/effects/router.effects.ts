@@ -8,6 +8,8 @@ import { createEffect } from '@ngrx/effects';
 
 @Injectable()
 export class RouterEffects {
+  // recoge el valor data que se indica en un módulo routing y lo añade al título
+  // se debe pasar así:  data: { title: 'Home' }
   updateTitle$ = createEffect(
     () =>
       this.router.events.pipe(
@@ -19,7 +21,7 @@ export class RouterEffects {
         }),
         mergeMap(route => route.data),
         // tslint:disable-next-line:no-string-literal
-        map(data => `Book Collection - ${data['title']}`),
+        map(data => `AntApp  - ${data['title']}`),
         tap(title => this.titleService.setTitle(title))
       ),
     {
@@ -31,5 +33,5 @@ export class RouterEffects {
     private router: Router,
     private titleService: Title,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) { }
 }

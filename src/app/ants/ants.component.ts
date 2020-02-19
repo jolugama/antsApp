@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+// import { IonSearchbar } from '@ionic/angular';
+
 
 
 import { select, Store } from '@ngrx/store';
@@ -7,6 +9,7 @@ import { Observable } from 'rxjs';
 
 import { ItemsActions, ItemsSearchActions } from '@ants/actions';
 import * as fromAnts from '@ants/reducers';
+
 
 @Component({
   selector: 'app-ants',
@@ -17,7 +20,8 @@ export class AntsComponent implements OnInit {
   ants$: Observable<any>;
 
   constructor(
-    private store: Store<fromAnts.State>
+    private store: Store<fromAnts.State>,
+    // private ionSearchbar: IonSearchbar
   ) {
 
     this.ants$ = store.pipe(select(fromAnts.selectAntsArrayState));
