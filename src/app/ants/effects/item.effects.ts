@@ -46,7 +46,7 @@ export class ItemEffects {
             skip(1)
           );
 
-          // return this.store.pipe(select(fromAnts.selectAntsState));
+          // return this.store.pipe(select(fromItems.selectAntsState));
 
           // return this.googleBooks.searchBooks(query).pipe(
           //   takeUntil(nextSearch$),
