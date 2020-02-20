@@ -1,5 +1,12 @@
+ion-page{
+    justify-content: flex-start !important;
+}
+
 
 .list-cards {
+    // display: flex;
+    // flex-flow: column wrap;
+    // overflow-x: hidden;
     overflow-y: auto;
     ion-card{
         cursor: pointer;
