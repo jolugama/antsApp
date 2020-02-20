@@ -19,7 +19,7 @@ import { Ant } from '../models';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { ItemsActions, ItemsSearchActions } from '../actions';
+import { ItemsActions, SearchActions } from '../actions';
 import * as fromItems from '../reducers';
 
 
@@ -34,7 +34,7 @@ export class ItemEffects {
   search$ = createEffect(
     () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
       this.actions$.pipe(
-        ofType(ItemsSearchActions.searchItems),
+        ofType(SearchActions.searchItems),
         // debounceTime(debounce, scheduler),
         switchMap(({ query }) => {
           if (query === '') {
@@ -42,7 +42,7 @@ export class ItemEffects {
           }
 
           const nextSearch$ = this.actions$.pipe(
-            ofType(ItemsSearchActions.searchItems),
+            ofType(SearchActions.searchItems),
             skip(1)
           );
 

@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { ItemsActions, ItemsSearchActions } from '@ants/actions';
+import { ItemsActions, SearchActions, FiltersActions } from '@ants/actions';
 import * as fromAnts from '@ants/reducers';
+// import { Ant } from '@ants/models';
 
 
 @Component({
@@ -40,12 +41,21 @@ export class AntsComponent implements OnInit {
   }
 
   search(query: string) {
-    this.store.dispatch(ItemsSearchActions.searchItems({ query }));
+    this.store.dispatch(SearchActions.searchItems({ query }));
   }
 
   openCard(id) {
     console.log('click Card', id);
 
+  }
+
+  findItems(query) {
+    console.log(query);
+    this.store.dispatch(FiltersActions.buscarItemsBuscador({ query }));
+    // setTimeout(() => {
+    //   const itemsMock: Ant[] = [];
+    //   this.store.dispatch(SearchActions.searchSuccess({ items: itemsMock }));
+    // }, 2000);
   }
 
 

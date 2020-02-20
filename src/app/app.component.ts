@@ -52,7 +52,6 @@ export class AppComponent {
   // // fin menu+
 
   openCloseSidenav(event) {
-    console.log('aaa', event);
     if (event.type === 'ionDidOpen') {
       this.store.dispatch(LayoutActions.openSidenav());
     } else if (event.type === 'ionDidClose') {

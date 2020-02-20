@@ -2,14 +2,14 @@
 
 
 <!-- <input matInput placeholder="Search for a book" [value]="query" (keyup)="search.emit($event.target.value)"> -->
-<ion-searchbar placeholder="Buscar"></ion-searchbar>
+<ion-searchbar placeholder="Buscar" (keyup)="findItems($event.target.value)"></ion-searchbar>
 
 
 
 
 <div class="list-cards">
     <!-- *ngFor="let item of list" -->
-    <ion-card (click)="openCard('122')" >
+    <ion-card (click)="openCard('122')">
         <ion-card-header>
             <img src="assets/img/ants/122_1.jpg" />
             <ion-card-subtitle>formicinae - camponotini</ion-card-subtitle>
@@ -28,10 +28,10 @@
                 </ion-col>
             </ion-row>
         </ion-card-content>
-    
+
     </ion-card>
 
-    <ion-card (click)="openCard('122')" >
+    <ion-card (click)="openCard('122')">
         <ion-card-header>
             <img src="assets/img/ants/122_1.jpg" />
             <ion-card-subtitle>formicinae - camponotini</ion-card-subtitle>
@@ -50,8 +50,8 @@
                 </ion-col>
             </ion-row>
         </ion-card-content>
-    
-    <!-- </ion-card>
+
+        <!-- </ion-card>
 
     <ion-card (click)="openCard('122')" >
         <ion-card-header>
@@ -101,10 +101,3 @@
       <ion-infinite-scroll-content></ion-infinite-scroll-content>
     </ion-infinite-scroll> -->
 </div>
-
-
-
-
-
-
-

@@ -5,15 +5,17 @@ import {
   combineReducers,
   Action,
 } from '@ngrx/store';
+import * as fromRoot from '@redux/reducers';
 import * as fromItems from './items.reducer';
 import * as fromFavorites from './favorites.reducer';
-import * as fromRoot from '@redux/reducers';
+import * as fromSearch from './search.reducer';
 
 export const itemsFeatureKey = 'ants';
 
 export interface ItemsState {
   [fromFavorites.collectionFeatureKey]: fromFavorites.State;
   [fromItems.ItemsFeatureKey]: fromItems.State;
+  [fromSearch.searchFeatureKey]: fromSearch.State;
 }
 
 export interface State extends fromRoot.State {
@@ -24,7 +26,8 @@ export interface State extends fromRoot.State {
 export function reducers(state: ItemsState | undefined, action: Action) {
   return combineReducers({
     [fromFavorites.collectionFeatureKey]: fromFavorites.reducer,
-    [fromItems.ItemsFeatureKey]: fromItems.reducer
+    [fromItems.ItemsFeatureKey]: fromItems.reducer,
+    [fromSearch.searchFeatureKey]: fromSearch.reducer,
   })(state, action);
 }
 

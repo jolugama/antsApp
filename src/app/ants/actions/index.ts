@@ -1,7 +1,9 @@
 import * as ItemsActions from './items.actions';
-import * as ItemsSearchActions from './search.actions';
+import * as SearchActions from './search.actions';
+import * as FiltersActions from './filters.actions';
 
 export {
     ItemsActions,
-    ItemsSearchActions
+    SearchActions,
+    FiltersActions
 };

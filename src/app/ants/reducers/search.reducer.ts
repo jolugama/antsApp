@@ -1,12 +1,13 @@
 import {
-  ItemsSearchActions
+  SearchActions,
+  FiltersActions
 } from '../actions';
 import { createReducer, on } from '@ngrx/store';
 
 export const searchFeatureKey = 'search';
 
 export interface State {
-  ids: string[];
+  ids: number[];
   loading: boolean;
   error: string;
   query: string;
@@ -21,7 +22,7 @@ const initialState: State = {
 
 export const reducer = createReducer(
   initialState,
-  on(ItemsSearchActions.searchItems, (state, { query }) => {
+  on(FiltersActions.buscarItemsBuscador, (state, { query }) => {
     return query === ''
       ? {
           ids: [],
@@ -36,20 +37,20 @@ export const reducer = createReducer(
           query,
         };
   }),
-  on(ItemsSearchActions.searchSuccess, (state, { items }) => ({
-    ids: items.map(item => item.id.toString()),
+  on(SearchActions.searchSuccess, (state, { items }) => ({
+    ids: items.map(item => item.id),
     loading: false,
     error: '',
     query: state.query,
   })),
-  on(ItemsSearchActions.searchFailure, (state, { error }) => ({
+  on(SearchActions.searchFailure, (state, { error }) => ({
     ...state,
     loading: false,
     error,
   }))
 );
 
-// export const getIds = (state: State) => state.ids;
+export const getIds = (state: State) => state.ids;
 
 export const getQuery = (state: State) => state.query;
 
