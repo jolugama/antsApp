@@ -16,7 +16,8 @@
     </ion-content>
   </ion-menu> -->
 
-  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu" 
+  (ionDidClose)="openCloseSidenav($event)" (ionDidOpen)="openCloseSidenav($event)">
     <ion-header>
       <ion-toolbar color="tertiary">
         <ion-title>Custom Menu</ion-title>
@@ -53,9 +54,9 @@
 
   <ion-header translucent>
     <ion-toolbar>
-
+      <!-- (click)="openSidenav()" -->
       <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
+        <ion-menu-button  ></ion-menu-button>
       </ion-buttons>
       <ion-title>
         AntApp

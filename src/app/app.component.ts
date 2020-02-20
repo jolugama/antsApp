@@ -5,6 +5,12 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+// todo sobre ngrx redux
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { LayoutActions } from '@redux/core/actions';
+import * as fromRoot from '@redux/reducers';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -16,7 +22,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private menu: MenuController,
-    private config: Config
+    private store: Store<fromRoot.State>
   ) {
     this.initializeApp();
   }
@@ -29,19 +35,29 @@ export class AppComponent {
   }
 
 
-  // inicio menu
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }
+  // // inicio menu
+  // openFirst() {
+  //   this.menu.enable(true, 'first');
+  //   this.menu.open('first');
+  // }
 
-  openEnd() {
-    this.menu.open('end');
-  }
+  // openEnd() {
+  //   this.menu.open('end');
+  // }
 
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
+  // openCustom() {
+  //   this.menu.enable(true, 'custom');
+  //   this.menu.open('custom');
+  // }
+  // // fin menu+
+
+  openCloseSidenav(event) {
+    console.log('aaa', event);
+    if (event.type === 'ionDidOpen') {
+      this.store.dispatch(LayoutActions.openSidenav());
+    } else if (event.type === 'ionDidClose') {
+      this.store.dispatch(LayoutActions.closeSidenav());
+    }
+
   }
-  // fin menu
 }

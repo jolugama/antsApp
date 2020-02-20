@@ -257,7 +257,7 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-        "images": ["camponotus_barbaricus.jpg", "camponotus-barbaricus.jpg"]
+        "images": []
     },
 
     {
@@ -344,7 +344,7 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-        "images": ["583_0.jpg", "583_1.jpg", "583_2.jpg", "583_3.jpg"]
+        "images": []
     },
     {
         "id": 106,
@@ -430,7 +430,7 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-        "images": ["1394_0.jpg"]
+        "images": [""]
     }, 
     {
         "id": 91,
@@ -516,7 +516,7 @@
             "arena": [18, 28]
         },
 
-        "images": ["formica_serviformica_cinerea.jpg", "formica_serviformica_cinerea_nesteingang.jpg", "formica_serviformica_cinerea_habitat.jpg", "902_3.jpg"]
+        "images": []
     },
     {
         "id": 175,
@@ -603,7 +603,7 @@
             "arena": [25, 30]
         },
 
-        "images": ["solenopsis_cf_fugax.jpg"]
+        "images": []
     },
     {
         "id": 43,
@@ -689,7 +689,7 @@
             "arena": [18, 28]
         },
 
-        "images": ["camponotus_herculeanus.jpg", "1179_1.jpg", "1179_2.JPG", "vergleich-ligniperdus-herculeanus.jpg"]
+        "images": []
     },
     {
         "id": 33,
@@ -776,7 +776,7 @@
             "arena": [21, 28]
         },
 
-        "images": ["camponotus_cruentatus.jpg", "camponotus_cruentatus2.jpg", "1160_2.jpg", "1160_3.jpg"]
+        "images": []
     },
     {
         "id": 169,
@@ -863,6 +863,6 @@
             "arena": [25, 30]
         },
 
-        "images": ["1161_0.jpg", "1161_1.jpg", "1161_3.jpg"]
+        "images": []
     }
 ]
