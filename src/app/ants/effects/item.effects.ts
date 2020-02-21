@@ -29,7 +29,7 @@ import * as fromItems from '../reducers';
 export class ItemEffects {
   constructor(
     private actions$: Actions,
-    private store: Store<fromItems.State>,
+    private store$: Store<fromItems.State>,
     public http: HttpClient
   ) { }
 
@@ -60,30 +60,26 @@ export class ItemEffects {
   search$ = createEffect(() =>
     this.actions$.pipe(
       ofType(SearchActions.searchItems),
-      switchMap(() => {
-        return of([]).pipe(
+      switchMap(({ query }) => {
+
+        if (query === '') {
+          return empty;
+        }
+
+        const nextSearch$ = this.actions$.pipe(
+          ofType(SearchActions.searchItems),
+          skip(1)
+        );
+
+        return of(query).pipe(
           tap(console.log),
           map((items: Ant[]) => {
             return SearchActions.searchSuccess({ items });
           })
         );
-      })
-      // switchMap(({ query }) => {
-      //   if (query === '') {
-      //     return empty;
-      //   }
 
-      // this.http.get('assets/data/ants.json').pipe(
-      //   tap(console.log),
-      //   map((items: Ant[]) => {
-      //     // es ok. llama a acción, y este al reducer de la acción,
-      //     // la cual añade en entities con addMany
-      //     return SearchActions.searchSuccess({ items });
-      //   }
-      //   ),
-      //   catchError((error) => of(SearchActions.searchFailure({ error }))
-      //   )
-      // )
+
+      })
 
 
 

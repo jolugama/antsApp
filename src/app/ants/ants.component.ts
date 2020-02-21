@@ -5,12 +5,14 @@ import { Component, OnInit } from '@angular/core';
 
 
 import { select, Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 import { ItemsActions, SearchActions, FiltersActions } from '@ants/actions';
 import * as fromItems from '@ants/reducers';
-import { map } from 'rxjs/operators';
-// import { Ant } from '@ants/models';
+import { map, withLatestFrom } from 'rxjs/operators';
+import { ItemsService } from '@ants/services/items.service';
+
+
 
 
 @Component({
@@ -22,11 +24,12 @@ export class AntsComponent implements OnInit {
   ants$: Observable<any>;
 
   constructor(
-    private store: Store<fromItems.State>,
+    private store$: Store<fromItems.State>,
+    private itemsService: ItemsService
     // private ionSearchbar: IonSearchbar
   ) {
 
-    this.ants$ = store.pipe(
+    this.ants$ = store$.pipe(
       select(fromItems.selectItemsArrayState)
     );
 
@@ -41,7 +44,25 @@ export class AntsComponent implements OnInit {
   ngOnInit() {
     // llama a la accion loadItems, pasa por por reducer y guarda en entities e ids gracias a addMany
     // y con el effect loadItemsJSON$ lo rellena.
-    this.store.dispatch(ItemsActions.loadItems());
+    this.store$.dispatch(ItemsActions.loadItems());
+
+    // of('hola').pipe(
+    //   withLatestFrom(this.store$),
+    //   map(([action, storeState]) => {
+    //     debugger;
+    //     // Do something ...
+    //   })
+    // ).subscribe((e) => {
+    //   debugger;
+    // });
+
+
+    // setTimeout(() => {
+    //   this.itemsService.getItems('camponotus').subscribe((e) => {
+    //     debugger;
+    //   });
+    // }, 1000);
+
 
 
 
@@ -58,7 +79,7 @@ export class AntsComponent implements OnInit {
 
   findItems(query: string) {
     console.log(query);
-    this.store.dispatch(SearchActions.searchItems({ query }));
+    this.store$.dispatch(SearchActions.searchItems({ query }));
     // setTimeout(() => {
     //   const itemsMock: Ant[] = [];
     //   this.store.dispatch(SearchActions.searchSuccess({ items: itemsMock }));
