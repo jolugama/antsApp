@@ -11,7 +11,7 @@ import { ItemsActions, SearchActions, FiltersActions } from '@ants/actions';
 import * as fromItems from '@ants/reducers';
 import { map, withLatestFrom } from 'rxjs/operators';
 import { ItemsService } from '@ants/services/items.service';
-import { timingSafeEqual } from 'crypto';
+
 
 
 
@@ -29,6 +29,11 @@ export class AntsComponent implements OnInit {
     private itemsService: ItemsService
     // private ionSearchbar: IonSearchbar
   ) {
+    this.store$.dispatch(ItemsActions.loadItems());
+
+    // setTimeout(() => {
+    //   this.findItems('');
+    // }, 1000);
 
     // this.ants$ = store$.pipe(
     //   select(fromItems.selectItemsArrayState)
@@ -39,18 +44,16 @@ export class AntsComponent implements OnInit {
     //     // console.log('carga ', arg);
     //   });
 
-   
+
 
   }
 
   ngOnInit() {
     // llama a la accion loadItems, pasa por por reducer y guarda en entities e ids gracias a addMany
     // y con el effect loadItemsJSON$ lo rellena.
-    this.store$.dispatch(ItemsActions.loadItems());
 
-    setTimeout(() => {
-      this.findItems('');
-    }, 1000);
+
+
 
     // of('hola').pipe(
     //   withLatestFrom(this.store$),

@@ -28,12 +28,15 @@ import { ItemsService } from '@ants/services/items.service';
 
 @Injectable()
 export class ItemEffects {
+
   constructor(
     private actions$: Actions,
     private store$: Store<fromItems.State>,
     public http: HttpClient,
     private itemsService: ItemsService
-  ) { }
+  ) {
+
+  }
 
 
   // carga json
@@ -56,6 +59,21 @@ export class ItemEffects {
       )
     )
   );
+
+
+  // Cuando carga el json satisfactoriamente, hace un primer filtro vacío para obtener el array de items.
+  loadItemsJsonSuccess$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(ItemsActions.loadItemsSuccess),
+      switchMap(({ items }) => {
+        const query = '';
+        return of(SearchActions.searchItems({ query }));
+
+      })
+
+    )
+  );
+
 
 
   // carga json
