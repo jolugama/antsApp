@@ -69,6 +69,16 @@ export const selectAntsArrayState = createSelector(
   (state: ItemsState) => state.items
 );
 
+// export const selectBookCollection = createSelector(
+//   selectItemsState,
+//   selectCollectionBookIds,
+//   (entities, ids) => {
+//     return ids
+//       .map(id => entities[id])
+//       .filter((book): book is Book => book != null);
+//   }
+// );
+
 
 export const selectCollectionLoaded = createSelector(
   selectCollectionState,
@@ -79,6 +89,6 @@ export const getCollectionLoading = createSelector(
   fromFavorites.getLoading
 );
 // export const selectCollectionBookIds = createSelector(
-//   selectCollectionState,
-//   fromCollection.getIds
+//   selectItemsState,
+//   fromItems.selectId
 // );

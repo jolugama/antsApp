@@ -42,5 +42,5 @@ export const reducer = createReducer(
 
 
 
-export const getEntities = (state: State) => state.entities;
-
+// export const getEntities = (state: State) => state.entities;
+export const selectId = (state: State) => state.selectedItemId;

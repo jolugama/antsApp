@@ -8,7 +8,8 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { ItemsActions, SearchActions, FiltersActions } from '@ants/actions';
-import * as fromAnts from '@ants/reducers';
+import * as fromItems from '@ants/reducers';
+import { map } from 'rxjs/operators';
 // import { Ant } from '@ants/models';
 
 
@@ -21,11 +22,19 @@ export class AntsComponent implements OnInit {
   ants$: Observable<any>;
 
   constructor(
-    private store: Store<fromAnts.State>,
+    private store: Store<fromItems.State>,
     // private ionSearchbar: IonSearchbar
   ) {
 
-    this.ants$ = store.pipe(select(fromAnts.selectAntsArrayState));
+    this.ants$ = store.pipe(
+      select(fromItems.selectAntsArrayState),
+      map((r) => {
+        return r.entities;
+      }),
+      map((r) => {
+        return Object.values(r);
+      }),
+    );
 
     this.ants$
       .subscribe(arg => console.log('carga ', arg));
@@ -33,10 +42,11 @@ export class AntsComponent implements OnInit {
   }
 
   ngOnInit() {
+    // llama a la accion loadItems, pasa por por reducer y guarda en entities e ids gracias a addMany
+    // y con el effect loadItemsJSON$ lo rellena.
     this.store.dispatch(ItemsActions.loadItems());
-    // setTimeout(() => {
-    //   this.search('messor');
-    // }, 1500);
+
+
 
   }
 

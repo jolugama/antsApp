@@ -36,23 +36,7 @@ export class FavoriteItemEffects {
 
 
 
-  loadCollection$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ItemsActions.loadItems),
-      switchMap(() =>
-        this.http.get('assets/data/ants.json').pipe(
-          // tap(console.log),
-          map((items: Ant[]) =>
 
-            ItemsActions.loadItemsSuccess({ items }),
-          ),
-          catchError((error) => of(ItemsActions.loadItemsFailure({ error }))
-          )
-        )
-
-      )
-    )
-  );
 
 
 
