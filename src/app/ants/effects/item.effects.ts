@@ -24,13 +24,15 @@ import { HttpClient } from '@angular/common/http';
 import { Ant } from '../models';
 import * as fromItems from '../reducers';
 
+import { ItemsService } from '@ants/services/items.service';
 
 @Injectable()
 export class ItemEffects {
   constructor(
     private actions$: Actions,
     private store$: Store<fromItems.State>,
-    public http: HttpClient
+    public http: HttpClient,
+    private itemsService: ItemsService
   ) { }
 
 
@@ -71,11 +73,12 @@ export class ItemEffects {
           skip(1)
         );
 
-        return of(query).pipe(
-          tap(console.log),
-          map((items: Ant[]) => {
-            return SearchActions.searchSuccess({ items });
-          })
+        return this.itemsService.getItems(query).pipe(
+          takeUntil(nextSearch$),
+          map((items: Ant[]) => SearchActions.searchSuccess({ items })),
+          catchError(err =>
+            of(SearchActions.searchFailure({ error: err.message }))
+          )
         );
 
 
