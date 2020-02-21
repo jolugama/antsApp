@@ -64,9 +64,9 @@ export class ItemEffects {
       ofType(SearchActions.searchItems),
       switchMap(({ query }) => {
 
-        if (query === '') {
-          return empty;
-        }
+        // if (query === '') {
+        //   return empty;
+        // }
 
         const nextSearch$ = this.actions$.pipe(
           ofType(SearchActions.searchItems),
@@ -75,6 +75,7 @@ export class ItemEffects {
 
         return this.itemsService.getItems(query).pipe(
           takeUntil(nextSearch$),
+          tap(console.log),
           map((items: Ant[]) => SearchActions.searchSuccess({ items })),
           catchError(err =>
             of(SearchActions.searchFailure({ error: err.message }))
