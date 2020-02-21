@@ -64,9 +64,9 @@ export const selectCollectionState = createSelector(
   (state: ItemsState) => state.favorites
 );
 
-export const selectAntsArrayState = createSelector(
+export const selectItemsArrayState = createSelector(
   selectItemsState,
-  (state: ItemsState) => state.items
+  (state: ItemsState) => Object.values(state.items.entities)
 );
 
 // export const selectBookCollection = createSelector(

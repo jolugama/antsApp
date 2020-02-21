@@ -27,17 +27,14 @@ export class AntsComponent implements OnInit {
   ) {
 
     this.ants$ = store.pipe(
-      select(fromItems.selectAntsArrayState),
-      map((r) => {
-        return r.entities;
-      }),
-      map((r) => {
-        return Object.values(r);
-      }),
+      select(fromItems.selectItemsArrayState)
     );
 
     this.ants$
-      .subscribe(arg => console.log('carga ', arg));
+      .subscribe(arg => {
+        // console.log('carga ', arg);
+      });
+
 
   }
 
@@ -50,18 +47,18 @@ export class AntsComponent implements OnInit {
 
   }
 
-  search(query: string) {
-    this.store.dispatch(SearchActions.searchItems({ query }));
-  }
+  // search(query: string) {
+  //   this.store.dispatch(SearchActions.searchItems({ query }));
+  // }
 
   openCard(id) {
     console.log('click Card', id);
 
   }
 
-  findItems(query) {
+  findItems(query: string) {
     console.log(query);
-    this.store.dispatch(FiltersActions.buscarItemsBuscador({ query }));
+    this.store.dispatch(SearchActions.searchItems({ query }));
     // setTimeout(() => {
     //   const itemsMock: Ant[] = [];
     //   this.store.dispatch(SearchActions.searchSuccess({ items: itemsMock }));

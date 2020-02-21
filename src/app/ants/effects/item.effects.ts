@@ -56,6 +56,43 @@ export class ItemEffects {
   );
 
 
+  // carga json
+  search$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(SearchActions.searchItems),
+      switchMap(() => {
+        return of([]).pipe(
+          tap(console.log),
+          map((items: Ant[]) => {
+            return SearchActions.searchSuccess({ items });
+          })
+        );
+      })
+      // switchMap(({ query }) => {
+      //   if (query === '') {
+      //     return empty;
+      //   }
+
+      // this.http.get('assets/data/ants.json').pipe(
+      //   tap(console.log),
+      //   map((items: Ant[]) => {
+      //     // es ok. llama a acción, y este al reducer de la acción,
+      //     // la cual añade en entities con addMany
+      //     return SearchActions.searchSuccess({ items });
+      //   }
+      //   ),
+      //   catchError((error) => of(SearchActions.searchFailure({ error }))
+      //   )
+      // )
+
+
+
+
+    )
+
+  );
+
+
 
   // search$ = createEffect(
   //   () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>

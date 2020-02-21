@@ -1,6 +1,6 @@
 import {
   SearchActions,
-  FiltersActions
+  // FiltersActions
 } from '../actions';
 import { createReducer, on } from '@ngrx/store';
 
@@ -22,7 +22,7 @@ const initialState: State = {
 
 export const reducer = createReducer(
   initialState,
-  on(FiltersActions.buscarItemsBuscador, (state, { query }) => {
+  on(SearchActions.searchItems, (state, { query }) => {
     return query === ''
       ? {
           ids: [],
