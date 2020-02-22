@@ -10,7 +10,7 @@
 <div class="list-cards">
     <!--  -->
 
-    <ion-card (click)="openCard('122')" *ngFor="let item of  (ants$ | async)?.items">
+    <ion-card (click)="openCard(item.id)" *ngFor="let item of  (ants$ | async)?.items">
         <ion-card-header>
             <img src="assets/img/ants/{{item.images[0] || 'noimage.png'}}" />
             <ion-card-subtitle>{{item.taxonomy.subfamily}} - {{item.taxonomy.tribe}}</ion-card-subtitle>

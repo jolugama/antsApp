@@ -70,7 +70,7 @@ export const selectItemsSearch = createSelector(
   selectItemsState,
   (state: ItemsState) => {
     const arr = [];
-    for (const item of state.items.ids) {
+    for (const item of state.search.ids) {
       arr.push(state.items.entities[item]);
     }
 

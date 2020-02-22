@@ -64,7 +64,7 @@ export class ItemEffects {
 
   // Cuando carga el json satisfactoriamente, hace un primer filtro vacío para obtener el array de items.
   loadItemsJsonSuccess$ = createEffect(
-    () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
+    () => ({ debounce = 0, scheduler = asyncScheduler } = {}) =>
       this.actions$.pipe(
         ofType(ItemsActions.loadItemsSuccess),
         debounceTime(debounce, scheduler),
@@ -80,7 +80,7 @@ export class ItemEffects {
 
   // muestra un array de items con los filtros actuales aplicados
   search$ = createEffect(
-    () => ({ debounce = 500, scheduler = asyncScheduler } = {}) =>
+    () => ({ debounce = 100, scheduler = asyncScheduler } = {}) =>
       this.actions$.pipe(
         ofType(SearchActions.searchItems),
         debounceTime(debounce, scheduler),
@@ -96,10 +96,7 @@ export class ItemEffects {
             skip(1)
           );
 
-
-
           return this.itemsService.getItems(query).pipe(
-            // debounceTime(2400),
             tap(e => console.log('search$')),
             takeUntil(nextSearch$),
             tap(console.log),

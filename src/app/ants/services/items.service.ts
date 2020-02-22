@@ -9,17 +9,45 @@ import { Store } from '@ngrx/store';
   providedIn: 'root'
 })
 export class ItemsService {
-
+  query = '';
   constructor(
     private store$: Store<fromItems.State>,
   ) { }
 
   getItems(query) {
+    this.query = this.removeTildes(query);
     return of(query).pipe(
       withLatestFrom(this.store$),
       map(([action, storeState]) => {
-        return Object.values(storeState.ants.items.entities);
+
+        const items = Object.values(storeState.ants.items.entities);
+        const result = [];
+        if (this.query === '') {
+          return items;
+        }
+        for (const item of items) {
+          if (item.taxonomy.specie.includes(this.query)) {
+            result.push(item);
+          }
+        }
+        // debugger;
+        return result;
       }),
     );
+  }
+
+
+  removeTildes(input) {
+    const tittles = 'ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç';
+    const original = 'AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc';
+
+    for (let i = 0; i < tittles.length; i++) {
+      // tslint:disable-next-line:prefer-for-of
+      for (let j = 0; j < input.length; j++) {
+        input = input.replace(tittles.charAt(i), original.charAt(i)).toLowerCase();
+      }
+
+    }
+    return input;
   }
 }
