@@ -16,8 +16,6 @@ export class ItemsService {
 
   getItems(query) {
     return of(query).pipe(
-      // tap(e => console.log('jose')),
-      // debounceTime(1000),
       withLatestFrom(this.store$),
       map(([action, storeState]) => {
         return Object.values(storeState.ants.items.entities);
