@@ -59,14 +59,18 @@ export const selectItemsState = createFeatureSelector<State, ItemsState>(
 
 
 
+
 export const selectCollectionState = createSelector(
   selectItemsState,
   (state: ItemsState) => state.favorites
 );
 
-export const selectItemsArrayState = createSelector(
+export const selectItemsSearch = createSelector(
   selectItemsState,
-  (state: ItemsState) => Object.values(state.items.entities)
+  (state: ItemsState) => {
+
+    return Object.values(state.search.ids);
+  }
 );
 
 // export const selectBookCollection = createSelector(

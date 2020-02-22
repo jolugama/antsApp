@@ -35,14 +35,14 @@ export class AntsComponent implements OnInit {
     //   this.findItems('');
     // }, 1000);
 
-    // this.ants$ = store$.pipe(
-    //   select(fromItems.selectItemsArrayState)
-    // );
+    this.ants$ = store$.pipe(
+      select(fromItems.selectItemsSearch)
+    );
 
-    // this.ants$
-    //   .subscribe(arg => {
-    //     // console.log('carga ', arg);
-    //   });
+    this.ants$
+      .subscribe(arg => {
+        console.log('carga ', arg);
+      });
 
 
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
-import { map, withLatestFrom } from 'rxjs/operators';
+import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
 
 import * as fromItems from '@ants/reducers';
 import { Store } from '@ngrx/store';
@@ -20,7 +20,7 @@ export class ItemsService {
       map(([action, storeState]) => {
         // tslint:disable-next-line:no-string-literal
         return Object.values(storeState.ants.items.entities);
-      })
+      }),
     );
   }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { asyncScheduler, EMPTY as empty, of } from 'rxjs';
+import { asyncScheduler, EMPTY as empty, of, timer } from 'rxjs';
 import {
   catchError,
   debounceTime,
@@ -62,51 +62,58 @@ export class ItemEffects {
 
 
   // Cuando carga el json satisfactoriamente, hace un primer filtro vacío para obtener el array de items.
-  loadItemsJsonSuccess$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(ItemsActions.loadItemsSuccess),
-      switchMap(({ items }) => {
-        const query = '';
-        return of(SearchActions.searchItems({ query }));
+  loadItemsJsonSuccess$ = createEffect(
+    () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
+      this.actions$.pipe(
+        ofType(ItemsActions.loadItemsSuccess),
+        debounceTime(debounce, scheduler),
+        switchMap(({ items }) => {
+          const query = '';
+          return of(SearchActions.searchItems({ query }));
 
-      })
+        })
 
-    )
+      )
   );
 
 
+  // muestra un array de items con los filtros actuales aplicados
+  search$ = createEffect(
+    () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
+      this.actions$.pipe(
+        ofType(SearchActions.searchItems),
+        debounceTime(debounce, scheduler),
+        switchMap(({ query }) => {
+          // if (query === '') {
+          //   return empty;
+          // }
 
-  // carga json
-  search$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(SearchActions.searchItems),
-      switchMap(({ query }) => {
-
-        // if (query === '') {
-        //   return empty;
-        // }
-
-        const nextSearch$ = this.actions$.pipe(
-          ofType(SearchActions.searchItems),
-          skip(1)
-        );
-
-        return this.itemsService.getItems(query).pipe(
-          takeUntil(nextSearch$),
-          tap(console.log),
-          map((items: Ant[]) => SearchActions.searchSuccess({ items })),
-          catchError(err =>
-            of(SearchActions.searchFailure({ error: err.message }))
-          )
-        );
+          // si hay varias peticiones de esta misma acción
+          // solo se procesará 1.
+          const nextSearch$ = this.actions$.pipe(
+            ofType(SearchActions.searchItems),
+            skip(1)
+          );
 
 
-      })
+          return this.itemsService.getItems(query).pipe(
+            // debounceTime(2400),
+            tap(e => console.log('jose')),
+            takeUntil(nextSearch$),
+            tap(console.log),
+            map((items: Ant[]) => SearchActions.searchSuccess({ items })),
+            catchError(err =>
+              of(SearchActions.searchFailure({ error: err.message }))
+            )
+          );
+
+
+        })
 
 
 
 
-    )
+      )
 
   );
 
