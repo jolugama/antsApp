@@ -38,7 +38,7 @@ export class AntsComponent implements OnInit {
     );
 
     this.ants$.pipe(
-      distinctUntilChanged((a, b) => JSON.stringify(a) === JSON.stringify(b))
+      distinctUntilChanged((a, b) => JSON.stringify(a.items) === JSON.stringify(b.items))
     ).subscribe(res => {
       console.log('carga ', res);
     });
