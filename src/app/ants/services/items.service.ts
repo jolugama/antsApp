@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
-import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
+import { of, timer, Observable } from 'rxjs';
+import { map, withLatestFrom, distinctUntilChanged, debounceTime, tap } from 'rxjs/operators';
 
 import * as fromItems from '@ants/reducers';
 import { Store } from '@ngrx/store';
@@ -16,9 +16,10 @@ export class ItemsService {
 
   getItems(query) {
     return of(query).pipe(
+      // tap(e => console.log('jose')),
+      // debounceTime(1000),
       withLatestFrom(this.store$),
       map(([action, storeState]) => {
-        // tslint:disable-next-line:no-string-literal
         return Object.values(storeState.ants.items.entities);
       }),
     );

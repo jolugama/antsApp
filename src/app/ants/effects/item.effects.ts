@@ -11,6 +11,7 @@ import {
   takeUntil,
   tap,
   withLatestFrom,
+  distinctUntilChanged,
 } from 'rxjs/operators';
 
 
@@ -79,7 +80,7 @@ export class ItemEffects {
 
   // muestra un array de items con los filtros actuales aplicados
   search$ = createEffect(
-    () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
+    () => ({ debounce = 500, scheduler = asyncScheduler } = {}) =>
       this.actions$.pipe(
         ofType(SearchActions.searchItems),
         debounceTime(debounce, scheduler),
@@ -96,9 +97,10 @@ export class ItemEffects {
           );
 
 
+
           return this.itemsService.getItems(query).pipe(
             // debounceTime(2400),
-            tap(e => console.log('jose')),
+            tap(e => console.log('search$')),
             takeUntil(nextSearch$),
             tap(console.log),
             map((items: Ant[]) => SearchActions.searchSuccess({ items })),
@@ -107,99 +109,11 @@ export class ItemEffects {
             )
           );
 
-
         })
-
-
-
-
       )
 
   );
 
-
-
-  // search$ = createEffect(
-  //   () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
-  //     this.actions$.pipe(
-  //       ofType(FiltersActions.buscarItemsBuscador),
-  //       debounceTime(debounce, scheduler),
-  //       switchMap(({ query }) => {
-  //         if (query === '') {
-  //           return empty;
-  //         }
-
-  //         const nextSearch$ = this.actions$.pipe(
-  //           ofType(FiltersActions.buscarItemsBuscador),
-  //           skip(1)
-  //         );
-
-  //         return this.store.pipe(
-  //           select(fromItems.selectAntsArrayState),
-  //           takeUntil(nextSearch$),
-  //           map((ant: Ant[]) => {
-  //             return [];
-  //           })
-  //         );
-
-  //         // this.store.pipe(
-  //         //   select(fromItems.selectAntsArrayState),
-  //         //   map((id, entities) => {
-  //         //     return entities;
-  //         //   }
-  //         //   )
-  //         // );
-
-  //         // return switchMap(() => {
-  //         //   // return select(fromItems.selectAntsArrayState);
-  //         //   return this.store.pipe(
-  //         //     select(fromItems.selectAntsArrayState),
-  //         //     // tap((r) => console.log('xx', r))
-
-  //         //   );
-  //         // });
-
-  //         // return this.googleBooks.searchBooks(query).pipe(
-  //         //   takeUntil(nextSearch$),
-  //         //   map((books: Book[]) => BooksApiActions.searchSuccess({ books })),
-  //         //   catchError(err =>
-  //         //     of(BooksApiActions.searchFailure({ errorMsg: err.message }))
-  //         //   )
-  //         // );
-  //       })
-  //     )
-  // );
-
-
-
-
-
-
-  // search$ = createEffect(
-  //   () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
-  //     this.actions$.pipe(
-  //       ofType(FindBookPageActions.searchBooks),
-  //       debounceTime(debounce, scheduler),
-  //       switchMap(({ query }) => {
-  //         if (query === '') {
-  //           return empty;
-  //         }
-
-  //         const nextSearch$ = this.actions$.pipe(
-  //           ofType(FindBookPageActions.searchBooks),
-  //           skip(1)
-  //         );
-
-  //         return this.googleBooks.searchBooks(query).pipe(
-  //           takeUntil(nextSearch$),
-  //           map((books: Book[]) => BooksApiActions.searchSuccess({ books })),
-  //           catchError(err =>
-  //             of(BooksApiActions.searchFailure({ errorMsg: err.message }))
-  //           )
-  //         );
-  //       })
-  //     )
-  // );
 
 
 

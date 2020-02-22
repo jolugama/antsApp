@@ -68,8 +68,11 @@ export const selectCollectionState = createSelector(
 export const selectItemsSearch = createSelector(
   selectItemsState,
   (state: ItemsState) => {
-
-    return Object.values(state.search.ids);
+    const arr = [];
+    for (const item of state.items.ids) {
+      arr.push(state.items.entities[item]);
+    }
+    return arr;
   }
 );
 

@@ -9,7 +9,7 @@ import { Observable, of } from 'rxjs';
 
 import { ItemsActions, SearchActions, FiltersActions } from '@ants/actions';
 import * as fromItems from '@ants/reducers';
-import { map, withLatestFrom } from 'rxjs/operators';
+import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
 import { ItemsService } from '@ants/services/items.service';
 
 
@@ -39,7 +39,9 @@ export class AntsComponent implements OnInit {
       select(fromItems.selectItemsSearch)
     );
 
-    this.ants$
+    this.ants$.pipe(
+      distinctUntilChanged((a, b) => JSON.stringify(a) === JSON.stringify(b))
+    )
       .subscribe(arg => {
         console.log('carga ', arg);
       });
