@@ -3,11 +3,19 @@ import {
   // FiltersActions
 } from '../actions';
 import { createReducer, on } from '@ngrx/store';
+import { Ant } from '@ants/models';
 
 export const searchFeatureKey = 'search';
 
 export interface State {
   ids: number[];
+  loading: boolean;
+  error: string;
+  query: string;
+}
+
+export interface SelectState {
+  items: Ant[];
   loading: boolean;
   error: string;
   query: string;

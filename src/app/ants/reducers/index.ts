@@ -1,4 +1,4 @@
-import { Ant } from './../models';
+
 import {
   createSelector,
   createFeatureSelector,
@@ -9,6 +9,7 @@ import * as fromRoot from '@redux/reducers';
 import * as fromItems from './items.reducer';
 import * as fromFavorites from './favorites.reducer';
 import * as fromSearch from './search.reducer';
+import { Ant } from '@ants/models';
 
 export const itemsFeatureKey = 'ants';
 
@@ -72,7 +73,15 @@ export const selectItemsSearch = createSelector(
     for (const item of state.items.ids) {
       arr.push(state.items.entities[item]);
     }
-    return arr;
+
+    const resp: fromSearch.SelectState = {
+      items: arr,
+      loading: state.search.loading,
+      error: state.search.error,
+      query: state.search.query
+    };
+
+    return resp;
   }
 );
 

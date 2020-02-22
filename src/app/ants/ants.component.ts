@@ -24,6 +24,7 @@ import { ItemsService } from '@ants/services/items.service';
 export class AntsComponent implements OnInit {
   ants$: Observable<any>;
 
+
   constructor(
     private store$: Store<fromItems.State>,
     private itemsService: ItemsService
@@ -31,9 +32,6 @@ export class AntsComponent implements OnInit {
   ) {
     this.store$.dispatch(ItemsActions.loadItems());
 
-    // setTimeout(() => {
-    //   this.findItems('');
-    // }, 1000);
 
     this.ants$ = store$.pipe(
       select(fromItems.selectItemsSearch)
@@ -41,10 +39,9 @@ export class AntsComponent implements OnInit {
 
     this.ants$.pipe(
       distinctUntilChanged((a, b) => JSON.stringify(a) === JSON.stringify(b))
-    )
-      .subscribe(arg => {
-        console.log('carga ', arg);
-      });
+    ).subscribe(res => {
+      console.log('carga ', res);
+    });
 
 
 
