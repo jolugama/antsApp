@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-ants',
+  selector: 'app-ants-list',
   templateUrl: './ants-list.component.html',
   styleUrls: ['./ants-list.component.scss']
 })

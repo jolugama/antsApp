@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 
-import { ItemsListComponent } from './components/list-items/list-items.component';
-import { ItemSelectedComponent } from './components/item-selected/item-selected.component';
-
+import { ItemsListComponent } from '@shared/components/list-items/list-items.component';
+import { ItemSelectedComponent } from '@shared/components/item-selected/item-selected.component';
+import { SharedModule } from '@shared/shared.module';
 
 const routes: Routes = [
   { path: '', component: ItemsListComponent, data: { title: 'Ants' } },
@@ -13,7 +13,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes),
+    SharedModule
+  ],
   exports: [RouterModule]
 })
 export class AntsRoutingModule { }

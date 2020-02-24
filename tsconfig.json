@@ -24,6 +24,7 @@
       "@redux/*": ["src/app/redux/*"],
       "@ants/*": ["src/app/ants/*"],
       "@environments/*": ["src/environments/*"],
+      "@shared/*": ["src/app/shared/*"],
     }
   },
   "angularCompilerOptions": {

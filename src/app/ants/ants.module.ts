@@ -18,8 +18,12 @@ import { FavoriteItemEffects, ItemEffects } from './effects';
 
 import { AntsListComponent } from './components/ants-list/ants-list.component';
 import { AntsSelectedComponent } from './components/ants-selected/ants-selected.component';
-import { ItemsListComponent } from './components/list-items/list-items.component';
-import { ItemSelectedComponent } from './components/item-selected/item-selected.component';
+
+
+
+import { SharedModule } from '@shared/shared.module';
+
+
 
 
 
@@ -27,15 +31,14 @@ import { ItemSelectedComponent } from './components/item-selected/item-selected.
 @NgModule({
   declarations: [
     AntsListComponent,
-    AntsSelectedComponent,
-    ItemsListComponent,
-    ItemSelectedComponent
+    AntsSelectedComponent
   ],
   imports: [
     CommonModule,
     IonicModule,
     FormsModule,
     AntsRoutingModule,
+    SharedModule,
     /**
      * StoreModule.forFeature is used for composing state
      * from feature modules. These modules can be loaded
@@ -53,6 +56,9 @@ import { ItemSelectedComponent } from './components/item-selected/item-selected.
      * whether they are registered once or multiple times.
      */
     EffectsModule.forFeature([FavoriteItemEffects, ItemEffects]),
+  ],
+  exports: [
+
   ]
 })
 export class AntsModule { }
