@@ -9,7 +9,6 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 
 import { AntsRoutingModule } from './ants-routing.module';
-import { AntsComponent } from './ants.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
@@ -17,10 +16,19 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromAnts from './reducers';
 import { FavoriteItemEffects, ItemEffects } from './effects';
 
+import { AntsComponent } from './ants.component';
+import { ItemSelectedComponent } from './item-selected/item-selected.component';
+import { ListItemsComponent } from './list-items/list-items.component';
+
+
 
 
 @NgModule({
-  declarations: [AntsComponent],
+  declarations: [
+    AntsComponent,
+    ListItemsComponent,
+    ItemSelectedComponent
+  ],
   imports: [
     CommonModule,
     IonicModule,

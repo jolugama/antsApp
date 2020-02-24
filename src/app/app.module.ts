@@ -12,12 +12,17 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { FormsModule } from '@angular/forms';
 
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReduxModule } from './redux/redux.module';
 
+
+import { AppComponent } from './app.component';
+
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -25,7 +30,6 @@ import { ReduxModule } from './redux/redux.module';
     HttpClientModule,
     ReduxModule,
     IonicModule.forRoot({
-      rippleEffect: false,
       mode: 'md'
     }),
     FormsModule
