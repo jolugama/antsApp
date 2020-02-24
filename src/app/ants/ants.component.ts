@@ -11,6 +11,7 @@ import { ItemsActions, SearchActions, FiltersActions } from '@ants/actions';
 import * as fromItems from '@ants/reducers';
 import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
 import { ItemsService } from '@ants/services/items.service';
+import { Router } from '@angular/router';
 
 
 
@@ -27,7 +28,8 @@ export class AntsComponent implements OnInit {
 
   constructor(
     private store$: Store<fromItems.State>,
-    private itemsService: ItemsService
+    private itemsService: ItemsService,
+    public router: Router
     // private ionSearchbar: IonSearchbar
   ) {
     this.store$.dispatch(ItemsActions.loadItems());
@@ -82,6 +84,7 @@ export class AntsComponent implements OnInit {
 
   openCard(id) {
     console.log('click Card', id);
+    this.router.navigate([`/ants/${id}`]);
 
   }
 

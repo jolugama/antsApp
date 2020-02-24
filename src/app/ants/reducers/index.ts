@@ -96,15 +96,46 @@ export const selectItemsSearch = createSelector(
 // );
 
 
-export const selectCollectionLoaded = createSelector(
-  selectCollectionState,
-  fromFavorites.getLoaded
-);
-export const getCollectionLoading = createSelector(
-  selectCollectionState,
-  fromFavorites.getLoading
-);
-// export const selectCollectionBookIds = createSelector(
-//   selectItemsState,
-//   fromItems.selectId
+// export const selectCollectionLoaded = createSelector(
+//   selectCollectionState,
+//   fromFavorites.getLoaded
 // );
+// export const getCollectionLoading = createSelector(
+//   selectCollectionState,
+//   fromFavorites.getLoading
+// );
+
+
+
+
+export const selectItemEntitiesState = createSelector(
+  selectItemsState,
+  state => state.items
+);
+
+export const selectSelectedItemId = createSelector(
+  selectItemEntitiesState,
+  fromItems.selectId
+);
+
+
+
+// export const selectBookCollection = createSelector(
+//   selectItemEntitiesState,
+//   selectSelectedItemId,
+//   (entities, ids) => {
+//     return ids
+//       .map(id => entities[id])
+//       .filter((item): item is Ant => item != null);
+//   }
+// );
+
+
+export const selectSelectedItem = createSelector(
+  selectItemEntitiesState,
+  selectSelectedItemId,
+  (entities, selectedId) => {
+    debugger;
+    return selectedId && entities[selectedId];
+  }
+);

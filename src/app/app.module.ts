@@ -24,7 +24,10 @@ import { ReduxModule } from './redux/redux.module';
     AppRoutingModule,
     HttpClientModule,
     ReduxModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      rippleEffect: false,
+      mode: 'md'
+    }),
     FormsModule
   ],
   providers: [
@@ -32,7 +35,10 @@ import { ReduxModule } from './redux/redux.module';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // exports: [
+  //   IonicModule
+  // ]
 
 })
 export class AppModule { }

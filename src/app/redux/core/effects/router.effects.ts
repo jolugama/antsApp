@@ -21,7 +21,7 @@ export class RouterEffects {
         }),
         mergeMap(route => route.data),
         // tslint:disable-next-line:no-string-literal
-        map(data => `AntApp  - ${data['title']}`),
+        map(data => `AntApp  - ${data['title']} `),
         tap(title => this.titleService.setTitle(title))
       ),
     {

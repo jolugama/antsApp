@@ -21,4 +21,10 @@ export const loadItemsFailure = createAction(
 );
 
 
+export const selectItem = createAction(
+  '[Item Page] Select Item',
+  props<{ id: number }>()
+);
+
+
 

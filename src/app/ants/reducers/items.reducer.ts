@@ -37,7 +37,11 @@ export const reducer = createReducer(
   })),
   on(ItemsActions.loadItemsSuccess,
     (state, { items }) => adapter.addMany(items, state)
-  )
+  ),
+  on(ItemsActions.selectItem, (state, { id }) => ({
+    ...state,
+    selectedItemId: id,
+  }))
 );
 
 

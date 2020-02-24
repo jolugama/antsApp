@@ -26,9 +26,19 @@ export class ItemsService {
           return items;
         }
         for (const item of items) {
-          if (item.taxonomy.specie.includes(this.query)) {
+          let resultado = true;
+
+          this.query.split(' ').map((d) => {
+            if (item.taxonomy.specie.includes(d) === false) {
+              resultado = false;
+            }
+          });
+
+          if (resultado) {
             result.push(item);
           }
+
+
         }
         // debugger;
         return result;
