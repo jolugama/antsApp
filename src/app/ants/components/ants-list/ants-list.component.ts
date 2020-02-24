@@ -19,8 +19,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ants',
-  templateUrl: './ants.component.html',
-  styleUrls: ['./ants.component.scss']
+  templateUrl: './ants-list.component.html',
+  styleUrls: ['./ants-list.component.scss']
 })
 export class AntsListComponent implements OnInit {
   ants$: Observable<any>;
