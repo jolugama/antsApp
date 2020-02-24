@@ -16,17 +16,19 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromAnts from './reducers';
 import { FavoriteItemEffects, ItemEffects } from './effects';
 
-import { AntsComponent } from './ants.component';
-import { ItemSelectedComponent } from './item-selected/item-selected.component';
-import { ListItemsComponent } from './list-items/list-items.component';
+import { AntsListComponent } from './components/list-ants/ants.component';
+import { AntsSelectedComponent } from './components/ants-selected/ants-selected.component';
+import { ItemsListComponent } from './components/list-items/list-items.component';
+import { ItemSelectedComponent } from './components/item-selected/item-selected.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AntsComponent,
-    ListItemsComponent,
+    AntsListComponent,
+    AntsSelectedComponent,
+    ItemsListComponent,
     ItemSelectedComponent
   ],
   imports: [

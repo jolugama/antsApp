@@ -22,7 +22,7 @@ import { Router } from '@angular/router';
   templateUrl: './ants.component.html',
   styleUrls: ['./ants.component.scss']
 })
-export class AntsComponent implements OnInit {
+export class AntsListComponent implements OnInit {
   ants$: Observable<any>;
 
 

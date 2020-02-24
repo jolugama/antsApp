@@ -15,7 +15,7 @@
     </ion-content>
   </ion-menu> -->
 
-  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu" 
+  <!-- <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu" 
   (ionDidClose)="openCloseSidenav($event)" (ionDidOpen)="openCloseSidenav($event)">
     <ion-header>
       <ion-toolbar color="tertiary">
@@ -31,38 +31,22 @@
         <ion-item>Menu Item</ion-item>
       </ion-list>
     </ion-content>
-  </ion-menu>
-
-  <!-- <ion-menu side="end" type="push" contentId="main">
-    <ion-header>
-      <ion-toolbar color="danger">
-        <ion-title>End Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
   </ion-menu> -->
+
 
 
   <ion-header translucent>
     <ion-toolbar>
       <!-- (click)="openSidenav()" -->
       <ion-buttons slot="start">
-        <ion-menu-button  ></ion-menu-button>
+        <ion-back-button text="" defaultHref="/ants"></ion-back-button>
       </ion-buttons>
-      <ion-back-button text="backText" defaultHref="/ants"></ion-back-button>
-      <ion-buttons slot="end">
+     
+      <!-- <ion-buttons slot="end">
         <ion-back-button>Volver</ion-back-button>
-      </ion-buttons>
+      </ion-buttons> -->
       <ion-title>
-        AntApp
+        xxxx
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -75,7 +59,7 @@
     </ion-header>
 
     <div id="container">
-      <app-ants></app-ants>
+      <app-ants-selected></app-ants-selected>
       
     </div>
   </ion-content>

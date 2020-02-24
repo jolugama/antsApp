@@ -40,7 +40,7 @@ export class ItemSelectedComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.item$ = this.store.pipe(select(fromItems.selectSelectedItem)) as Observable<Ant>;
     this.item$.subscribe((a) => {
-      debugger;
+      // debugger;
     });
   }
 

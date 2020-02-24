@@ -14,7 +14,7 @@ import * as fromRoot from '@redux/reducers';
   templateUrl: './list-items.component.html',
   styleUrls: ['./list-items.component.scss'],
 })
-export class ListItemsComponent implements OnInit {
+export class ItemsListComponent implements OnInit {
 
   constructor(
     private menu: MenuController,

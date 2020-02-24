@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ListItemsComponent } from './list-items/list-items.component';
-import { ItemSelectedComponent } from './item-selected/item-selected.component';
+
+
+import { ItemsListComponent } from './components/list-items/list-items.component';
+import { ItemSelectedComponent } from './components/item-selected/item-selected.component';
 
 
 const routes: Routes = [
-  { path: '', component: ListItemsComponent, data: { title: 'Ants' } },
+  { path: '', component: ItemsListComponent, data: { title: 'Ants' } },
   { path: ':id', component: ItemSelectedComponent, data: { title: 'Ants Selected' } }
 ];
 
