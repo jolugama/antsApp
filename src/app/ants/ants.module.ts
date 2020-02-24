@@ -16,8 +16,8 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromAnts from './reducers';
 import { FavoriteItemEffects, ItemEffects } from './effects';
 
-import { AntsListComponent } from './components/ants-list/ants-list.component';
-import { AntsSelectedComponent } from './components/ants-selected/ants-selected.component';
+// import { AntsListComponent } from './components/ants-list/ants-list.component';
+// import { AntsSelectedComponent } from './components/ants-selected/ants-selected.component';
 
 
 
@@ -30,8 +30,7 @@ import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
-    AntsListComponent,
-    AntsSelectedComponent
+
   ],
   imports: [
     CommonModule,
