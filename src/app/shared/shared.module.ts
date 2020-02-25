@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { ItemsListComponent } from '@shared/components/list-items/list-items.component';
 import { ItemSelectedComponent } from '@shared/components/item-selected/item-selected.component';
+
 import { AdDirective } from '@shared/directives/ad.directive';
 
 // componentes dinámicos
@@ -26,6 +27,10 @@ import { AntsSelectedComponent } from '@ants/components/ants-selected/ants-selec
   exports: [
     ItemsListComponent,
     ItemSelectedComponent
-  ]
+  ],
+  entryComponents: [
+    AntsListComponent,
+    AntsSelectedComponent
+  ],
 })
 export class SharedModule { }
