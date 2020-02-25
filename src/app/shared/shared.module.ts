@@ -28,6 +28,10 @@ import { AntsSelectedComponent } from '@ants/components/ants-selected/ants-selec
     ItemsListComponent,
     ItemSelectedComponent
   ],
+  /**
+   * aquí se especifica los componentes que en algún momento
+   * se van a crear de forma dinámica
+   */
   entryComponents: [
     AntsListComponent,
     AntsSelectedComponent
