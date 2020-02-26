@@ -10,8 +10,6 @@ import { ItemSelectedComponent } from '@shared/components/item-selected/item-sel
 import { ItemPageComponent } from '@shared/components/item-page/item-page.component';
 import { DescriptionPageComponent } from '@shared/components/description-page/description-page.component';
 
-
-
 const routes: Routes = [
   { path: '', component: ItemPageComponent, data: { title: 'Ants' } },
   { path: 'x', component: ItemsListComponent, data: { title: 'Ants' } },
@@ -23,6 +21,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     SharedModule
   ],
-  exports: [RouterModule]
+  exports: [
+    RouterModule
+  ]
 })
 export class AntsRoutingModule { }
