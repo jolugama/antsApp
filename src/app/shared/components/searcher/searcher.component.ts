@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Out } from './interfaces';
+
 
 @Component({
   selector: 'app-searcher',
@@ -7,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearcherComponent implements OnInit {
 
+  @Output() out = new EventEmitter<Out>();
+  outObj: Out = {
+    value: ''
+  };
   constructor() { }
 
   ngOnInit() { }
 
-  findItems(items) {
-
+  findItems(text) {
+    this.outObj.value = text;
+    this.out.emit(this.outObj);
   }
 
 }

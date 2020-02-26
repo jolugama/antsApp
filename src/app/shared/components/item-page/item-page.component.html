@@ -18,10 +18,16 @@
 <ion-content fullscreen>
 
   <div id="container">
-
-    <app-searcher></app-searcher>
+    <app-searcher (out)="onSearch($event)"></app-searcher>
     <app-filter-box></app-filter-box>
+    <app-item-box></app-item-box>
     <!-- <ng-container #componenteDinamico></ng-container> -->
+
+
+      <!-- <ion-button [routerLink]="['/home']" routerDirection="root">Home</ion-button> -->
+
+
+
   </div>
 </ion-content>
 

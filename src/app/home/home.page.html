@@ -4,7 +4,11 @@
 
 
 <p>
-  <a routerLink="/ants" routerLinkActive="active">Hormigas</a>
+  <a [routerLink]="['/ants']" routerDirection="'forward'">Hormigas</a>
+
+  <ion-button [routerLink]="['/ants']" routerDirection="'forward'">Home</ion-button>
+
+
 </p>
 
 

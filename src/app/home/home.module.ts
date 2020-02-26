@@ -19,6 +19,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
+  exports: [RouterModule],
   declarations: [HomePage]
 })
 export class HomePageModule {}
