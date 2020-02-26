@@ -6,14 +6,25 @@ import { SharedModule } from '@shared/shared.module';
 
 import { ItemsListComponent } from '@shared/components/list-items/list-items.component';
 import { ItemSelectedComponent } from '@shared/components/item-selected/item-selected.component';
+import { ItemPage } from './components/item/item.page';
+// import { DescriptionPage } from './components/description/description.page';
 
-import { ItemPageComponent } from '@shared/components/item-page/item-page.component';
-import { DescriptionPageComponent } from '@shared/components/description-page/description-page.component';
+
+
+
 
 const routes: Routes = [
-  { path: '', component: ItemPageComponent, data: { title: 'Ants' } },
+  { path: '', component: ItemPage, data: { title: 'Ants' } },
   { path: 'x', component: ItemsListComponent, data: { title: 'Ants' } },
-  { path: ':id', component: ItemSelectedComponent, data: { title: 'Ants Selected' } }
+  { path: ':id', component: ItemSelectedComponent, data: { title: 'Ants Selected' } },
+  // {
+  //   path: 'item',
+  //   loadChildren: () => import('./components/item/item.module').then( m => m.ItemPageModule)
+  // },
+  // {
+  //   path: 'description',
+  //   loadChildren: () => import('./components/description/description.module').then( m => m.DescriptionPageModule)
+  // }
 ];
 
 @NgModule({
