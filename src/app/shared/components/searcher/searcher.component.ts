@@ -9,6 +9,10 @@ export class SearcherComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  findItems(items) {
+
+  }
 
 }

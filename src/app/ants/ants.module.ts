@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -19,10 +19,9 @@ import { FavoriteItemEffects, ItemEffects } from './effects';
 // import { AntsListComponent } from './components/ants-list/ants-list.component';
 // import { AntsSelectedComponent } from './components/ants-selected/ants-selected.component';
 
-
+// import { LoaderService } from '@ants/services/loader/loader.service';
 
 import { SharedModule } from '@shared/shared.module';
-
 
 
 
@@ -56,8 +55,15 @@ import { SharedModule } from '@shared/shared.module';
      */
     EffectsModule.forFeature([FavoriteItemEffects, ItemEffects]),
   ],
-  exports: [
-
-  ]
+  // providers: [
+  //   LoaderService,
+  //   {
+  //     provide: APP_INITIALIZER,
+  //     useFactory: (service: LoaderService) => {
+  //       return () => service.loadItems().then();
+  //     },
+  //     deps: [],
+  //     multi: true
+  //   }]
 })
 export class AntsModule { }
