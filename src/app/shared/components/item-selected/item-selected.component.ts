@@ -2,11 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 
-import * as fromItems from '@ants/reducers';
-import { ItemsActions } from '@ants/actions';
+import * as fromItems from '@pages/ants/reducers';
+import { ItemsActions } from '@pages/ants/actions';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { map } from 'rxjs/operators';
-import { Ant } from '@ants/models';
+import { Ant } from '@pages/ants/models';
 import { Observable } from 'rxjs';
 
 

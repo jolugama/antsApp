@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 
-import * as fromAntsActions from '@ants/actions';
-import * as fromAnts from '@ants/reducers';
+import * as fromAntsActions from '@pages/ants/actions';
+import * as fromAnts from '@pages/ants/reducers';
 import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
 
 import { Router } from '@angular/router';

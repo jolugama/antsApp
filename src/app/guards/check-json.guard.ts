@@ -4,7 +4,7 @@ import {
   ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { LoaderService } from '@ants/services/loader/loader.service';
+import { LoaderService } from '@pages/ants/services/loader/loader.service';
 
 
 @Injectable({

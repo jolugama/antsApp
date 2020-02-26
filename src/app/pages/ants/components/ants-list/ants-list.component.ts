@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 
-import { ItemsActions, SearchActions, FiltersActions } from '@ants/actions';
-import * as fromItems from '@ants/reducers';
+import { ItemsActions, SearchActions, FiltersActions } from '@pages/ants/actions';
+import * as fromItems from '@pages/ants/reducers';
 import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
-import { ItemsService } from '@ants/services/items.service';
+import { ItemsService } from '@pages/ants/services/items.service';
 import { Router } from '@angular/router';
 
 

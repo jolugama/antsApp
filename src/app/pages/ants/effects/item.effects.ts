@@ -25,7 +25,7 @@ import { HttpClient } from '@angular/common/http';
 import { Ant } from '../models';
 import * as fromItems from '../reducers';
 
-import { ItemsService } from '@ants/services/items.service';
+import { ItemsService } from '@pages/ants/services/items.service';
 
 @Injectable()
 export class ItemEffects {

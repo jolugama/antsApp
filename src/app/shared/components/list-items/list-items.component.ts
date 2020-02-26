@@ -13,8 +13,8 @@ import { LayoutActions } from '@redux/core/actions';
 import * as fromRoot from '@redux/reducers';
 
 // componentes dinámicos
-// import { AntsListComponent } from '@ants/components/ants-list/ants-list.component';
-// import { AntsSelectedComponent } from '@ants/components/ants-selected/ants-selected.component';
+// import { AntsListComponent } from '@pages/ants/components/ants-list/ants-list.component';
+// import { AntsSelectedComponent } from '@pages/ants/components/ants-selected/ants-selected.component';
 
 
 
@@ -57,7 +57,7 @@ export class ItemsListComponent implements OnInit, OnDestroy, AfterViewInit {
   async getLazyComponent() {
     // this.componentRef.destroy();
     this.compDynamicContainer.clear();
-    const { AntsListComponent } = await import('@ants/components/ants-list/ants-list.component');
+    const { AntsListComponent } = await import('@pages/ants/components/ants-list/ants-list.component');
     this.componentRef = this.compDynamicContainer.createComponent(
       this.resolver.resolveComponentFactory(AntsListComponent)
     );

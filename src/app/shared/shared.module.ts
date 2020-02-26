@@ -23,8 +23,9 @@ import { ItemSelectedComponent } from '@shared/components/item-selected/item-sel
 
 
 // componentes dinámicos
-import { AntsListComponent } from '@ants/components/ants-list/ants-list.component';
-import { AntsSelectedComponent } from '@ants/components/ants-selected/ants-selected.component';
+
+import { AntsSelectedComponent } from '@pages/ants/components/ants-selected/ants-selected.component';
+import { AntsListComponent } from '@pages/ants/components/ants-list/ants-list.component';
 
 
 

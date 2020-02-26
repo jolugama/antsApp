@@ -9,7 +9,7 @@ import * as fromRoot from '@redux/reducers';
 import * as fromItems from './items.reducer';
 import * as fromFavorites from './favorites.reducer';
 import * as fromSearch from './search.reducer';
-import { Ant } from '@ants/models';
+import { Ant } from '@pages/ants/models';
 
 export const itemsFeatureKey = 'ants';
 
@@ -135,7 +135,7 @@ export const selectSelectedItem = createSelector(
   selectItemEntitiesState,
   selectSelectedItemId,
   (entities, selectedId) => {
-    debugger;
+    // debugger;
     return selectedId && entities[selectedId];
   }
 );

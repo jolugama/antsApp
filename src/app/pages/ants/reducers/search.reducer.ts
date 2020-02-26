@@ -3,7 +3,7 @@ import {
   // FiltersActions
 } from '../actions';
 import { createReducer, on } from '@ngrx/store';
-import { Ant } from '@ants/models';
+import { Ant } from '@pages/ants/models';
 
 export const searchFeatureKey = 'search';
 
