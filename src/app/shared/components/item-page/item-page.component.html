@@ -1,3 +1,26 @@
-<p>
-  item-page works!
-</p>
+<app-menu></app-menu>
+
+
+
+
+<ion-header translucent>
+  <ion-toolbar>
+    <!-- (click)="openSidenav()" -->
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      AntApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <div id="container">
+
+    <app-searcher></app-searcher>
+    <app-filter-box></app-filter-box>
+    <!-- <ng-container #componenteDinamico></ng-container> -->
+  </div>
+</ion-content>

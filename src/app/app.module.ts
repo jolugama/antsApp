@@ -20,9 +20,16 @@ import { AppComponent } from './app.component';
 
 
 
+
+
+// export const PAGES = [
+//   EncyclopediaPageComponent
+// ];
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // ...PAGES
   ],
   entryComponents: [],
   imports: [
