@@ -13,8 +13,8 @@ import { LayoutActions } from '@redux/core/actions';
 import * as fromRoot from '@redux/reducers';
 
 // componentes dinámicos
-import { AntsListComponent } from '@ants/components/ants-list/ants-list.component';
-import { AntsSelectedComponent } from '@ants/components/ants-selected/ants-selected.component';
+// import { AntsListComponent } from '@ants/components/ants-list/ants-list.component';
+// import { AntsSelectedComponent } from '@ants/components/ants-selected/ants-selected.component';
 
 
 
@@ -27,8 +27,8 @@ import { AntsSelectedComponent } from '@ants/components/ants-selected/ants-selec
 })
 export class ItemsListComponent implements OnInit, OnDestroy, AfterViewInit {
   miFactory: ComponentFactory<any>;
-  componentRef: ComponentRef<AntsListComponent> = null; // se declara una variable referencia.
-  componentRef2: ComponentRef<AntsSelectedComponent> = null; // se declara una variable referencia.
+  componentRef: ComponentRef<any> = null; // se declara una variable referencia.
+  // componentRef2: ComponentRef<AntsSelectedComponent> = null; // se declara una variable referencia.
 
   // ViewContainerRef crea componentes en su interior de forma dinámica
   // Hay que añadir read: ViewContainerRef, ya que si no, devolvería un ElementRef
@@ -38,9 +38,10 @@ export class ItemsListComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // ComponentFactoryResolver es que el que permite crear componentes de forma dinámica.
   constructor(
-    private menu: MenuController,
+    // private menu: MenuController,
     private store: Store<fromRoot.State>,
-    private resolver: ComponentFactoryResolver
+    private resolver: ComponentFactoryResolver,
+    // private compDynamicContainer: ViewContainerRef,
   ) { }
 
   ngOnInit() {
@@ -48,18 +49,19 @@ export class ItemsListComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.miFactory = this.resolver.resolveComponentFactory(AntsListComponent);
-    this.componentRef = this.compDynamicContainer.createComponent(this.miFactory);
+    // this.miFactory = this.resolver.resolveComponentFactory(AntsListComponent);
+    // this.componentRef = this.compDynamicContainer.createComponent(this.miFactory);
+    this.getLazyComponent();
+  }
+
+  async getLazyComponent() {
+    // this.componentRef.destroy();
+    this.compDynamicContainer.clear();
+    const { AntsListComponent } = await import('@ants/components/ants-list/ants-list.component');
+    this.componentRef = this.compDynamicContainer.createComponent(
+      this.resolver.resolveComponentFactory(AntsListComponent)
+    );
     // this.componentRef.instance.openCard(24);
-
-
-    // setTimeout(() => {
-    //   this.componentRef.destroy();
-    //   this.miFactory = this.resolver.resolveComponentFactory(AntsSelectedComponent);
-    //   // En la referencia componentRef, creamos el componente dinámico dentro del contenedor compDynamicContainer
-    //   // el tipo de componente dinámico lo asigna la factoría
-    //   this.componentRef2 = this.compDynamicContainer.createComponent(this.miFactory);
-    // }, 2000);
   }
 
 
