@@ -27,6 +27,8 @@ import { ItemSelectedComponent } from '@shared/components/item-selected/item-sel
 import { AntsSelectedComponent } from '@pages/ants/components/ants-selected/ants-selected.component';
 import { AntsListComponent } from '@pages/ants/components/ants-list/ants-list.component';
 
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -60,13 +62,15 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     IonicModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   exports: [
     ...DYNAMIC_COMPONENTS,
     ...COMPONENTS,
     ItemsListComponent,
-    ItemSelectedComponent
+    ItemSelectedComponent,
+    RouterModule
   ]
 
 })

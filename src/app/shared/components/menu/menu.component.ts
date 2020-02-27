@@ -14,6 +14,18 @@ import * as fromRoot from '@redux/reducers';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
+  appPages = [
+    {
+      title: 'Home',
+      url: '/home',
+      icon: 'calendar'
+    },
+    {
+      title: 'Hormigas',
+      url: '/ants',
+      icon: 'calendar'
+    }
+  ];
 
   constructor(
     private store: Store<fromRoot.State>,
@@ -28,7 +40,10 @@ export class MenuComponent implements OnInit {
     } else if (event.type === 'ionDidClose') {
       this.store.dispatch(LayoutActions.closeSidenav());
     }
+  }
 
+  openTutorial() {
+    console.log('click');
   }
 
 }

@@ -15,6 +15,19 @@ import * as searcher from '@shared/components/searcher/interfaces';
 })
 export class ItemPageComponent implements OnInit {
   searcher: searcher.Out;
+  appPages = [
+    {
+      title: 'Home',
+      url: '/home',
+      icon: 'calendar'
+    },
+    {
+      title: 'Hormigas',
+      url: '/ants',
+      icon: 'calendar'
+    }
+  ];
+
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -26,6 +39,19 @@ export class ItemPageComponent implements OnInit {
   onSearch(out: searcher.Out) {
     this.searcher = out;
     console.log(out.value);
+  }
+
+
+  openCloseSidenav(event) {
+    // if (event.type === 'ionDidOpen') {
+    //   this.store.dispatch(LayoutActions.openSidenav());
+    // } else if (event.type === 'ionDidClose') {
+    //   this.store.dispatch(LayoutActions.closeSidenav());
+    // }
+  }
+
+  openTutorial() {
+    console.log('click');
   }
 
 }
