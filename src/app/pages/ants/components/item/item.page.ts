@@ -10,11 +10,14 @@ export class ItemPage implements OnInit {
 
   constructor(
     private dataService: DataService
-  ) { }
+  ) {
+    console.log('init page');
+    this.dataService.loadItems().subscribe();
+    // this.dataService.loadItems2();
+  }
 
   ngOnInit() {
-    console.log('init page');
-    this.dataService.loadItems();
+
   }
 
 }

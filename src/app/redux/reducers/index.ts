@@ -18,6 +18,14 @@ import * as fromRouter from '@ngrx/router-store';
 
 import * as fromLayout from '../core/reducers/layout.reducer';
 import { InjectionToken } from '@angular/core';
+import { Params } from '@angular/router';
+
+
+export interface RouterStateUrl {
+  url: string;
+  data: Params;
+  params: Params;
+}
 
 /**
  * As mentioned, we treat each reducer like a table in a database. This means
@@ -70,7 +78,18 @@ export const selectLayoutState = createFeatureSelector<State, fromLayout.State>(
   'layout'
 );
 
+export const selectRouter = createFeatureSelector<State, fromRouter.RouterReducerState<any>>('router');
+
 export const selecthowSidenav = createSelector(
   selectLayoutState,
   fromLayout.selectShowSidenav
 );
+
+export const {
+  selectQueryParams,    // select the current route query params
+  selectQueryParam,     // factory function to select a query param
+  selectRouteParams,    // select the current route params
+  selectRouteParam,     // factory function to select a route param
+  selectRouteData,      // select the current route data
+  selectUrl,            // select the current url
+} = fromRouter.getSelectors(selectRouter);

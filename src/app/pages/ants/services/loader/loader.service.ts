@@ -4,8 +4,12 @@ import { Injectable } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 
+import * as fromRootReducers from '@redux/reducers';
+import * as fromRootActions from '@redux/core/actions';
+
 import * as fromAntsActions from '@pages/ants/actions';
-import * as fromAnts from '@pages/ants/reducers';
+import * as fromAntsReducers from '@pages/ants/reducers';
+
 import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
 
 import { Router } from '@angular/router';
@@ -18,14 +22,23 @@ import { Router } from '@angular/router';
 export class LoaderService {
 
   constructor(
-    private store$: Store<fromAnts.State>,
+    private storeAnts$: Store<fromAntsReducers.State>,
+    private storeRoot$: Store<fromRootReducers.State>,
     public router: Router
   ) {
   }
 
   loadJson() {
-    this.store$.dispatch(fromAntsActions.ItemsActions.loadItems());
-    console.log( 'cargando json........');
+    this.getUrl();
+    this.storeAnts$.dispatch(fromAntsActions.ItemsActions.loadItems());
+    console.log('cargando json........');
+  }
 
+  getUrl() {
+
+  }
+
+  getItems() {
+    this.getUrl();
   }
 }
