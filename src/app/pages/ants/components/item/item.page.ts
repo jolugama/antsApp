@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '@shared/services/data.service';
+import { take } from 'rxjs/operators';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-item',
@@ -7,12 +9,17 @@ import { DataService } from '@shared/services/data.service';
   styleUrls: ['./item.page.scss'],
 })
 export class ItemPage implements OnInit {
-
+  items$: Subscription;
   constructor(
     private dataService: DataService
   ) {
     console.log('init page');
-    this.dataService.loadItems().subscribe();
+
+    this.items$ = this.dataService.loadItems().subscribe(
+      // {
+      //   complete: () => this.items$.unsubscribe()
+      // }
+    );
     // this.dataService.loadItems2();
   }
 
