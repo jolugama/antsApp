@@ -34,6 +34,8 @@ export class DataService {
 
   }
 
+  // carga los items sólo si estos no han sido cargados ya.
+  // para detectar que redux coger, mira la url, si es /ants lo coge del redux ants.
   loadItems(): Observable<any> {
     return this.storeRoot$.pipe(
       debounceTime(300),
@@ -41,6 +43,7 @@ export class DataService {
       // tap((data) => {
       //   debugger;
       // }),
+      // recojo el observable, y como voy a devoler otro observable lo enmascaro con un switchMap
       switchMap((value: string) => {
         if (value.split('/')[1].includes('ants')) {
           const temp = this.storeAnts$.pipe(
@@ -60,26 +63,9 @@ export class DataService {
           }
         }
       }),
-
-    );
-
-  }
-
-  loadItems2() {
-    this.storeRoot$.pipe(
-      select(fromRootReducers.selectUrl),
-      tap((data) => {
-        debugger;
-      }),
-      map((value: string) => {
-        alert('asdfsdafds');
-        if (value.split('/')[1].includes('ants')) {
-          this.storeAnts$.dispatch(fromAntsActions.ItemsActions.loadItems());
-        }
-      }),
-      // take(1)
     );
   }
+
 
   getItems() {
     // const obj = this.getUrl;

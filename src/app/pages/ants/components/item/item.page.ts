@@ -16,11 +16,7 @@ export class ItemPage implements OnInit {
     console.log('init page');
 
     this.items$ = this.dataService.loadItems().subscribe(
-      // {
-      //   complete: () => this.items$.unsubscribe()
-      // }
     );
-    // this.dataService.loadItems2();
   }
 
   ngOnInit() {
