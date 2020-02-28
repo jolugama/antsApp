@@ -17,8 +17,8 @@ export class ItemPage implements OnInit {
   ) {
     console.log('init page');
 
-    // TODO ants no debería estar aquí
-    this.items$ = this.dataService.loadItems('ants').subscribe(
+
+    this.items$ = this.dataService.loadItems().subscribe(
       // nothing
     );
   }

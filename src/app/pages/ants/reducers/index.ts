@@ -11,9 +11,11 @@ import * as fromFavorites from './favorites.reducer';
 import * as fromSearch from './search.reducer';
 import { Ant } from '@pages/ants/models';
 
+
+
 export const itemsFeatureKey = 'ants';
 
-export interface ItemsState {
+interface ItemsState {
   [fromFavorites.collectionFeatureKey]: fromFavorites.State;
   [fromItems.ItemsFeatureKey]: fromItems.State;
   [fromSearch.searchFeatureKey]: fromSearch.State;
@@ -22,6 +24,10 @@ export interface ItemsState {
 export interface State extends fromRoot.State {
   [itemsFeatureKey]: ItemsState;
 }
+
+
+
+
 
 /** Provide reducer in AoT-compilation happy way */
 export function reducers(state: ItemsState | undefined, action: Action) {
@@ -74,14 +80,16 @@ export const selectItemsSearch = createSelector(
       arr.push(state.items.entities[item]);
     }
 
-    const resp: fromSearch.SelectState = {
+    const resp = {
       items: arr,
       loading: state.search.loading,
       error: state.search.error,
       query: state.search.query
     };
 
-    return resp;
+    return {
+      [itemsFeatureKey]: resp
+    };
   }
 );
 

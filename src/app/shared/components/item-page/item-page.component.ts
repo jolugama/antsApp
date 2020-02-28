@@ -5,14 +5,17 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 
 import { DataService } from '@shared/services/data.service';
 import * as searcher from '@shared/components/searcher/interfaces';
 
+
+import { Observable } from 'rxjs';
+import { distinctUntilChanged } from 'rxjs/operators';
+
 import * as fromAntsReducers from '@pages/ants/reducers';
 import * as fromAntsActions from '@pages/ants/actions';
-
 
 @Component({
   selector: 'app-item-page',
@@ -21,13 +24,26 @@ import * as fromAntsActions from '@pages/ants/actions';
 })
 export class ItemPageComponent implements OnInit {
   searcher: searcher.Out;
-
+  items$: Observable<any>; // donde se almacena los items a mostrar (los filtrados)
 
   constructor(
     private dataService: DataService,
     private storeAnts$: Store<fromAntsReducers.State>,
 
-    ) { }
+  ) {
+
+    // almaceno todos los items
+    this.items$ = storeAnts$.pipe(
+      select(fromAntsReducers.selectItemsSearch)
+    );
+
+
+    this.items$.pipe(
+      distinctUntilChanged((a, b) => JSON.stringify(a.items) === JSON.stringify(b.items))
+    ).subscribe(res => {
+      console.log('carga ', res);
+    });
+  }
 
   ngOnInit() {
 
@@ -36,17 +52,11 @@ export class ItemPageComponent implements OnInit {
   // recibe del componente buscador y guarda el objeto en searcher.
   onSearch(out: searcher.Out) {
     this.searcher = out;
-    // console.log(out.value);
     this.findItems(this.searcher.value);
   }
 
   findItems(query: string) {
-    // console.log(query);
     this.storeAnts$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
-    // setTimeout(() => {
-    //   const itemsMock: Ant[] = [];
-    //   this.store.dispatch(SearchActions.searchSuccess({ items: itemsMock }));
-    // }, 2000);
   }
 
 }

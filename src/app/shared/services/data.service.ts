@@ -22,8 +22,9 @@ import { switchMap, map, tap, take, concatAll, debounceTime, distinctUntilChange
 export class DataService {
   items$: Observable<any>;
   route$: Observable<any>;
-  // keyAnts = 'ants';
-  // keyMushrooms = 'mushrooms';
+  keyAnts = 'ants';
+  currentKey: string;
+  keyMushrooms = 'mushrooms';
   constructor(
     public router: Router,
     private storeAnts$: Store<fromAntsReducers.State>,
@@ -37,18 +38,19 @@ export class DataService {
   /**
    * carga los items del key indicado, sólo si estos no han sido cargados ya.
    * para detectar que redux coger, mira la url, si contiene la key, lo coge.
-   * @param key es la palabra que debe contener la url
+   * key (keyAnts, keyMushrooms) es la palabra que debe contener la url
    */
-  loadItems(key): Observable<any> {
+  loadItems(): Observable<any> {
     return this.storeRoot$.pipe(
       debounceTime(300),
       select(fromRootReducers.selectUrl),
-      // tap((data) => {
-      //   debugger;
-      // }),
+      /* tap((data) => {
+         debugger;
+         }),
+      */
       // recojo el observable, y como voy a devoler otro observable lo enmascaro con un switchMap
       switchMap((value: string) => {
-        if (this.isOnState(value, key)) {
+        if (this.isOnState(value, this.keyAnts)) {
           const temp = this.storeAnts$.pipe(
             select(fromAntsReducers.selectItemsSearch),
             take(1)
@@ -56,15 +58,17 @@ export class DataService {
           // uno los 2 y no lo devuelvo hasta tenerlos todos.
           return combineLatest(of(value), temp);
         } else {
-          return combineLatest(of(value), of({ items: [] }));
+          return combineLatest(of(value), of({ [this.currentKey]: { items: [] } }));
         }
       }),
-      distinctUntilChanged((a, b) => JSON.stringify(a[1].items) === JSON.stringify(b[1].items)),
-      map((data) => {
-        if (data[1].items.length === 0) {
-          if (this.isOnState(data[0], key)) {
+      distinctUntilChanged((a: any, b: any) => JSON.stringify(a[1][this.currentKey].items) === JSON.stringify(b[1][this.currentKey].items)),
+      map((data: any) => {
+        if (data[1].ants.items.length === 0) {
+          if (this.isOnState(data[0], this.keyAnts)) {
             return this.storeAnts$.dispatch(fromAntsActions.ItemsActions.loadItems());
           }
+        } else {
+
         }
       }),
     );
@@ -76,11 +80,6 @@ export class DataService {
   //   // TODO falta completar
   // }
 
-  // getUrl() {
-  // }
-
-
-
 
 
   // ****** private zone ******
@@ -91,7 +90,11 @@ export class DataService {
    * @param word Es la palabra clave raiz, que debe contener
    */
   private isOnState(route, word): boolean {
-    return route.split('/')[1].includes(word);
+    const result = route.split('/')[1].includes(word);
+    if (result) {
+      this.currentKey = word;
+    }
+    return result;
   }
 
 
