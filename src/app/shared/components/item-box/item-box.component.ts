@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-box',
@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-box.component.scss'],
 })
 export class ItemBoxComponent implements OnInit {
+  @Input() data;
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }

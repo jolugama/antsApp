@@ -3,7 +3,7 @@
  *
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Store, select } from '@ngrx/store';
 
@@ -22,7 +22,8 @@ import * as fromAntsActions from '@pages/ants/actions';
   templateUrl: './item-page.component.html',
   styleUrls: ['./item-page.component.scss'],
 })
-export class ItemPageComponent implements OnInit {
+export class ItemPageComponent implements OnInit, OnDestroy {
+
   searcher: searcher.Out;
   items$: Observable<any>; // donde se almacena los items a mostrar (los filtrados)
 
@@ -39,7 +40,7 @@ export class ItemPageComponent implements OnInit {
 
 
     this.items$.pipe(
-      distinctUntilChanged((a, b) => JSON.stringify(a.items) === JSON.stringify(b.items))
+      distinctUntilChanged((a, b) => JSON.stringify(a.ants.items) === JSON.stringify(b.ants.items))
     ).subscribe(res => {
       console.log('carga ', res);
     });
@@ -57,6 +58,10 @@ export class ItemPageComponent implements OnInit {
 
   findItems(query: string) {
     this.storeAnts$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
+  }
+
+  ngOnDestroy(): void {
+    throw new Error('se destruye item-page');
   }
 
 }
