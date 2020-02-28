@@ -1,3 +1,7 @@
+/**
+ * Servicio que transforma cualquier resultado de un redux específico en agnóstico.
+ */
+
 import { Injectable } from '@angular/core';
 
 
@@ -22,9 +26,13 @@ import { switchMap, map, tap, take, concatAll, debounceTime, distinctUntilChange
 export class DataService {
   items$: Observable<any>;
   route$: Observable<any>;
-  keyAnts = 'ants';
+
   currentKey: string;
-  keyMushrooms = 'mushrooms';
+  keys = [
+    'ants',
+    'mushrooms'
+  ];
+
   constructor(
     public router: Router,
     private storeAnts$: Store<fromAntsReducers.State>,
@@ -41,29 +49,17 @@ export class DataService {
    * key (keyAnts, keyMushrooms) es la palabra que debe contener la url
    */
   loadItems(): Observable<any> {
-    return this.storeRoot$.pipe(
+    return this._setCurrentKey().pipe(
       debounceTime(300),
-      select(fromRootReducers.selectUrl),
-      /* tap((data) => {
-         debugger;
-         }),
-      */
-      // recojo el observable, y como voy a devoler otro observable lo enmascaro con un switchMap
+
+      // recojo el observable, y como voy a devolver otro observable lo enmascaro con un switchMap
       switchMap((value: string) => {
-        if (this.isOnState(value, this.keyAnts)) {
-          const temp = this.storeAnts$.pipe(
-            select(fromAntsReducers.selectItemsSearch),
-            take(1)
-          );
-          // uno los 2 y no lo devuelvo hasta tenerlos todos.
-          return combineLatest(of(value), temp);
-        } else {
-          return combineLatest(of(value), of({ [this.currentKey]: { items: [] } }));
-        }
+        return this._getItemSearch();
       }),
-      distinctUntilChanged((a: any, b: any) => JSON.stringify(a[1][this.currentKey].items) === JSON.stringify(b[1][this.currentKey].items)),
+      // distinctUntilChanged((a: any, b: any) => JSON.stringify(a[this.currentKey].items) === JSON.stringify(b[this.currentKey].items)),
       map((data: any) => {
-        if (data[1][this.currentKey].items.length === 0) {
+
+        if (data[this.currentKey].items.length === 0) {
           this._loadItems();
         } else {
           this.currentKey = '';
@@ -92,20 +88,49 @@ export class DataService {
    * @param route Es el que contiene la ruta completa
    * @param word Es la palabra clave raiz, que debe contener
    */
-  private isOnState(route, word): boolean {
-    const result = route.split('/')[1].includes(word);
-    if (result) {
-      this.currentKey = word;
-    }
-    return result;
-  }
+  // private _isOnState(route, word): boolean {
+  //   const result = route.split('/')[1].includes(word);
+  //   if (result) {
+  //     this.currentKey = word;
+  //   }
+  //   return result;
+  // }
 
   private _loadItems() {
-    if (this.currentKey === this.keyAnts) {
+    // si es ants
+    if (this.currentKey === this.keys[0]) {
       return this.storeAnts$.dispatch(fromAntsActions.ItemsActions.loadItems());
     }
   }
 
+  private _getItemSearch(): Observable<any> {
+    let result;
+    if (this.currentKey === this.keys[0]) {
+      result = this.storeAnts$.pipe(
+        select(fromAntsReducers.selectItemsSearch),
+        take(1)
+      );
+    } else {
+      result = of({ items: [] });
+    }
+    return result;
+  }
+
+
+  private _setCurrentKey(): Observable<string> {
+    return this.storeRoot$.pipe(
+      select(fromRootReducers.selectUrl),
+      map((value: string) => {
+        const index = this.keys.indexOf(value.split('/')[1]);
+        this.currentKey = this.keys[index];
+        return this.keys[index];
+      }),
+      catchError(() => {
+        this.currentKey = '';
+        return '';
+      })
+    );
+  }
 
 
 }

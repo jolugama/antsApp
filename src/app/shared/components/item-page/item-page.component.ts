@@ -29,12 +29,12 @@ export class ItemPageComponent implements OnInit, OnDestroy {
 
   constructor(
     private dataService: DataService,
-    private storeAnts$: Store<fromAntsReducers.State>,
+    private storeItems$: Store<fromAntsReducers.State>,
 
   ) {
 
     // almaceno todos los items
-    this.items$ = storeAnts$.pipe(
+    this.items$ = storeItems$.pipe(
       select(fromAntsReducers.selectItemsSearch)
     );
 
@@ -57,7 +57,7 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   }
 
   findItems(query: string) {
-    this.storeAnts$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
+    this.storeItems$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
   }
 
   ngOnDestroy(): void {
