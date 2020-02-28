@@ -13,7 +13,7 @@ import * as fromAntsActions from '@pages/ants/actions';
 import * as fromAntsReducers from '@pages/ants/reducers';
 
 import * as fromRootReducers from '@redux/reducers';
-import { switchMap, map, tap, take, concatAll, debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { switchMap, map, tap, take, concatAll, debounceTime, distinctUntilChanged, catchError } from 'rxjs/operators';
 
 
 @Injectable({
@@ -63,16 +63,19 @@ export class DataService {
       }),
       distinctUntilChanged((a: any, b: any) => JSON.stringify(a[1][this.currentKey].items) === JSON.stringify(b[1][this.currentKey].items)),
       map((data: any) => {
-        if (data[1].ants.items.length === 0) {
-          if (this.isOnState(data[0], this.keyAnts)) {
-            return this.storeAnts$.dispatch(fromAntsActions.ItemsActions.loadItems());
-          }
+        if (data[1][this.currentKey].items.length === 0) {
+          this._loadItems();
         } else {
-
+          this.currentKey = '';
         }
       }),
+      catchError((error) => {
+        return empty();
+      })
+
     );
   }
+
 
 
   // getItems() {
@@ -96,6 +99,13 @@ export class DataService {
     }
     return result;
   }
+
+  private _loadItems() {
+    if (this.currentKey === this.keyAnts) {
+      return this.storeAnts$.dispatch(fromAntsActions.ItemsActions.loadItems());
+    }
+  }
+
 
 
 }
