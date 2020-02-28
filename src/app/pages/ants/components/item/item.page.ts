@@ -3,6 +3,8 @@ import { DataService } from '@shared/services/data.service';
 import { take } from 'rxjs/operators';
 import { Observable, Subscription } from 'rxjs';
 
+
+
 @Component({
   selector: 'app-item',
   templateUrl: './item.page.html',
@@ -11,11 +13,13 @@ import { Observable, Subscription } from 'rxjs';
 export class ItemPage implements OnInit {
   items$: Subscription;
   constructor(
-    private dataService: DataService
+    private dataService: DataService,
   ) {
     console.log('init page');
 
+    // TODO ants no debería estar aquí
     this.items$ = this.dataService.loadItems('ants').subscribe(
+      // nothing
     );
   }
 

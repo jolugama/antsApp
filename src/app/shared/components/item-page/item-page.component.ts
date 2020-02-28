@@ -4,8 +4,14 @@
  */
 
 import { Component, OnInit } from '@angular/core';
+
+import { Store } from '@ngrx/store';
+
 import { DataService } from '@shared/services/data.service';
 import * as searcher from '@shared/components/searcher/interfaces';
+
+import * as fromAntsReducers from '@pages/ants/reducers';
+import * as fromAntsActions from '@pages/ants/actions';
 
 
 @Component({
@@ -17,7 +23,11 @@ export class ItemPageComponent implements OnInit {
   searcher: searcher.Out;
 
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private dataService: DataService,
+    private storeAnts$: Store<fromAntsReducers.State>,
+
+    ) { }
 
   ngOnInit() {
 
@@ -26,7 +36,17 @@ export class ItemPageComponent implements OnInit {
   // recibe del componente buscador y guarda el objeto en searcher.
   onSearch(out: searcher.Out) {
     this.searcher = out;
-    console.log(out.value);
+    // console.log(out.value);
+    this.findItems(this.searcher.value);
+  }
+
+  findItems(query: string) {
+    // console.log(query);
+    this.storeAnts$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
+    // setTimeout(() => {
+    //   const itemsMock: Ant[] = [];
+    //   this.store.dispatch(SearchActions.searchSuccess({ items: itemsMock }));
+    // }, 2000);
   }
 
 }
