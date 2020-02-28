@@ -22,22 +22,24 @@ import { switchMap, map, tap, take, concatAll, debounceTime, distinctUntilChange
 export class DataService {
   items$: Observable<any>;
   route$: Observable<any>;
-  keyAnts: 'ants';
+  // keyAnts = 'ants';
+  // keyMushrooms = 'mushrooms';
   constructor(
     public router: Router,
     private storeAnts$: Store<fromAntsReducers.State>,
     private storeRoot$: Store<fromRootReducers.State>,
 
-  ) { }
-
-  getUrl() {
-
-
+  ) {
   }
 
-  // carga los items sólo si estos no han sido cargados ya.
-  // para detectar que redux coger, mira la url, si es /ants lo coge del redux ants.
-  loadItems(): Observable<any> {
+
+
+  /**
+   * carga los items del key indicado, sólo si estos no han sido cargados ya.
+   * para detectar que redux coger, mira la url, si contiene la key, lo coge.
+   * @param key es la palabra que debe contener la url
+   */
+  loadItems(key): Observable<any> {
     return this.storeRoot$.pipe(
       debounceTime(300),
       select(fromRootReducers.selectUrl),
@@ -46,9 +48,10 @@ export class DataService {
       // }),
       // recojo el observable, y como voy a devoler otro observable lo enmascaro con un switchMap
       switchMap((value: string) => {
-        if (this.isOnState(value, this.keyAnts)) {
+        if (this.isOnState(value, key)) {
           const temp = this.storeAnts$.pipe(
-            select(fromAntsReducers.selectItemsSearch)
+            select(fromAntsReducers.selectItemsSearch),
+            take(1)
           );
           // uno los 2 y no lo devuelvo hasta tenerlos todos.
           return combineLatest(of(value), temp);
@@ -59,7 +62,7 @@ export class DataService {
       distinctUntilChanged((a, b) => JSON.stringify(a[1].items) === JSON.stringify(b[1].items)),
       map((data) => {
         if (data[1].items.length === 0) {
-          if (this.isOnState(data[0], this.keyAnts)) {
+          if (this.isOnState(data[0], key)) {
             return this.storeAnts$.dispatch(fromAntsActions.ItemsActions.loadItems());
           }
         }
@@ -68,10 +71,19 @@ export class DataService {
   }
 
 
-  getItems() {
-    // const obj = this.getUrl;
-    // TODO falta completar
-  }
+  // getItems() {
+  //   // const obj = this.getUrl;
+  //   // TODO falta completar
+  // }
+
+  // getUrl() {
+  // }
+
+
+
+
+
+  // ****** private zone ******
 
   /**
    *

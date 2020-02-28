@@ -15,7 +15,7 @@ export class ItemPage implements OnInit {
   ) {
     console.log('init page');
 
-    this.items$ = this.dataService.loadItems().subscribe(
+    this.items$ = this.dataService.loadItems('ants').subscribe(
     );
   }
 
