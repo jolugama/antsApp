@@ -17,8 +17,7 @@ import { AntsItemPage } from './components/ants-item/ants.item.page';
 
 const routes: Routes = [
   { path: '', component: AntsItemPage, data: { title: 'Ants' } },
-  { path: 'x', component: ItemsListComponent, data: { title: 'Ants' } },
-  { path: ':id', component: ItemSelectedComponent, data: { title: 'Ants Selected' } },
+  // { path: ':id', component: ItemSelectedComponent, data: { title: 'Ants Selected' } },
   // {
   //   path: 'item',
   //   loadChildren: () => import('./components/item/item.module').then( m => m.ItemPageModule)

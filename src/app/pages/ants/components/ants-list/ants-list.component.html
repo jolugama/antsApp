@@ -9,7 +9,7 @@
 
 
 <!-- <input matInput placeholder="Search for a book" [value]="query" (keyup)="search.emit($event.target.value)"> -->
-<ion-searchbar placeholder="Buscar" (keyup)="findItems($event.target.value)"></ion-searchbar>
+<!-- <ion-searchbar placeholder="Buscar" (keyup)="findItems($event.target.value)"></ion-searchbar> -->
 
 
 
@@ -17,7 +17,7 @@
 <div class="list-cards">
     <!--  -->
 
-    <ion-card (click)="openCard(item.id)" *ngFor="let item of  (ants$ | async)?.items">
+    <!-- <ion-card (click)="openCard(item.id)" *ngFor="let item of  (ants$ | async)?.items">
         <ion-card-header>
             <img src="assets/img/ants/{{item.images[0] || 'noimage.png'}}" />
             <ion-card-subtitle>{{item.taxonomy.subfamily}} - {{item.taxonomy.tribe}}</ion-card-subtitle>
@@ -37,7 +37,7 @@
             </ion-row>
         </ion-card-content>
 
-    </ion-card>
+    </ion-card> -->
 
    
     <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">

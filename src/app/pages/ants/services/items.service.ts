@@ -28,7 +28,7 @@ export class ItemsService {
         for (const item of items) {
           let resultado = true;
 
-          this.query.split(' ').map((d) => {
+          this.query.split('').map((d) => {
             if (item.taxonomy.specie.includes(d) === false) {
               resultado = false;
             }

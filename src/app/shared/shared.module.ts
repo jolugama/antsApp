@@ -23,9 +23,9 @@ import { ItemSelectedComponent } from '@shared/components/item-selected/item-sel
 
 
 // componentes dinámicos
-
-import { AntsSelectedComponent } from '@pages/ants/components/ants-selected/ants-selected.component';
-import { AntsListComponent } from '@pages/ants/components/ants-list/ants-list.component';
+import { AntsItemComponent } from './components/ants/ants-item/ants-item.component';
+// import { AntsSelectedComponent } from '@pages/ants/components/ants-selected/ants-selected.component';
+// import { AntsListComponent } from '@pages/ants/components/ants-list/ants-list.component';
 
 import { RouterModule } from '@angular/router';
 
@@ -36,7 +36,11 @@ import { RouterModule } from '@angular/router';
 
 
 
+
+
 const DYNAMIC_COMPONENTS = [
+  AntsItemComponent,
+
   ItemPageComponent,
   DescriptionPageComponent,
 ];
@@ -54,8 +58,6 @@ const COMPONENTS = [
   declarations: [
     ItemsListComponent,
     ItemSelectedComponent,
-    AntsListComponent,
-    AntsSelectedComponent,
     ...DYNAMIC_COMPONENTS,
     ...COMPONENTS
   ],
