@@ -1,4 +1,6 @@
 <p>
   item-box works!
 </p>
-<p>{{ in | json}}</p>
+<!-- <p>{{ items | json}}</p> -->
+
+<app-item *ngFor="let item of items" [item]="item"></app-item>

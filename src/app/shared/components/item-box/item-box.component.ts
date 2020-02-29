@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./item-box.component.scss'],
 })
 export class ItemBoxComponent implements OnInit {
-  @Input() in: any;
+  @Input() items: any;
 
   constructor() { }
 

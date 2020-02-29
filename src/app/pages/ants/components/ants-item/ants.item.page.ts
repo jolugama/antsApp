@@ -10,18 +10,12 @@ import { Store, select } from '@ngrx/store';
 import * as fromAntsReducers from '@pages/ants/reducers';
 import * as fromAntsActions from '@pages/ants/actions';
 
-// interfaces
-import * as searcher from '@shared/components/searcher/interfaces';
 
 // servicios
-import { DataService } from '@shared/services/data.service';
 import { AntsService } from '@pages/ants/services/ants.service';
 
 
 import { ItemPageComponent } from '@shared/components/item-page/item-page.component';
-
-
-
 
 
 
