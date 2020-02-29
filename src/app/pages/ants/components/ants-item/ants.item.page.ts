@@ -45,16 +45,6 @@ export class AntsItemPage implements OnInit, OnDestroy, AfterViewInit {
 
     // carga ants en redux
     this.antService.loadItems();
-
-    // suscripción a los items filtrados
-    this.antService.getFilteredItems().subscribe(data => {
-      console.log(data);
-      console.log('ants', data.ants.items);
-
-
-    });
-
-
   }
 
   ngOnInit() {
@@ -66,6 +56,13 @@ export class AntsItemPage implements OnInit, OnDestroy, AfterViewInit {
     this.page.searcherEmitter.subscribe(data => {
       const query = data.value;
       this.storeItems$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
+    });
+
+    // suscripción a los items filtrados
+    this.antService.getFilteredItems().subscribe(data => {
+      console.log(data);
+      console.log('ants', data.ants.items);
+      this.page.dataItems = data.ants.items;
     });
   }
 

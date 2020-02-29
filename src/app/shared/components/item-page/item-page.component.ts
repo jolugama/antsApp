@@ -24,7 +24,7 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   // searcher: searcher.Out;
 
   public searcherEmitter = new EventEmitter<searcher.Out>();
-
+  public dataItems: any;
   // items$: Observable<any>; // donde se almacena los items a mostrar (los filtrados)
 
   constructor(

@@ -15,7 +15,7 @@
   <div id="container">
     <app-searcher (out)="onSearch($event)"></app-searcher>
     <app-filter-box></app-filter-box>
-    <app-item-box></app-item-box>
+    <app-item-box [in]="dataItems"></app-item-box>
     <!-- <ng-container #componenteDinamico></ng-container> -->
 
 
