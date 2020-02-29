@@ -11,8 +11,8 @@ import { DataService } from '@shared/services/data.service';
 import * as searcher from '@shared/components/searcher/interfaces';
 
 
-import { Observable } from 'rxjs';
-import { distinctUntilChanged } from 'rxjs/operators';
+import { Observable, combineLatest, of } from 'rxjs';
+import { distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 
 import * as fromAntsReducers from '@pages/ants/reducers';
 import * as fromAntsActions from '@pages/ants/actions';
@@ -38,12 +38,15 @@ export class ItemPageComponent implements OnInit, OnDestroy {
       select(fromAntsReducers.selectItemsSearch)
     );
 
-
-    this.items$.pipe(
-      distinctUntilChanged((a, b) => JSON.stringify(a.ants.items) === JSON.stringify(b.ants.items))
+    this.dataService.getSetCurrentKey().pipe(
+      map(key => {
+        return distinctUntilChanged((a, b) => JSON.stringify(a[key].items) === JSON.stringify(b[key].items));
+      })
     ).subscribe(res => {
+
       console.log('carga ', res);
     });
+
   }
 
   ngOnInit() {

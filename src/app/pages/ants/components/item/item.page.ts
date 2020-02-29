@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService } from '@shared/services/data.service';
 import { take } from 'rxjs/operators';
 import { Observable, Subscription } from 'rxjs';
@@ -10,7 +10,8 @@ import { Observable, Subscription } from 'rxjs';
   templateUrl: './item.page.html',
   styleUrls: ['./item.page.scss'],
 })
-export class ItemPage implements OnInit {
+export class ItemPage implements OnInit, OnDestroy {
+
   items$: Subscription;
   constructor(
     private dataService: DataService,
@@ -25,6 +26,10 @@ export class ItemPage implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  ngOnDestroy(): void {
+    this.items$.unsubscribe();
   }
 
 }

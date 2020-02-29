@@ -33,6 +33,7 @@ export class DataService {
     'mushrooms'
   ];
 
+
   constructor(
     public router: Router,
     private storeAnts$: Store<fromAntsReducers.State>,
@@ -49,7 +50,7 @@ export class DataService {
    * key (keyAnts, keyMushrooms) es la palabra que debe contener la url
    */
   loadItems(): Observable<any> {
-    return this._setCurrentKey().pipe(
+    return this.getSetCurrentKey().pipe(
       debounceTime(300),
 
       // recojo el observable, y como voy a devolver otro observable lo enmascaro con un switchMap
@@ -58,7 +59,6 @@ export class DataService {
       }),
       // distinctUntilChanged((a: any, b: any) => JSON.stringify(a[this.currentKey].items) === JSON.stringify(b[this.currentKey].items)),
       map((data: any) => {
-
         if (data[this.currentKey].items.length === 0) {
           this._loadItems();
         } else {
@@ -74,11 +74,21 @@ export class DataService {
 
 
 
-  // getItems() {
-  //   // const obj = this.getUrl;
-  //   // TODO falta completar
-  // }
-
+   getSetCurrentKey(): Observable<string> {
+    return this.storeRoot$.pipe(
+      select(fromRootReducers.selectUrl),
+      map((value: string) => {
+        const index = this.keys.indexOf(value.split('/')[1]);
+        this.currentKey = this.keys[index];
+        return this.keys[index];
+      }),
+      take(1),
+      catchError(() => {
+        this.currentKey = '';
+        return '';
+      })
+    );
+  }
 
 
   // ****** private zone ******
@@ -105,6 +115,7 @@ export class DataService {
 
   private _getItemSearch(): Observable<any> {
     let result;
+    // si es ants
     if (this.currentKey === this.keys[0]) {
       result = this.storeAnts$.pipe(
         select(fromAntsReducers.selectItemsSearch),
@@ -117,20 +128,7 @@ export class DataService {
   }
 
 
-  private _setCurrentKey(): Observable<string> {
-    return this.storeRoot$.pipe(
-      select(fromRootReducers.selectUrl),
-      map((value: string) => {
-        const index = this.keys.indexOf(value.split('/')[1]);
-        this.currentKey = this.keys[index];
-        return this.keys[index];
-      }),
-      catchError(() => {
-        this.currentKey = '';
-        return '';
-      })
-    );
-  }
+
 
 
 }
