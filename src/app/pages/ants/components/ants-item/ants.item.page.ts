@@ -1,19 +1,25 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DataService } from '@shared/services/data.service';
-import { take } from 'rxjs/operators';
 
 
+// rxjs y redux
+import { Observable, combineLatest, of, Subscription } from 'rxjs';
+import { distinctUntilChanged, map, switchMap, take } from 'rxjs/operators';
 import { Store, select } from '@ngrx/store';
 
-
-import * as searcher from '@shared/components/searcher/interfaces';
-
-
-import { Observable, combineLatest, of, Subscription } from 'rxjs';
-import { distinctUntilChanged, map, switchMap } from 'rxjs/operators';
-
+// actions y reducers
 import * as fromAntsReducers from '@pages/ants/reducers';
 import * as fromAntsActions from '@pages/ants/actions';
+
+// interfaces
+import * as searcher from '@shared/components/searcher/interfaces';
+
+// servicios
+import { DataService } from '@shared/services/data.service';
+import { AntsService } from '@pages/ants/services/ants.service';
+
+
+
+
 
 
 @Component({
@@ -23,17 +29,25 @@ import * as fromAntsActions from '@pages/ants/actions';
 })
 export class AntsItemPage implements OnInit, OnDestroy {
 
-  items$: Subscription;
+  itemsSuscription$: Subscription;
   constructor(
-    private dataService: DataService,
+    // private dataService: DataService,
+    private antService: AntsService,
     private storeItems$: Store<fromAntsReducers.State>,
   ) {
-    console.log('init page');
+    console.log('constructor ant page');
 
     // cargo ants en redux
-    this.items$ = this.dataService.loadItems().subscribe(
-      // nothing
-    );
+    this.antService.loadItems();
+
+    this.antService.getItems().subscribe(data => {
+      console.log(data);
+      console.log('ants', data.ants.items);
+
+    });
+
+
+
   }
 
   ngOnInit() {
@@ -41,7 +55,7 @@ export class AntsItemPage implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.items$.unsubscribe();
+    this.itemsSuscription$.unsubscribe();
   }
 
 }

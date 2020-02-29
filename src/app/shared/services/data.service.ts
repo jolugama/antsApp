@@ -65,7 +65,7 @@ export class DataService {
         if (data[this.currentKey].items.length === 0) {
           this._loadItems();
         } else {
-          this.currentKey = '';
+          // this.currentKey = '';
         }
       }),
       catchError((error) => {
@@ -93,7 +93,7 @@ export class DataService {
     );
   }
 
-   emitItems() {
+  emitItems() {
     this.itemsSource.next();
   }
 
@@ -113,7 +113,7 @@ export class DataService {
   //   return result;
   // }
 
-  private _loadItems() {
+  private _loadItems(): void {
     // si es ants
     if (this.currentKey === this.keys[0]) {
       return this.storeAnts$.dispatch(fromAntsActions.ItemsActions.loadItems());

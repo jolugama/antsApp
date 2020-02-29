@@ -26,6 +26,12 @@ export interface State extends fromRoot.State {
 }
 
 
+export interface SearchState {
+  [itemsFeatureKey]: fromSearch.State;
+}
+
+
+
 
 
 
@@ -80,7 +86,7 @@ export const selectItemsSearch = createSelector(
       arr.push(state.items.entities[item]);
     }
 
-    const resp = {
+    const resp: fromSearch.State = {
       items: arr,
       loading: state.search.loading,
       error: state.search.error,
