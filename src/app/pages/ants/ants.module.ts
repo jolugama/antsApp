@@ -23,14 +23,16 @@ import { FavoriteItemEffects, ItemEffects } from './effects';
 
 import { SharedModule } from '@shared/shared.module';
 
-import { ItemPage } from './components/item/item.page';
+
+import { AntsItemPage } from './components/ants-item/ants.item.page';
+
 // import { DescriptionPage } from './components/description/description.page';
 
 
 
 @NgModule({
   declarations: [
-    ItemPage
+    AntsItemPage
 
   ],
   imports: [

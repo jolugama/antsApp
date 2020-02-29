@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 
 import { select, Store } from '@ngrx/store';
-import { Observable, of, merge, concat, forkJoin, combineLatest, empty } from 'rxjs';
+import { Observable, of, merge, concat, forkJoin, combineLatest, empty, Subject } from 'rxjs';
 
 
 // import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
@@ -26,6 +26,9 @@ import { switchMap, map, tap, take, concatAll, debounceTime, distinctUntilChange
 export class DataService {
   items$: Observable<any>;
   route$: Observable<any>;
+
+  private itemsSource = new Subject<any>();
+  public itemsAgnostic$ = this.itemsSource.asObservable();
 
   currentKey: string;
   keys = [
@@ -74,7 +77,7 @@ export class DataService {
 
 
 
-   getSetCurrentKey(): Observable<string> {
+  getSetCurrentKey(): Observable<string> {
     return this.storeRoot$.pipe(
       select(fromRootReducers.selectUrl),
       map((value: string) => {
@@ -88,6 +91,10 @@ export class DataService {
         return '';
       })
     );
+  }
+
+   emitItems() {
+    this.itemsSource.next();
   }
 
 

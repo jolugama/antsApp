@@ -6,7 +6,9 @@ import { SharedModule } from '@shared/shared.module';
 
 import { ItemsListComponent } from '@shared/components/list-items/list-items.component';
 import { ItemSelectedComponent } from '@shared/components/item-selected/item-selected.component';
-import { ItemPage } from './components/item/item.page';
+
+import { AntsItemPage } from './components/ants-item/ants.item.page';
+
 // import { DescriptionPage } from './components/description/description.page';
 
 
@@ -14,7 +16,7 @@ import { ItemPage } from './components/item/item.page';
 
 
 const routes: Routes = [
-  { path: '', component: ItemPage, data: { title: 'Ants' } },
+  { path: '', component: AntsItemPage, data: { title: 'Ants' } },
   { path: 'x', component: ItemsListComponent, data: { title: 'Ants' } },
   { path: ':id', component: ItemSelectedComponent, data: { title: 'Ants Selected' } },
   // {
