@@ -3,12 +3,13 @@
  *
  */
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
 
 // import { Store, select } from '@ngrx/store';
 
 // import { DataService } from '@shared/services/data.service';
 import * as searcher from '@shared/components/searcher/interfaces';
+import { Subject } from 'rxjs';
 
 
 
@@ -20,7 +21,9 @@ import * as searcher from '@shared/components/searcher/interfaces';
 })
 export class ItemPageComponent implements OnInit, OnDestroy {
 
-  searcher: searcher.Out;
+  // searcher: searcher.Out;
+
+  public searcherEmitter = new EventEmitter<searcher.Out>();
 
   // items$: Observable<any>; // donde se almacena los items a mostrar (los filtrados)
 
@@ -59,16 +62,18 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   }
 
   // recibe del componente buscador y guarda el objeto en searcher.
-  onSearch(out: searcher.Out) {
-    this.searcher = out;
-    this.findItems(this.searcher.value);
+  onSearch(data: searcher.Out) {
+    this.searcherEmitter.emit(data);
+    // this.findItems(this.searcher.value);
   }
 
-  findItems(query: string) {
-    // this.storeItems$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
-  }
+  // findItems(query: string) {
+  //   this.findEmiter = new EventEmitter<Out>();
+  //   // this.storeItems$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
+  // }
 
   ngOnDestroy(): void {
+    alert('delete');
     throw new Error('se destruye item-page');
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Out } from './interfaces';
+import { Subject } from 'rxjs';
 
 
 @Component({
@@ -13,6 +14,11 @@ export class SearcherComponent implements OnInit {
   outObj: Out = {
     value: ''
   };
+
+  private outSource$ = new Subject<void>();
+  public out$ = this.outSource$.asObservable();
+
+
   constructor() { }
 
   ngOnInit() { }

@@ -27,7 +27,10 @@ export class AntsService {
     this.storeItems$.dispatch(fromItemsActions.ItemsActions.loadItems());
   }
 
-  getItems(): Observable<fromItemsReducers.SearchState> {
+  /**
+   * devuelve observable de state search, con los items actuales filtrados
+   */
+  getFilteredItems(): Observable<fromItemsReducers.SearchState> {
     return this.storeItems$.pipe(
       select(fromItemsReducers.selectItemsSearch)
     );
