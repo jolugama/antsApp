@@ -13,8 +13,22 @@
 <div>
 
   <div id="container">
-    <app-searcher (out)="onSearch($event)"></app-searcher>
-    
+    <div class="searcher">
+
+      <ion-row>
+        <ion-col>
+          <app-searcher (out)="onSearch($event)"></app-searcher>
+        </ion-col>
+
+        <ion-col size="2">
+          <ion-icon name="options-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+
+    </div>
+
+
     <app-filter-box></app-filter-box>
     <app-item-box [items]="dataItems"></app-item-box>
     <!-- <ng-container #componenteDinamico></ng-container> -->
@@ -30,4 +44,3 @@
 <!-- <ion-footer translucent>
 
 </ion-footer> -->
-

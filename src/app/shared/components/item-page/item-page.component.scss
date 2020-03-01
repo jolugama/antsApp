@@ -3,6 +3,7 @@
 // }
 :host {
     background: bisque;
+    color:black;
     overflow-y: auto;
     max-width: 900px;
     width: 100%;
@@ -10,7 +11,18 @@
 
 }
 
-
+.searcher{
+    margin:0;
+    padding:0;
+    ion-col:nth-child(2){
+        text-align: center;
+        align-self: center;
+        ion-icon {
+            width: 2em;
+            height: 2em;
+        }
+    }
+}
 
 
 @media (min-width: 1000px) {
