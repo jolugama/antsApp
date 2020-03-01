@@ -1,9 +1,9 @@
-
 // :host{
 //    height: 250px;
 // }
 
 $size: 90px;
+
 @media only screen and (min-width: 992px) {
     $size: 120px;
 }
@@ -17,7 +17,9 @@ $size: 90px;
 
 
 ::ng-deep {
-    ion-card-header {
+
+    ion-card-header,
+    ion-card-content {
         // margin: 0px !important;
         padding: 5px !important;
         padding-left: 0px !important;
@@ -28,23 +30,41 @@ img {
     max-width: $size;
 }
 
-.flex-container {
-    display: flex;
-    flex-flow: row nowrap;
-    height: 100%;
-    align-items: center;
+ion-col {
+    align-self: center;
+    margin: 0 auto;
 
-    >div {
-        flex-grow: 1;
-        line-height: 2em;
+    &:nth-child(2) {
+        text-align: center;
+    }
+
+    &:nth-child(3) {
+        text-align: right;
     }
 }
 
-.flex-container-column {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: $size;
+// ion-col:nth-child(2) {
+//     color: lime;
+//     align-self: center;
+//   }
 
-}
+// .flex-container {
+//     display: flex;
+//     flex-flow: row nowrap;
+//     height: 100%;
+//     align-items: center;
+
+//     >div {
+//         flex-grow: 1;
+//         line-height: 2em;
+//     }
+// }
+
+// .flex-container-column {
+//     display: flex;
+//     flex-flow: column nowrap;
+//     justify-content: space-between;
+//     align-items: flex-end;
+//     height: $size;
+
+// }
