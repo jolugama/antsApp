@@ -29,7 +29,8 @@ export class ItemsService {
           let resultado = true;
 
           this.query.split('').map((d) => {
-            if (item.taxonomy.specie.includes(d) === false) {
+            if (item.taxonomy.specie.includes(d) === false &&
+            item.taxonomy.subfamily.includes(d) === false ) {
               resultado = false;
             }
           });

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ant } from '@pages/ants/models/ant.ts';
 
 @Component({
   selector: 'app-ants-item',
@@ -6,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ants-item.component.scss'],
 })
 export class AntsItemComponent implements OnInit {
+  item: Ant;
+  constructor() {
 
-  constructor() { }
+  }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  public setItem(item: Ant) {
+    this.item = item;
+  }
 
 }

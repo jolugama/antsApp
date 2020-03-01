@@ -89,5 +89,5 @@ export interface Taxonomy {
     subfamily: string;
     tribe: string;
     specie: string;
-    Synonyms: string;
+    synonyms: string;
 }

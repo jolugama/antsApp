@@ -1,0 +1,34 @@
+$size: 120px;
+
+::ng-deep {
+    ion-card-header {
+        // margin: 0px !important;
+        padding: 5px !important;
+        padding-left: 0px !important;
+    }
+}
+
+img {
+    max-width: $size;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    align-items: center;
+
+    >div {
+        flex-grow: 1;
+        line-height: 2em;
+    }
+}
+
+.flex-container-column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: $size;
+
+}
