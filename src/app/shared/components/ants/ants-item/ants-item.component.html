@@ -4,7 +4,8 @@
         <ion-card-header>
             <div class="flex-container">
               <div>
-                <img src="./assets/img/ants/{{item.images[0] || 'noimage.png'}}" />
+                <img src="./assets/img/ants/{{item.images[0] || 'noimage.png'}}"
+                onError="this.src='./assets/img/ants/noimage.png'" />
               </div>
               <div>
                 <ion-card-subtitle>{{item.taxonomy.subfamily}}</ion-card-subtitle>

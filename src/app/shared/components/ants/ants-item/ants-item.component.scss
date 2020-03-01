@@ -1,4 +1,20 @@
-$size: 120px;
+
+// :host{
+//    height: 250px;
+// }
+
+$size: 90px;
+@media only screen and (min-width: 992px) {
+    $size: 120px;
+}
+
+// @include desktop{
+//     img {
+//         padding-left: 0px !important;
+//     } 
+// }
+
+
 
 ::ng-deep {
     ion-card-header {
