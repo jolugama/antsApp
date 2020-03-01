@@ -1,25 +1,6 @@
 
-<!-- (click)="openCard(item.id)" -->
-    <ion-card >
-        <!-- <ion-card-header>
-            <div class="flex-container">
-              <div>
-                <img src="./assets/img/ants/{{item.images[0] || 'noimage.png'}}"
-                onError="this.src='./assets/img/ants/noimage.png'" />
-              </div>
-              <div>
-                <ion-card-subtitle>{{item.taxonomy.subfamily}}</ion-card-subtitle>
-                <ion-card-title>{{item.taxonomy.specie}}</ion-card-title>
-               
-              </div>
-              <div class="flex-container-column">
-                  <div>{{item.habitat.nestForm.join(', ')}}</div>
-                  <div>{{item.biology.nutrition.join(', ')}}</div>
-              </div>
-            </div>
-        </ion-card-header> -->
 
-
+    <ion-card (click)="openCard(item.id)">
         <ion-card-content>
             <ion-row>
                 <ion-col size="2" >

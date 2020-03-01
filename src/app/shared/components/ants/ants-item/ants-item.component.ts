@@ -18,4 +18,9 @@ export class AntsItemComponent implements OnInit {
     this.item = item;
   }
 
+  openCard(id) {
+    console.log('click id', id);
+
+  }
+
 }
