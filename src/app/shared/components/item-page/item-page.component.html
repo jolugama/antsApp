@@ -10,10 +10,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<div>
 
   <div id="container">
     <app-searcher (out)="onSearch($event)"></app-searcher>
+    
     <app-filter-box></app-filter-box>
     <app-item-box [items]="dataItems"></app-item-box>
     <!-- <ng-container #componenteDinamico></ng-container> -->
@@ -24,9 +25,9 @@
 
 
   </div>
-</ion-content>
+</div>
 
-<ion-footer translucent>
+<!-- <ion-footer translucent>
 
-</ion-footer>
+</ion-footer> -->
 

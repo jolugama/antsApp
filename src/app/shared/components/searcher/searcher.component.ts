@@ -28,4 +28,9 @@ export class SearcherComponent implements OnInit {
     this.out.emit(this.outObj);
   }
 
+  findItems2() {
+    this.outObj.value = '';
+    this.out.emit(this.outObj);
+  }
+
 }
