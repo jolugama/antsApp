@@ -29,11 +29,11 @@ import { ItemPageComponent } from '@shared/components/organisms/item-page/item-p
 
 
 @Component({
-  selector: 'app-ants-items',
-  templateUrl: './ants-item.component.html',
-  styleUrls: ['./ants-item.component.scss'],
+  selector: 'app-ants-items-page',
+  templateUrl: './ants-item-page.component.html',
+  styleUrls: ['./ants-item-page.component.scss'],
 })
-export class AntsItemComponent implements OnInit, OnDestroy, AfterViewInit {
+export class AntsItemPageComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('page') page: ItemPageComponent;
   itemsSuscription$: Subscription;
 

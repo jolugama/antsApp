@@ -24,17 +24,17 @@ import { FavoriteItemEffects, ItemEffects } from './effects';
 import { SharedModule } from '@shared/shared.module';
 
 
-import { AntsItemComponent } from './pages/ants-item/ants.item.component';
-import { AntsDescriptionComponent } from './pages/ants-description/ants-description.component';
-import { AntsFilterComponent } from './pages/ants-filter/ants-filter.component';
+import { AntsItemPageComponent } from './pages/ants-item-page/ants-item-page.component';
+import { AntsDescriptionPageComponent} from './pages/ants-description-page/ants-description-page.component';
+import { AntsFilterPageComponent } from './pages/ants-filter-page/ants-filter-page.component';
 
 
 
 @NgModule({
   declarations: [
-    AntsItemComponent,
-    AntsDescriptionComponent,
-    AntsFilterComponent
+    AntsItemPageComponent,
+    AntsDescriptionPageComponent,
+    AntsFilterPageComponent
 
   ],
   imports: [
