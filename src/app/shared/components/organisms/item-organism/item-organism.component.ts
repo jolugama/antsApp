@@ -13,11 +13,11 @@ import * as searcher from '@shared/components/searcher/interfaces';
 
 
 @Component({
-  selector: 'app-item-page',
-  templateUrl: './item-page.component.html',
-  styleUrls: ['./item-page.component.scss'],
+  selector: 'app-item-organism',
+  templateUrl: './item-organism.component.html',
+  styleUrls: ['./item-organism.component.scss'],
 })
-export class ItemPageComponent implements OnInit, OnDestroy {
+export class ItemOrganismComponent implements OnInit, OnDestroy {
   public searcherEmitter = new EventEmitter<searcher.Out>();
   public dataItems: any;
   public data = {

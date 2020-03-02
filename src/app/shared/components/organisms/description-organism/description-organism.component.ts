@@ -7,11 +7,11 @@ import {
 import { AntsDescriptionComponent } from '@shared/components/ants/ants-description/ants-description.component';
 
 @Component({
-  selector: 'app-description-page',
-  templateUrl: './description-page.component.html',
-  styleUrls: ['./description-page.component.scss'],
+  selector: 'app-description-organism',
+  templateUrl: './description-organism.component.html',
+  styleUrls: ['./description-organism.component.scss'],
 })
-export class DescriptionPageComponent implements OnInit, AfterViewInit, OnDestroy {
+export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDestroy {
   miFactory: ComponentFactory<any>;
   componentRef: ComponentRef<AntsDescriptionComponent> = null; // se declara una variable referencia.
   @ViewChild('componenteDinamicoDescription', { read: ViewContainerRef }) compDynamicContainer: ViewContainerRef;

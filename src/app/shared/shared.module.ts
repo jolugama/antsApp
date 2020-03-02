@@ -14,8 +14,8 @@ import { SearcherComponent } from './components/searcher/searcher.component';
 
 
 // pages
-import { ItemPageComponent } from './components/organisms/item-page/item-page.component';
-import { DescriptionPageComponent } from './components/organisms/description-page/description-page.component';
+import { ItemOrganismComponent } from './components/organisms/item-organism/item-organism.component';
+import { DescriptionOrganismComponent } from './components/organisms/description-organism/description-organism.component';
 
 // componentes dinámicos
 import { AntsItemComponent } from './components/ants/ants-item/ants-item.component';
@@ -38,9 +38,9 @@ const DYNAMIC_PAGES = [
   AntsItemComponent,
 ];
 
-const GENERIC_PAGES = [
-  ItemPageComponent,
-  DescriptionPageComponent,
+const ORGANISM_PAGES = [
+  ItemOrganismComponent,
+  DescriptionOrganismComponent,
 ];
 
 const COMPONENTS = [
@@ -55,7 +55,7 @@ const COMPONENTS = [
 @NgModule({
   declarations: [
     ...DYNAMIC_PAGES,
-    ...GENERIC_PAGES,
+    ...ORGANISM_PAGES,
     ...COMPONENTS
   ],
   imports: [
@@ -66,7 +66,7 @@ const COMPONENTS = [
   ],
   exports: [
     ...DYNAMIC_PAGES,
-    ...GENERIC_PAGES,
+    ...ORGANISM_PAGES,
     ...COMPONENTS,
     RouterModule
   ]
