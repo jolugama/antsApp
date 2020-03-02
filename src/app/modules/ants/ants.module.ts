@@ -24,9 +24,9 @@ import { FavoriteItemEffects, ItemEffects } from './effects';
 import { SharedModule } from '@shared/shared.module';
 
 
-import { AntsItemComponent } from './components/ants-item/ants.item.component';
-import { AntsDescriptionComponent } from './components/ants-description/ants-description.component';
-import { AntsFilterComponent } from './ants-filter/ants-filter.component';
+import { AntsItemComponent } from './pages/ants-item/ants.item.component';
+import { AntsDescriptionComponent } from './pages/ants-description/ants-description.component';
+import { AntsFilterComponent } from './pages/ants-filter/ants-filter.component';
 
 
 
