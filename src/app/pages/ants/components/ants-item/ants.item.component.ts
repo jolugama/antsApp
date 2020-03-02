@@ -22,8 +22,8 @@ import { ItemPageComponent } from '@shared/components/item-page/item-page.compon
 
 @Component({
   selector: 'app-ants-items',
-  templateUrl: './ants-item.page.html',
-  styleUrls: ['./ants-item.page.scss'],
+  templateUrl: './ants-item.component.html',
+  styleUrls: ['./ants-item.component.scss'],
 })
 export class AntsItemPage implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('page') page: ItemPageComponent;

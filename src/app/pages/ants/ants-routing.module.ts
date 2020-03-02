@@ -6,9 +6,9 @@ import { SharedModule } from '@shared/shared.module';
 
 
 
-import { AntsItemPage } from './components/ants-item/ants.item.page';
+import { AntsItemPage } from './components/ants-item/ants.item.component';
 
-// import { DescriptionPage } from './components/description/description.page';
+
 
 
 

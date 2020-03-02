@@ -21,8 +21,7 @@ import { DescriptionPageComponent } from './components/description-page/descript
 
 // componentes dinámicos
 import { AntsItemComponent } from './components/ants/ants-item/ants-item.component';
-// import { AntsSelectedComponent } from '@pages/ants/components/ants-selected/ants-selected.component';
-// import { AntsListComponent } from '@pages/ants/components/ants-list/ants-list.component';
+
 
 import { RouterModule } from '@angular/router';
 
