@@ -6,8 +6,6 @@ import {
 // componentes dinámicos
 import { AntsItemComponent } from '@shared/components/ants/ants-item/ants-item.component';
 
-
-
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
