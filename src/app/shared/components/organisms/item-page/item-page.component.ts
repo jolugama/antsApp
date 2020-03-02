@@ -4,14 +4,9 @@
  */
 
 import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
-
-// import { Store, select } from '@ngrx/store';
-
-// import { DataService } from '@shared/services/data.service';
-import * as searcher from '@shared/components/searcher/interfaces';
-import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
+import * as searcher from '@shared/components/searcher/interfaces';
 
 
 
@@ -21,39 +16,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./item-page.component.scss'],
 })
 export class ItemPageComponent implements OnInit, OnDestroy {
-
-  // searcher: searcher.Out;
-
   public searcherEmitter = new EventEmitter<searcher.Out>();
   public dataItems: any;
-  // items$: Observable<any>; // donde se almacena los items a mostrar (los filtrados)
+  public data = {
+    title: ''
+  };
 
   constructor(
-    public router:Router
+    public router: Router
   ) {
-
-    // // almaceno todos los items
-    // this.items$ = storeItems$.pipe(
-    //   select(fromAntsReducers.selectItemsSearch)
-    // );
-
-    // this.items$ = storeItems$.pipe(
-    //   switchMap(data => {
-    //     return  select(fromAntsReducers.selectItemsSearch);
-    //   })
-    // );
-
-    // this.dataService.getSetCurrentKey().pipe(
-    //   // map(key => {
-    //   //   return distinctUntilChanged((a, b) => JSON.stringify(a[key].items) === JSON.stringify(b[key].items));
-    //   // })
-    //   switchMap(key => {
-
-    //   })
-    // ).subscribe(res => {
-    //   console.log('carga ', res);
-    //   this.dataService.emitItems();
-    // });
 
   }
 
@@ -64,19 +35,15 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   // recibe del componente buscador y guarda el objeto en searcher.
   onSearch(data: searcher.Out) {
     this.searcherEmitter.emit(data);
-    // this.findItems(this.searcher.value);
+
   }
 
-  // findItems(query: string) {
-  //   this.findEmiter = new EventEmitter<Out>();
-  //   // this.storeItems$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
-  // }
 
   openFilter() {
     console.log('openFilter');
     this.router.navigate([`/ants/filter`]);
-
   }
+
 
   ngOnDestroy(): void {
     alert('delete');
