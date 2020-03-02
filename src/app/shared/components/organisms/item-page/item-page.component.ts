@@ -10,6 +10,7 @@ import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
 // import { DataService } from '@shared/services/data.service';
 import * as searcher from '@shared/components/searcher/interfaces';
 import { Subject } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 
@@ -28,8 +29,7 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   // items$: Observable<any>; // donde se almacena los items a mostrar (los filtrados)
 
   constructor(
-
-
+    public router:Router
   ) {
 
     // // almaceno todos los items
@@ -74,6 +74,7 @@ export class ItemPageComponent implements OnInit, OnDestroy {
 
   openFilter() {
     console.log('openFilter');
+    this.router.navigate([`/ants/filter`]);
 
   }
 

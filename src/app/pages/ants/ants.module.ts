@@ -26,13 +26,15 @@ import { SharedModule } from '@shared/shared.module';
 
 import { AntsItemComponent } from './components/ants-item/ants.item.component';
 import { AntsDescriptionComponent } from './components/ants-description/ants-description.component';
+import { AntsFilterComponent } from './ants-filter/ants-filter.component';
 
 
 
 @NgModule({
   declarations: [
     AntsItemComponent,
-    AntsDescriptionComponent
+    AntsDescriptionComponent,
+    AntsFilterComponent
 
   ],
   imports: [

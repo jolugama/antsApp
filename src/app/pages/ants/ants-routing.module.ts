@@ -8,6 +8,7 @@ import { SharedModule } from '@shared/shared.module';
 
 import { AntsItemComponent } from './components/ants-item/ants.item.component';
 import { AntsDescriptionComponent } from './components/ants-description/ants-description.component';
+import { AntsFilterComponent } from './ants-filter/ants-filter.component';
 
 
 
@@ -15,8 +16,21 @@ import { AntsDescriptionComponent } from './components/ants-description/ants-des
 
 
 const routes: Routes = [
-  { path: '', component: AntsItemComponent, data: { title: 'Ants' } },
-  { path: ':id', component: AntsDescriptionComponent, data: { title: 'Ants Description' } },
+  {
+    path: 'filter',
+    component: AntsFilterComponent,
+    data: { title: 'Ants Filter' }
+  },
+  {
+    path: ':id',
+    component: AntsDescriptionComponent,
+    data: { title: 'Ants Description' }
+  },
+  {
+    path: '',
+    component: AntsItemComponent,
+    data: { title: 'Ants' }
+  },
   // {
   //   path: 'item',
   //   loadChildren: () => import('./components/item/item.module').then( m => m.ItemPageModule)
