@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 
 
-import * as fromItemsActions from '@pages/ants/actions';
-import * as fromItemsReducers from '@pages/ants/reducers';
+import * as fromItemsActions from '@modules/ants/actions';
+import * as fromItemsReducers from '@modules/ants/reducers';
 import * as fromRootReducers from '@redux/reducers';
 
 

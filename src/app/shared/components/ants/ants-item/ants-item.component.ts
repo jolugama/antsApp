@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ant } from '@pages/ants/models/ant.ts';
+import { Ant } from '@modules/ants/models/ant.ts';
 import { Router } from '@angular/router';
 
 @Component({

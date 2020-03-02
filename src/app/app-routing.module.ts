@@ -9,8 +9,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
-  { path: 'ants', canLoad: [], loadChildren: ( ) => import('./pages/ants/ants.module').then(m => m.AntsModule) },
+  { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomePageModule) },
+  { path: 'ants', canLoad: [], loadChildren: ( ) => import('./modules/ants/ants.module').then(m => m.AntsModule) },
 ];
 
 @NgModule({

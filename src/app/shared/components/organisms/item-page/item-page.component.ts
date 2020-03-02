@@ -1,5 +1,7 @@
 /**
- * Es el encargado de vertificar en el redux router en qué ruta estamos
+ * Pass Through
+ * - devuelve datos de searcher al padre
+ * - envía items a item-box. 
  *
  */
 

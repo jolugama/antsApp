@@ -7,8 +7,8 @@ import { Observable, of } from 'rxjs';
 import * as fromRootReducers from '@redux/reducers';
 import * as fromRootActions from '@redux/core/actions';
 
-import * as fromAntsActions from '@pages/ants/actions';
-import * as fromAntsReducers from '@pages/ants/reducers';
+import * as fromAntsActions from '@modules/ants/actions';
+import * as fromAntsReducers from '@modules/ants/reducers';
 
 import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
 

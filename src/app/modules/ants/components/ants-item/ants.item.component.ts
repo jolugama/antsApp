@@ -1,3 +1,9 @@
+/**
+ * A través de @ViewChild('page')  accedo a las propiedades del genérico ItemPageComponent. 
+ * Le proporciono título y los items a mostrar
+ */
+
+
 import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit } from '@angular/core';
 
 
@@ -7,12 +13,12 @@ import { distinctUntilChanged, map, switchMap, take, catchError } from 'rxjs/ope
 import { Store, select } from '@ngrx/store';
 
 // actions y reducers
-import * as fromAntsReducers from '@pages/ants/reducers';
-import * as fromAntsActions from '@pages/ants/actions';
+import * as fromAntsReducers from '@modules/ants/reducers';
+import * as fromAntsActions from '@modules/ants/actions';
 
 
 // servicios
-import { AntsService } from '@pages/ants/services/ants.service';
+import { AntsService } from '@modules/ants/services/ants.service';
 
 
 import { ItemPageComponent } from '@shared/components/organisms/item-page/item-page.component';

@@ -19,7 +19,7 @@ import { FavoriteItemEffects, ItemEffects } from './effects';
 // import { AntsListComponent } from './components/ants-list/ants-list.component';
 // import { AntsSelectedComponent } from './components/ants-selected/ants-selected.component';
 
-// import { LoaderService } from '@pages/ants/services/loader/loader.service';
+// import { LoaderService } from '@modules/ants/services/loader/loader.service';
 
 import { SharedModule } from '@shared/shared.module';
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { of, timer, Observable } from 'rxjs';
 import { map, withLatestFrom, distinctUntilChanged, debounceTime, tap } from 'rxjs/operators';
 
-import * as fromItems from '@pages/ants/reducers';
+import * as fromItems from '@modules/ants/reducers';
 import { Store } from '@ngrx/store';
 
 @Injectable({

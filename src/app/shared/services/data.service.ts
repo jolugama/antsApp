@@ -10,11 +10,11 @@ import { Observable, of, merge, concat, forkJoin, combineLatest, empty, Subject 
 
 
 // import { map, withLatestFrom, distinctUntilChanged } from 'rxjs/operators';
-// import { ItemsService } from '@pages/ants/services/items.service';
+// import { ItemsService } from '@modules/ants/services/items.service';
 import { Router } from '@angular/router';
 
-import * as fromAntsActions from '@pages/ants/actions';
-import * as fromAntsReducers from '@pages/ants/reducers';
+import * as fromAntsActions from '@modules/ants/actions';
+import * as fromAntsReducers from '@modules/ants/reducers';
 
 import * as fromRootReducers from '@redux/reducers';
 import { switchMap, map, tap, take, concatAll, debounceTime, distinctUntilChanged, catchError } from 'rxjs/operators';

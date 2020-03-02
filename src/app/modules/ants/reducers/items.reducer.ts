@@ -4,7 +4,7 @@ import { createReducer, on } from '@ngrx/store';
 import {
   ItemsActions
 } from './../actions';
-import { Ant } from '@pages/ants/models';
+import { Ant } from '@modules/ants/models';
 
 export const ItemsFeatureKey = 'items';
 

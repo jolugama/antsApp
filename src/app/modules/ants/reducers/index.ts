@@ -9,7 +9,7 @@ import * as fromRoot from '@redux/reducers';
 import * as fromItems from './items.reducer';
 import * as fromFavorites from './favorites.reducer';
 import * as fromSearch from './search.reducer';
-import { Ant } from '@pages/ants/models';
+import { Ant } from '@modules/ants/models';
 
 
 
