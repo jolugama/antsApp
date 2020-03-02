@@ -4,8 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SharedModule } from '@shared/shared.module';
 
-import { ItemsListComponent } from '@shared/components/list-items/list-items.component';
-import { ItemSelectedComponent } from '@shared/components/item-selected/item-selected.component';
+
 
 import { AntsItemPage } from './components/ants-item/ants.item.page';
 

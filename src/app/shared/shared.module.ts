@@ -18,9 +18,6 @@ import { ItemPageComponent } from './components/item-page/item-page.component';
 import { DescriptionPageComponent } from './components/description-page/description-page.component';
 
 
-import { ItemsListComponent } from '@shared/components/list-items/list-items.component';
-import { ItemSelectedComponent } from '@shared/components/item-selected/item-selected.component';
-
 
 // componentes dinámicos
 import { AntsItemComponent } from './components/ants/ants-item/ants-item.component';
@@ -38,9 +35,11 @@ import { RouterModule } from '@angular/router';
 
 
 
-const DYNAMIC_COMPONENTS = [
+const DYNAMIC_PAGES = [
   AntsItemComponent,
+];
 
+const GENERIC_PAGES = [
   ItemPageComponent,
   DescriptionPageComponent,
 ];
@@ -56,9 +55,8 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [
-    ItemsListComponent,
-    ItemSelectedComponent,
-    ...DYNAMIC_COMPONENTS,
+    ...DYNAMIC_PAGES,
+    ...GENERIC_PAGES,
     ...COMPONENTS
   ],
   imports: [
@@ -68,10 +66,9 @@ const COMPONENTS = [
     RouterModule
   ],
   exports: [
-    ...DYNAMIC_COMPONENTS,
+    ...DYNAMIC_PAGES,
+    ...GENERIC_PAGES,
     ...COMPONENTS,
-    ItemsListComponent,
-    ItemSelectedComponent,
     RouterModule
   ]
 

@@ -35,13 +35,13 @@
     }
 
     :host::-webkit-scrollbar-thumb {
-        background: linear-gradient(180deg, #e0d03f, #a06903) !important;
+        background: linear-gradient(180deg, #fabe63, #fabe63) !important;  
         border-radius: 30px !important;
-        box-shadow: inset 2px 2px 2px #c3b359, inset -2px -2px 2px rgba(0, 0, 0, 0.25) !important;
+        box-shadow: inset 2px 2px 2px #ffefc4, inset -2px -2px 2px rgba(0, 0, 0, 0.25) !important;
     }
 
     :host::-webkit-scrollbar-track {
-        background: linear-gradient(90deg, #94ca0f 1px, #000000 0, #000000) !important;
+        background: linear-gradient(90deg, #ffedcc 20px, #000000 0, #000000) !important;
     }
 
     ::selection {
