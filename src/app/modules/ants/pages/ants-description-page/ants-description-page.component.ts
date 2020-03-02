@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-ants-description-page',
   templateUrl: './ants-description-page.component.html',
   styleUrls: ['./ants-description-page.component.scss'],
 })
-export class AntsDescriptionPageComponent implements OnInit {
+export class AntsDescriptionPageComponent implements OnInit, OnDestroy {
+
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+
+  ngOnDestroy(): void {
+    throw new Error("Method not implemented.");
+  }
 
 }

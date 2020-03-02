@@ -5,6 +5,7 @@ import {
 
 // componentes dinámicos
 import { AntsDescriptionComponent } from '@shared/components/ants/ants-description/ants-description.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-description-organism',
@@ -15,8 +16,15 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
   miFactory: ComponentFactory<any>;
   componentRef: ComponentRef<AntsDescriptionComponent> = null; // se declara una variable referencia.
   @ViewChild('componenteDinamicoDescription', { read: ViewContainerRef }) compDynamicContainer: ViewContainerRef;
+  public data = {
+    title: '',
+    description: {},
+    images:[]
+  };
+  
   constructor(
-    private resolver: ComponentFactoryResolver
+    private resolver: ComponentFactoryResolver,
+    public router: Router
   ) { }
 
   ngOnInit() { }

@@ -11,7 +11,7 @@ import { ItemComponent } from './components/item/item.component';
 import { ItemBoxComponent } from './components/item-box/item-box.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
-
+import { PictureCarouselComponent } from './components/picture-carousel/picture-carousel.component';
 
 // pages
 import { ItemOrganismComponent } from './components/organisms/item-organism/item-organism.component';
@@ -22,6 +22,7 @@ import { AntsItemComponent } from './components/ants/ants-item/ants-item.compone
 
 
 import { RouterModule } from '@angular/router';
+
 
 
 
@@ -48,7 +49,8 @@ const COMPONENTS = [
   ItemComponent,
   ItemBoxComponent,
   MenuComponent,
-  SearcherComponent
+  SearcherComponent,
+  PictureCarouselComponent
 ];
 
 
