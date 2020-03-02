@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ant } from '@pages/ants/models/ant.ts';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ants-item',
@@ -8,7 +9,9 @@ import { Ant } from '@pages/ants/models/ant.ts';
 })
 export class AntsItemComponent implements OnInit {
   item: Ant;
-  constructor() {
+  constructor(
+    public router: Router
+  ) {
 
   }
 
@@ -20,7 +23,7 @@ export class AntsItemComponent implements OnInit {
 
   openCard(id) {
     console.log('click id', id);
-
+    this.router.navigate([`/ants/${id}`])
   }
 
 }

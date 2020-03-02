@@ -6,8 +6,8 @@ import { SharedModule } from '@shared/shared.module';
 
 
 
-import { AntsItemPage } from './components/ants-item/ants.item.component';
-
+import { AntsItemComponent } from './components/ants-item/ants.item.component';
+import { AntsDescriptionComponent } from './components/ants-description/ants-description.component';
 
 
 
@@ -15,8 +15,8 @@ import { AntsItemPage } from './components/ants-item/ants.item.component';
 
 
 const routes: Routes = [
-  { path: '', component: AntsItemPage, data: { title: 'Ants' } },
-  // { path: ':id', component: ItemSelectedComponent, data: { title: 'Ants Selected' } },
+  { path: '', component: AntsItemComponent, data: { title: 'Ants' } },
+  { path: ':id', component: AntsDescriptionComponent, data: { title: 'Ants Description' } },
   // {
   //   path: 'item',
   //   loadChildren: () => import('./components/item/item.module').then( m => m.ItemPageModule)

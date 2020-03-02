@@ -15,7 +15,9 @@ import * as fromAntsActions from '@pages/ants/actions';
 import { AntsService } from '@pages/ants/services/ants.service';
 
 
-import { ItemPageComponent } from '@shared/components/item-page/item-page.component';
+import { ItemPageComponent } from '@shared/components/organisms/item-page/item-page.component';
+
+
 
 
 
@@ -25,7 +27,7 @@ import { ItemPageComponent } from '@shared/components/item-page/item-page.compon
   templateUrl: './ants-item.component.html',
   styleUrls: ['./ants-item.component.scss'],
 })
-export class AntsItemPage implements OnInit, OnDestroy, AfterViewInit {
+export class AntsItemComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('page') page: ItemPageComponent;
   itemsSuscription$: Subscription;
 

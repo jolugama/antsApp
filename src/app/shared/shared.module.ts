@@ -14,16 +14,16 @@ import { SearcherComponent } from './components/searcher/searcher.component';
 
 
 // pages
-import { ItemPageComponent } from './components/item-page/item-page.component';
-import { DescriptionPageComponent } from './components/description-page/description-page.component';
-
-
+import { ItemPageComponent } from './components/organisms/item-page/item-page.component';
+import { DescriptionPageComponent } from './components/organisms/description-page/description-page.component';
 
 // componentes dinámicos
 import { AntsItemComponent } from './components/ants/ants-item/ants-item.component';
 
 
 import { RouterModule } from '@angular/router';
+
+
 
 
 
