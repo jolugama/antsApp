@@ -59,7 +59,12 @@ export class AntsItemComponent implements OnInit, OnDestroy, AfterViewInit {
       console.log(data);
       console.log('ants', data.ants.items);
       this.page.dataItems = data.ants.items;
-      this.page.data.title= 'AntsApp - La enciclopedia de las hormigas'
+      if (this.page.innerWidth < 500) {
+        this.page.data.title = 'AntsApp - Hormigas'
+      }else{
+        this.page.data.title = 'AntsApp - La enciclopedia de las hormigas'
+      }
+    
     });
   }
 

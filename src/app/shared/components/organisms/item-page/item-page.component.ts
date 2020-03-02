@@ -3,7 +3,7 @@
  *
  */
 
-import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy, EventEmitter, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 import * as searcher from '@shared/components/searcher/interfaces';
@@ -21,6 +21,7 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   public data = {
     title: ''
   };
+  public innerWidth = window.innerWidth;
 
   constructor(
     public router: Router
@@ -31,6 +32,8 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   ngOnInit() {
 
   }
+
+
 
   // recibe del componente buscador y guarda el objeto en searcher.
   onSearch(data: searcher.Out) {
@@ -48,6 +51,12 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     alert('delete');
     throw new Error('se destruye item-page');
+  }
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
   }
 
 }
