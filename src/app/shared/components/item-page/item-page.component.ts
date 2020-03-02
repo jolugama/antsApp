@@ -72,6 +72,11 @@ export class ItemPageComponent implements OnInit, OnDestroy {
   //   // this.storeItems$.dispatch(fromAntsActions.SearchActions.searchItems({ query }));
   // }
 
+  openFilter() {
+    console.log('openFilter');
+
+  }
+
   ngOnDestroy(): void {
     alert('delete');
     throw new Error('se destruye item-page');

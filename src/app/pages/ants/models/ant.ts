@@ -1,21 +1,21 @@
 export interface Ant {
     id: number;
+    images: string[]; // array de imágenes
     taxonomy: Taxonomy; // familia, especie, sinónimo
-    identification: Identification; // clasificados por reina, obrera, soldado
+    identification: Identification; // clasificados por reina, obrera, soldado. colores y tamaños
     confusions?: Confusions; // descripción y especies
-    matingFlight?: number[]; // array de meses (en números)
     habitat?: Habitat; // array zona (palabras claves),  array suelo del hormiguero y descripción
     distribution: Distribution; // continente, pais, comunidad autónoma?
     biology: Biology; // si es monogina, horario fundación, tamaño colonia, hibernación, nutrición, descripción
     keepingLevel?: KeepingLevel; // nivel de peligrosidad
     airhumidity?: Airhumidity; // humedad ambiental en nido y fuera
     temperature?: Temperature; // temperatura en nido y fuera
-    images: string[]; // array de imágenes
 }
 
 
 // forma: para reina,  obrera, soldado
 export interface Shape {
+    text?: string;
     size: number[];
     colour: string[];
     body?: Body;
@@ -36,14 +36,16 @@ export interface Airhumidity {
 export interface KeepingLevel {
     level: number;
     obj?: string[];
+    text?: string;
 }
 
 export interface Biology {
-    queen: string[];
-    founding?: string;
+    colonyType: string[];
     colonySize: string[];
     hibernation: number[];
+    matingFlight?: number[];
     nutrition: string[];
+    nutrition_text?: string;
     description: string;
 }
 
@@ -55,6 +57,7 @@ export interface Distribution {
 
 export interface Habitat {
     zone: string[];
+    altitude?: number[];
     nestForm: string[];
     text: string;
 }
@@ -81,7 +84,7 @@ export interface Body {
     leg?: any[];
     thorax?: any[];
     gaster?: any[];
-    hair?: string;
+    hair?: any[];
 }
 
 

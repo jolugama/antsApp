@@ -5,7 +5,7 @@
     background: bisque;
     color:black;
     overflow-y: auto;
-    max-width: 900px;
+    max-width: 850px;
     width: 100%;
     margin: 0 auto;
 
@@ -17,9 +17,12 @@
     ion-col:nth-child(2){
         text-align: center;
         align-self: center;
+        cursor: pointer;
         ion-icon {
             width: 2em;
             height: 2em;
+            margin-left: -13px;
+
         }
     }
 }

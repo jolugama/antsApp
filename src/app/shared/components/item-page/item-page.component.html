@@ -20,8 +20,8 @@
           <app-searcher (out)="onSearch($event)"></app-searcher>
         </ion-col>
 
-        <ion-col size="2">
-          <ion-icon name="options-outline"></ion-icon>
+        <ion-col size="1" (click)="openFilter()">
+          <ion-icon name="options-outline" ></ion-icon>
         </ion-col>
       </ion-row>
 
