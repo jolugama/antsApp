@@ -85,13 +85,16 @@ export class AntsDescriptionPageComponent implements OnInit, OnDestroy, AfterVie
         if (this.antService.getWidth() > 500) {
           title = `${rest.taxonomy.specie} - ${rest.taxonomy.subfamily}`
         }
-        this.page.data = {
-
+        const dataObj= {
           title: title,
           description: rest,
           images: images,
+        };
 
-        }
+        this.page.data = dataObj;
+        // this.page.setData(dataObj);
+        // this.page.cdRef.detectChanges();
+        
       }
 
     });

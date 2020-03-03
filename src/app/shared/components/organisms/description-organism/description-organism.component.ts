@@ -1,30 +1,37 @@
 import {
   Component, OnInit, Input, ComponentFactory, ComponentRef, ViewChild, ViewContainerRef,
-  ComponentFactoryResolver, AfterViewInit, OnDestroy
+  ComponentFactoryResolver, AfterViewInit, OnDestroy, OnChanges, SimpleChanges, DoCheck, ChangeDetectorRef,
 } from '@angular/core';
 
 // componentes dinámicos
 import { AntsDescriptionComponent } from '@shared/components/ants/ants-description/ants-description.component';
 import { Router } from '@angular/router';
+import { PictureCarouselComponent } from '@shared/components/picture-carousel/picture-carousel.component';
+
+
 
 @Component({
   selector: 'app-description-organism',
   templateUrl: './description-organism.component.html',
   styleUrls: ['./description-organism.component.scss'],
 })
-export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDestroy {
+export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDestroy, OnChanges, DoCheck {
+
   miFactory: ComponentFactory<any>;
   componentRef: ComponentRef<AntsDescriptionComponent> = null; // se declara una variable referencia.
   @ViewChild('componenteDinamicoDescription', { read: ViewContainerRef }) compDynamicContainer: ViewContainerRef;
-  public data = {
+  @ViewChild(PictureCarouselComponent) pictureCarouselComponent: PictureCarouselComponent;
+  @Input() data = {
     title: '',
     description: {},
-    images:[]
+    images: []
   };
-  
+  flagSend = 0; // si es 1 ha sido ya enviado y no se envía más.
+
   constructor(
     private resolver: ComponentFactoryResolver,
-    public router: Router
+    public router: Router,
+    public cdRef: ChangeDetectorRef
   ) { }
 
   ngOnInit() { }
@@ -32,6 +39,29 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
   ngAfterViewInit() {
     this.getLazyComponent();
   }
+  // TODO ngDoCheck ??? 
+  ngOnChanges(changes: SimpleChanges): void {
+    // debugger;
+    // this.pictureCarouselComponent.images = this.data.images;
+  }
+
+  ngDoCheck(): void {
+    //  debugger;
+    // this.cdRef.detectChanges();
+    if (this.data?.description && this.data?.images && this.data?.title?.length > 0) {
+      this.sendData();
+    }
+  }
+
+  sendData() {
+    if (this.flagSend === 0) {
+      this.flagSend = 1;
+      this.pictureCarouselComponent.images = this.data.images;
+    }
+  }
+
+
+
 
   async getLazyComponent() {
     this.compDynamicContainer.clear();
