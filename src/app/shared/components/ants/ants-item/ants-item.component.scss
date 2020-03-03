@@ -29,13 +29,23 @@ img {
 ion-col {
     align-self: center;
     margin: 0 auto;
-
+    &:nth-child(1) {
+        // padding-left: 0px;
+        margin-left: 0px;
+    }
     &:nth-child(2) {
         text-align: center;
     }
 
     &:nth-child(3) {
         text-align: right;
+        margin:0;
+        padding:0;
+        // background-color: greenyellow;
+        height: $size;
+        display:flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
     }
 }
 
