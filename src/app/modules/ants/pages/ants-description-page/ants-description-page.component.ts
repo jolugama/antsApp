@@ -1,14 +1,23 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+/**
+ * A través de @ViewChild('page')  accedo a las propiedades del genérico description-organism. 
+ * Le proporciono título y los items a mostrar
+ */
+
+
+import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 
 import * as fromItemsReducer from '@modules/ants/reducers';
 import * as fromItemsActions from '@modules/ants/actions';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { map } from 'rxjs/operators';
+import { map, take } from 'rxjs/operators';
 import { Ant } from '@modules/ants/models';
 import { Observable } from 'rxjs';
 import { AntsService } from '@modules/ants/services/ants.service';
+
+import { DescriptionOrganismComponent } from '@shared/components/organisms/description-organism/description-organism.component';
+
 
 
 @Component({
@@ -16,7 +25,10 @@ import { AntsService } from '@modules/ants/services/ants.service';
   templateUrl: './ants-description-page.component.html',
   styleUrls: ['./ants-description-page.component.scss'],
 })
-export class AntsDescriptionPageComponent implements OnInit, OnDestroy {
+export class AntsDescriptionPageComponent implements OnInit, OnDestroy, AfterViewInit {
+
+  @ViewChild('page') page: DescriptionOrganismComponent;
+
   subs: Subscription;
   item$: Observable<Ant>;
 
@@ -36,16 +48,50 @@ export class AntsDescriptionPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.item$ = this.storeItems$.pipe(select(fromItemsReducer.selectedItem)) as Observable<any>;
+
+  }
+
+  ngAfterViewInit(): void {
+    this._sendData();
+
+
+  }
+
+
+  private _sendData() {
+
+    this.item$ = this.storeItems$.pipe(
+      select(fromItemsReducer.selectedItem),
+      take(1)
+    );
     this.item$.subscribe((data) => {
+
       // si carga la página desde descripción, no tiene cargado redux.
       // cargo items
-      if(!data){
+      if (!data) {
         this.antService.loadItems();
-      }else{
+        this.antService.getFilteredItems().subscribe(data => {
+          if (data?.ants?.items?.length > 0) {
+            this._sendData();
+          }
+
+        })
+      } else {
+        // debugger;
         // si tiene cargado ants de redux -->
-        console.log('xxxx',data);
- 
+        console.log('xxxx', data);
+        const { images, ...rest } = data;
+        let title = `${rest.taxonomy.specie}`;
+        if (this.antService.getWidth() > 500) {
+          title = `${rest.taxonomy.specie} - ${rest.taxonomy.subfamily}`
+        }
+        this.page.data = {
+
+          title: title,
+          description: rest,
+          images: images,
+
+        }
       }
 
     });

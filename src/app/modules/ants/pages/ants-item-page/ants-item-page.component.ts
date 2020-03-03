@@ -1,5 +1,5 @@
 /**
- * A través de @ViewChild('page')  accedo a las propiedades del genérico ItemPageComponent. 
+ * A través de @ViewChild('page')  accedo a las propiedades del genérico item-organism. 
  * Le proporciono título y los items a mostrar
  */
 
@@ -65,7 +65,7 @@ export class AntsItemPageComponent implements OnInit, OnDestroy, AfterViewInit {
       console.log(data);
       console.log('ants', data.ants.items);
       this.page.dataItems = data.ants.items;
-      if (this.page.innerWidth < 500) {
+      if (this.antService.getWidth() < 500) {
         this.page.data.title = 'AntsApp - Hormigas'
       }else{
         this.page.data.title = 'AntsApp - La enciclopedia de las hormigas'

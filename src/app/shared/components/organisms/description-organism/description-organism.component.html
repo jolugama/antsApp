@@ -2,7 +2,7 @@
     <ion-toolbar>
         <!-- (click)="openSidenav()" -->
         <ion-buttons slot="start">
-            <ion-back-button  defaultHref="ants"></ion-back-button>
+            <ion-back-button defaultHref="ants"></ion-back-button>
         </ion-buttons>
         <ion-title>
             {{data.title}}
@@ -13,3 +13,4 @@
 <app-picture-carousel></app-picture-carousel>
 <ng-container #componenteDinamicoDescription></ng-container>
 
+{{data | json}}
