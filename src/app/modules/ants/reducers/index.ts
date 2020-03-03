@@ -10,6 +10,7 @@ import * as fromItems from './items.reducer';
 import * as fromFavorites from './favorites.reducer';
 import * as fromSearch from './search.reducer';
 import { Ant } from '@modules/ants/models';
+import { of } from 'rxjs';
 
 
 
@@ -73,10 +74,10 @@ export const selectItemsState = createFeatureSelector<State, ItemsState>(
 
 
 
-export const selectCollectionState = createSelector(
-  selectItemsState,
-  (state: ItemsState) => state.favorites
-);
+// export const selectCollectionState = createSelector(
+//   selectItemsState,
+//   (state: ItemsState) => state.favorites
+// );
 
 export const selectItemsSearch = createSelector(
   selectItemsState,
@@ -121,35 +122,39 @@ export const selectItemsSearch = createSelector(
 
 
 
-
+/**
+ *  De Ants, solo items
+ */
 export const selectItemEntitiesState = createSelector(
   selectItemsState,
   state => state.items
 );
 
+/**
+ * de Ants, items, el id seleccionado (el que se abre en descripción)
+ */
 export const selectSelectedItemId = createSelector(
   selectItemEntitiesState,
   fromItems.selectId
+  // la ultima fila seria igual a:
+  // state => state.selectedItemId
 );
 
 
 
-// export const selectBookCollection = createSelector(
-//   selectItemEntitiesState,
-//   selectSelectedItemId,
-//   (entities, ids) => {
-//     return ids
-//       .map(id => entities[id])
-//       .filter((item): item is Ant => item != null);
-//   }
-// );
 
-
-export const selectSelectedItem = createSelector(
+// muestra solo un item, el item completo con la id seleccionado. 
+export const selectedItem = createSelector(
   selectItemEntitiesState,
   selectSelectedItemId,
-  (entities, selectedId) => {
-    // debugger;
-    return selectedId && entities[selectedId];
-  }
+  (items, id) => items.entities[id]
 );
+
+// export const selectSelectedItem = createSelector(
+//   selectItemEntitiesState,
+//   selectSelectedItemId,
+//   (entities, selectedId) => {
+//     debugger;
+//     return selectedId && entities[selectedId];
+//   }
+// );

@@ -9,15 +9,10 @@ import { Ant } from '@modules/ants/models';
 export const ItemsFeatureKey = 'items';
 
 export interface State extends EntityState<Ant> {
-  // aparte de entities e id, se añaden estos objetos
+  // ids --> hereda de EntityState
+  // entities --> hereda de EntityState
   selectedItemId: number | null;
 }
-
-// const initialState: State = {
-//   loaded: false,
-//   loading: false,
-//   // ants: []
-// };
 
 export const adapter: EntityAdapter<Ant> = createEntityAdapter<Ant>({
   selectId: (ant: Ant) => ant.id,
