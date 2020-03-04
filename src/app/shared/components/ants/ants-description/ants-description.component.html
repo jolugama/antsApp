@@ -1,17 +1,26 @@
-<p>
-  ants-description works! 
-</p>
 
-
-
-<div *ngIf="data">
-  {{ data | json }}
-<!-- <div> {{data.taxonomy.specie}}</div> -->
-</div>
-<ion-content>
+<div *ngIf="data?.taxonomy">
+  
   <ion-list>
 
 
+    <ion-card>
+      <ion-card-header>
+       
+        <ion-card-title> <b>Especie:</b> {{data.taxonomy.specie}}</ion-card-title>
+        <ion-card-subtitle> <b>Subfamilia:</b> {{data.taxonomy.subfamily}}</ion-card-subtitle>
+
+      </ion-card-header>
+
+      <ion-card-content>
+
+
+        <!-- <p><b>Clase:</b> {{item.taxonomia.subclase}}</p> -->
+        <!-- <p><b>Orden:</b> {{item.taxonomia.orden}}</p> -->
+        <!-- <p><b>Familia:</b> {{item.taxonomia.familia}}</p> -->
+
+      </ion-card-content>
+    </ion-card>
     <ion-card>
       <ion-card-header>
         <ion-card-title>Cocina</ion-card-title>
@@ -60,8 +69,7 @@
     </ion-card>
 
 
-
-
-
   </ion-list>
-</ion-content>
+
+
+</div>

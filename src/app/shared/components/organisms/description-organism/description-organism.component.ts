@@ -65,7 +65,7 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
       }
       this.pictureCarouselComponent.data = data;
       this.pictureCarouselComponent.cd.detectChanges();
-      this.componentRef.instance.data=this.data;
+      this.componentRef.instance.data=this.data.description;
     }
   }
 

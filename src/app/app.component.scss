@@ -8,6 +8,10 @@
   
     }
 
+    ion-list {
+        background: bisque !important;
+        padding-bottom: 110px !important; // fix ionic
+    }
     ion-router-outlet{
         background: bisque;
         color: black;
