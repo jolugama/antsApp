@@ -58,7 +58,7 @@
         <p><b>Tipo de colonia:</b> {{data.biology.colonyType?.join(', ')}}</p>
         <p><b>Hibernación:</b> {{data.biology.colonyType?.join('-')}}</p>
         <p><b>Enjambrazón:</b> {{data.biology.matingFlight?.join('-')}} {{data.biology.matingFlight_text}}</p>
-        <p><b>Nutrición:</b> {{data.biology.nutrition?.join('-')}}. {{data.biology.nutrition.nutrition_text}}</p>
+        <p><b>Nutrición:</b> {{data.biology.nutrition?.join(', ')}}. {{data.biology.nutrition.nutrition_text}}</p>
         <p><b>Descripción:</b> {{data.biology.description}}</p>
       </ion-card-header>
       <ion-card-content>
@@ -85,7 +85,7 @@
       <ion-card-header>
         <ion-card-title>Formicaria</ion-card-title>
         <p><b>Tamaño:</b> {{data.formicaria.size?.join('-')}}</p>
-        <p><b>Subfamilia:</b> {{data.taxonomy.subfamily}}</p>
+        <p><b>nido:</b> {{data.formicaria.nest.join(', ')}}</p>
       </ion-card-header>
       <ion-card-content>
       </ion-card-content>
