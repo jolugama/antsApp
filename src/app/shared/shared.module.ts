@@ -19,6 +19,7 @@ import { DescriptionOrganismComponent } from './components/organisms/description
 
 // componentes dinámicos
 import { AntsItemComponent } from './components/ants/ants-item/ants-item.component';
+import { AntsDescriptionComponent } from './components/ants/ants-description/ants-description.component';
 
 
 import { RouterModule } from '@angular/router';
@@ -35,8 +36,10 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 const DYNAMIC_PAGES = [
   AntsItemComponent,
+  AntsDescriptionComponent
 ];
 
 const ORGANISM_PAGES = [

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ants-description',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ants-description.component.scss'],
 })
 export class AntsDescriptionComponent implements OnInit {
-
+  @Input() data;
   constructor() { }
 
   ngOnInit() {}

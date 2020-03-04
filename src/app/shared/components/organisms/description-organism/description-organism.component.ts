@@ -65,6 +65,7 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
       }
       this.pictureCarouselComponent.data = data;
       this.pictureCarouselComponent.cd.detectChanges();
+      this.componentRef.instance.data=this.data;
     }
   }
 
@@ -78,6 +79,7 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
     this.componentRef = this.compDynamicContainer.createComponent(
       this.resolver.resolveComponentFactory(AntsDescriptionComponent)
     );
+    this.componentRef.instance.data=this.data;
   }
 
 

@@ -1,7 +1,13 @@
 <p>
-  ants-description works!
+  ants-description works! 
 </p>
 
+
+
+<div *ngIf="data">
+  {{ data | json }}
+<!-- <div> {{data.taxonomy.specie}}</div> -->
+</div>
 <ion-content>
   <ion-list>
 
