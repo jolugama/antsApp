@@ -1,3 +1,27 @@
-<p>
-  picture-carousel works! {{ data | json}} 
-</p>
+<div *ngIf="data?.folder">
+  <div *ngIf="data?.images?.length>1; else oneImage">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let img of data.images; let i = index">
+        <div class="position">{{i+1}}/{{data.images.length}}</div>
+        <div class="item-profile">
+
+
+          <ng-container *ngIf="data.images[0]; else imageDeprecated">
+            <img src="./assets/img/{{data.folder}}/{{data.images[i]}}" (error)="onError($event)"  />
+          </ng-container>
+
+          <ng-template #imageDeprecated>
+            <!-- <img src="./assets/img/{{data.folder}}/noimage.png"
+                onError="this.src='./assets/img/{{data.folder}}/noimage.png'" /> -->
+          </ng-template>
+
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ng-template #oneImage>
+    <img src="./assets/img/{{data.folder}}/{{data.images[0]}}" (error)="onError($event)" />
+  </ng-template>
+
+</div>

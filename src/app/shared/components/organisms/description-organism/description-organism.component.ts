@@ -61,6 +61,7 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
         folder: 'ants'
       }
       this.pictureCarouselComponent.data = data;
+      this.pictureCarouselComponent.cd.detectChanges();
     }
   }
 
