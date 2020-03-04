@@ -2,11 +2,14 @@ import {
   Component, OnInit, Input, ComponentFactory, ComponentRef, ViewChild, ViewContainerRef,
   ComponentFactoryResolver, AfterViewInit, OnDestroy, OnChanges, SimpleChanges, DoCheck, ChangeDetectorRef,
 } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { PictureCarouselComponent } from '@shared/components/picture-carousel/picture-carousel.component';
 
 // componentes dinámicos
 import { AntsDescriptionComponent } from '@shared/components/ants/ants-description/ants-description.component';
-import { Router } from '@angular/router';
-import { PictureCarouselComponent } from '@shared/components/picture-carousel/picture-carousel.component';
+
+
 
 
 

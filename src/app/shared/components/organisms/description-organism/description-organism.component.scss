@@ -2,3 +2,6 @@ ion-title {
     font-size: 1.0em;
 }
 
+:host {
+    overflow-y: auto;
+}
