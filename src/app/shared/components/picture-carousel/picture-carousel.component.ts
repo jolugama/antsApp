@@ -18,7 +18,7 @@ export class PictureCarouselComponent implements OnInit {
 
   @Input() data: Data;
   slideOpts = slideOpts;
-  error = `./assets/img/noimage.png`;
+  error = `./assets/img/noimage_mini.png`;
   constructor(public cd: ChangeDetectorRef) { }
 
   ngOnInit() { }

@@ -1,3 +1,8 @@
+.image {
+    margin: 0 auto;
+    text-align: center;
+}
+
 .position {
     position: absolute;
     border-radius: 5px;
@@ -11,7 +16,7 @@
     color: black;
 }
 
-@media (orientation: landscape) {
+@media (max-width: 800px) and (orientation: landscape) {
     img {
         z-index: 999999;
         object-fit: contain;
@@ -34,13 +39,14 @@
         top: 1em;
         bottom: auto;
         right: 1em;
-        background:beige;
+        background: beige;
     }
 
     ::ng-deep {
         ion-toolbar {
             display: none;
         }
+
         ion-slide {
             background: black;
         }

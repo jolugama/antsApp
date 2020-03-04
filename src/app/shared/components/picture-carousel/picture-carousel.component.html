@@ -1,4 +1,4 @@
-<div *ngIf="data?.folder">
+<div *ngIf="data?.folder" class="image">
   <div *ngIf="data?.images?.length>1; else oneImage">
     <ion-slides pager="true" [options]="slideOpts">
       <ion-slide *ngFor="let img of data.images; let i = index">
@@ -7,7 +7,7 @@
 
 
           <ng-container *ngIf="data.images[0]; else imageDeprecated">
-            <img src="./assets/img/{{data.folder}}/{{data.images[i]}}" (error)="onError($event)"  />
+            <img src="./assets/img/{{data.folder}}/{{data.images[i]}}" (error)="onError($event)" />
           </ng-container>
 
           <ng-template #imageDeprecated>
