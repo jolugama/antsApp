@@ -2,16 +2,21 @@
 //     background: bisque;
 // }
 :host {
-    background: bisque;
-    color:black;
+    // background: bisque;
+    // color:black;
     overflow-y: auto;
-    max-width: 850px;
-    width: 100%;
-    margin: 0 auto;
+    // max-width: 850px;
+    // width: 100%;
+    // margin: 0 auto;
 
 }
 
 .searcher{
+    position: sticky;
+    top: 0px;
+    z-index: 9999999;
+    background: bisque;
+
     margin:0;
     padding:0;
     ion-col:nth-child(2){

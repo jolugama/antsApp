@@ -7,6 +7,15 @@
         color:white;
   
     }
+
+    ion-router-outlet{
+        background: bisque;
+        color: black;
+        overflow-y: none;
+        max-width: 850px;
+        width: 100%;
+        margin: 0 auto;
+    }
     
     .container-main {
         max-width: 830px;
@@ -26,6 +35,8 @@
 .my-custom-menu {
     --width: 240px;
 }
+
+
 
 
 #container {
