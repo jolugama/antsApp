@@ -56,7 +56,11 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
   sendData() {
     if (this.flagSend === 0) {
       this.flagSend = 1;
-      this.pictureCarouselComponent.images = this.data.images;
+      const data = {
+        images: this.data.images,
+        folder: 'ants'
+      }
+      this.pictureCarouselComponent.data = data;
     }
   }
 
