@@ -4,7 +4,7 @@ import { createReducer, on } from '@ngrx/store';
 import {
   ItemsActions
 } from './../actions';
-import { Ant } from '@modules/ants/models';
+import { Ant, Taxonomy } from '@modules/ants/models';
 
 export const ItemsFeatureKey = 'items';
 
@@ -14,9 +14,14 @@ export interface State extends EntityState<Ant> {
   selectedItemId: number | null;
 }
 
+export function sortBySpecie(a: Ant, b: Ant): number {
+  return a.taxonomy.specie.localeCompare(b.taxonomy.specie);
+}
+ 
+
 export const adapter: EntityAdapter<Ant> = createEntityAdapter<Ant>({
   selectId: (ant: Ant) => ant.id,
-  sortComparer: false,
+  sortComparer: sortBySpecie,
 });
 
 export const initialState: State = adapter.getInitialState({

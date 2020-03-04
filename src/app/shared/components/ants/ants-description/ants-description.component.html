@@ -45,7 +45,7 @@
         <ion-card-title>Distribución</ion-card-title>
         <p><b>Continentes:</b> {{data.distribution.continent.join(', ')}}</p>
         <p><b>Países:</b> {{data.distribution.country.join(', ')}}</p>
-        <p *ngIf="data.distribution.country.includes('españa')"><b>Comunidades autónomas:</b> {{data.distribution.ca.join(', ')}}</p>
+        <p *ngIf="data.distribution.country.includes('españa')"><b>Comunidades autónomas:</b> {{data.distribution.ca?.join(', ')}}</p>
       </ion-card-header>
       <ion-card-content>
       </ion-card-content>
@@ -56,7 +56,7 @@
       <ion-card-header>
         <ion-card-title>Biología</ion-card-title>
         <p><b>Tipo de colonia:</b> {{data.biology.colonyType?.join(', ')}}</p>
-        <p><b>Hibernación:</b> {{data.biology.colonyType?.join('-')}}</p>
+        <p><b>Hibernación:</b> {{data.biology.hibernation?.join('-')}}</p>
         <p><b>Enjambrazón:</b> {{data.biology.matingFlight?.join('-')}} {{data.biology.matingFlight_text}}</p>
         <p><b>Nutrición:</b> {{data.biology.nutrition?.join(', ')}}. {{data.biology.nutrition.nutrition_text}}</p>
         <p><b>Descripción:</b> {{data.biology.description}}</p>
