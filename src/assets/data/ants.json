@@ -1,6 +1,6 @@
-[
-    {
-        "id": 122,
+[{
+        "id": 174,
+        "images": ["174_0.jpg","174_1.jpg","174_2.jpg"],
         "taxonomy": {
             "subfamily": "myrmicinae",
             "tribe": "pheidolini",
@@ -8,22 +8,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "poli",
+            "polimorph": "1",
             "queen": {
+                "text": "",
                 "size": [15, 18],
-                "colour": ["rojo", "marron", "negro"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [3, 14],
-                "colour": ["brillante", "negro", "rojo", "marron"],
+                "color": ["rojo", "marron", "negro"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -31,31 +20,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [3, 14],
+                "color": ["brillante", "negro", "rojo", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [7, 8],
-                "colour": ["negro"]
+                "color": ["negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [],
         "habitat": {
             "zone": ["arena", "bosque", "arbusto"],
             "nestForm": ["suelo", "piedras"],
+            "altitude": [],
             "text": "Sand and shrub areas"
         },
         "distribution": {
@@ -64,16 +82,19 @@
             "ca": ["madrid", "clm", "andalucia"]
         },
         "biology": {
-            "queen": ["monogina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina"],
+            "colonySize": [10000],
             "hibernation": [11, 2],
+            "matingFlight": [],
+            "matingFlight_text": "  autuum\n\t\t\tfounding:  claustral (without feeding) colonyage up to 25 years\n\t\t\tcolonysize: up to 10.000 Individuals",
             "nutrition": ["semillas", "insectos"],
+            "nutrition_text": "Mostly seeds from different rampant plants (also grass) but also insects",
             "description": "this species is a highly granivor ant which collects all kinds of small seeds and chew them into so- called antbread. most of their waterrequirements are covered by seeds and insects. honeywater is only accepted when there is a lack of moisture. messor barbarus tends to drown in open water so it is necessary to cover waterplaces with little stones or cotton."
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["alimentacion", "condicionesClimaticas"]
+            "obj": ["alimentacion", "condicionesClimaticas"],
+            "text": "Species from Southern Europe with higher requirements towards food and climate"
         },
         "airhumidity": {
             "nest": [50, 70],
@@ -83,11 +104,17 @@
             "nest": [21, 26],
             "arena": [25, 30]
         },
-
-        "images": ["122_1.jpg"]
-    }, 
+        "formicaria": {
+            "size": ["m"],
+            "nest": ["arenaArcillosa", "arena"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to savanah areas with grass and other plants",
+            "decoration": "branches, roots, treeneedels"
+        }
+    },
     {
-        "id": 109,
+        "id": 186,
+        "images": ["186_0.jpg"],
         "taxonomy": {
             "subfamily": "formicinae",
             "tribe": "lasiini",
@@ -95,22 +122,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "mono",
+            "polimorph": "\n\t\t\tWorker:\n\t\t\t\n\t\t\tSize: 3 - 5mm Colour: black with light brown shimmer\n\t\t",
             "queen": {
+                "text": "",
                 "size": [9],
-                "colour": ["negro", "marron", "brillante"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [3, 5],
-                "colour": ["negro", "marron", "brillante"],
+                "color": ["negro", "marron", "brillante"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -118,31 +134,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [3, 5],
+                "color": ["negro", "marron", "brillante"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [3.5, 4.5],
-                "colour": ["negro"]
+                "color": ["negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [5, 6],
         "habitat": {
             "zone": ["claros", "pastizal"],
             "nestForm": ["suelo", "piedras"],
+            "altitude": [],
             "text": "prefers sunexposed openland, often on ruralareas and in anthropogenic disturbed land"
         },
         "distribution": {
@@ -151,16 +196,19 @@
             "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares"]
         },
         "biology": {
-            "queen": ["monogina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina"],
+            "colonySize": [40000],
             "hibernation": [10, 3],
-            "nutrition": ["aguamiel", "insectos"],
+            "matingFlight": [5, 6],
+            "matingFlight_text": " on warm days mid - may to the end of june at 22 - 28°C\n\t\t\tfounding:  claustral (without feeding)\n\t\t\tfrom Egg to adult worker approx. 6 - 8 Weeks (Egg to Larvae: approx. 10 -12 days, Larvae to Pupae: approx. 10 -14 days, Pupae to worker :approx. 10 - 24 days, depending on temperature).\n\t\t\tThe maintime of activity is between april to october.The lifespan of the queen can be up to 15 years (still not completly clear) .\n\t\t\tcolonysize: up to 40.000 Individuals",
+            "nutrition": ["mielato", "insectos"],
+            "nutrition_text": "Honeywater and insects e.g. Dipterans like Flies or Mosquitos",
             "description": "very tough and well-fortified ants, which will grow to a great colony by good support. within 3 years they can reach a population up to 10.000 workers. in nature they cultivate sap insects on roses, elder, red-/black-currant and so on."
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["principiantes"]
+            "obj": ["principiantes"],
+            "text": "very easy in keeping"
         },
         "airhumidity": {
             "nest": [50, 60],
@@ -170,11 +218,17 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-
-        "images": ["109_1.jpg", "109_2.jpg", "109_3.jpg"]
+        "formicaria": {
+            "size": ["s", "m"],
+            "nest": ["arenaArcillosa", "arena"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to forest- and sand areas, moss, grass and other plants",
+            "decoration": "branches, roots, treeneedels, stones"
+        }
     },
     {
-        "id": 24,
+        "id": 105,
+        "images": ["105_0.jpg"],
         "taxonomy": {
             "subfamily": "formicinae",
             "tribe": "camponotini",
@@ -182,22 +236,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "poli",
+            "polimorph": "1",
             "queen": {
+                "text": "",
                 "size": [17],
-                "colour": ["negro"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [8, 17],
-                "colour": ["negro", "rojo"],
+                "color": ["negro"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -205,31 +248,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [8, 17],
+                "color": ["negro", "rojo"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [],
-                "colour": ["negro"]
+                "color": ["negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [6],
         "habitat": {
             "zone": ["claros"],
             "nestForm": ["suelo"],
+            "altitude": [],
             "text": "prefers open areas avoids aride areas"
         },
         "distribution": {
@@ -238,16 +310,19 @@
             "ca": ["madrid", "andalucia"]
         },
         "biology": {
-            "queen": ["monogina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina"],
+            "colonySize": [10000],
             "hibernation": [10, 2],
-            "nutrition": ["aguamiel", "insectos"],
+            "matingFlight": [6],
+            "matingFlight_text": " on warm days in june\n\t\t\tfounding:  claustral (without feeding) \n\t\t\tcolonysize: up to 10.000 Individuals",
+            "nutrition": ["mielato", "insectos"],
+            "nutrition_text": "Honeywater and insects e.g. Dipterans like Flies or Mosquitos",
             "description": "camponotus barbaricus is one of the biggest ant species in europe. very tough! they attack only in case of nest disturbance. shows activity at day and night .they build their nests preferably underneath wood or stones. a radiant heater should heaten a stone or an area of the antfarm from time to time."
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["principiantes"]
+            "obj": ["principiantes"],
+            "text": "for beginners with a colonysize of at least 10 workers"
         },
         "airhumidity": {
             "nest": [50, 60],
@@ -257,11 +332,18 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-        "images": ["24_1.jpg","24_2.jpg"]
+        "formicaria": {
+            "size": ["m", "l"],
+            "nest": ["arenaArcillosa", "arena"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to Grasareas with grass and other plants",
+            "decoration": "branches, roots, treeneedels"
+        }
     },
 
     {
-        "id": 102,
+        "id": 183,
+        "images": ["183_0.jpg"],
         "taxonomy": {
             "subfamily": "formicinae",
             "tribe": "lasiini",
@@ -269,22 +351,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "mono",
+            "polimorph": "\n\t\t\tWorker:\n\t\t\t\n\t\t\tSize: 2 - 4mm Colour: yellow\n\t\t",
             "queen": {
+                "text": "",
                 "size": [7, 8],
-                "colour": ["amarillo"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [2, 4],
-                "colour": ["amarillo"],
+                "color": ["amarillo"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -292,31 +363,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [2, 4],
+                "color": ["amarillo"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [3, 4],
-                "colour": ["amarillo"]
+                "color": ["amarillo"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [7, 9],
         "habitat": {
             "zone": ["claros", "pastizal"],
             "nestForm": ["suelo", "piedras"],
+            "altitude": [],
             "text": "prefers sunexposed grassland"
         },
         "distribution": {
@@ -325,16 +425,19 @@
             "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares"]
         },
         "biology": {
-            "queen": ["monogina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina"],
+            "colonySize": [40000],
             "hibernation": [10, 3],
-            "nutrition": ["aguamiel", "insectos"],
+            "matingFlight": [7, 9],
+            "matingFlight_text": " on warm days july to begin of september\n\t\t\tfounding:  claustral (without feeding), often Pleometrosis  with up to 20 Queens and Adoption\n\t\t\tcolonysize: up to 40.000 Individuals",
+            "nutrition": ["mielato", "insectos"],
+            "nutrition_text": "Honeywater and insects e.g. Dipterans like Flies or Mosqitos",
             "description": "lasius flavus is complete subterrainean antspecie which harvest honeydew from rootaphids"
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["principiantes"]
+            "obj": ["principiantes"],
+            "text": "very easy in keeping"
         },
         "airhumidity": {
             "nest": [60, 70],
@@ -344,10 +447,17 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-        "images": []
+        "formicaria": {
+            "size": ["s", "m"],
+            "nest": ["arenaArcillosa", "arena"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to grasslandareas moss, grass and other plants",
+            "decoration": "branches, roots, treeneedels, stones"
+        }
     },
     {
-        "id": 106,
+        "id": 69,
+        "images": ["69_0.jpg"],
         "taxonomy": {
             "subfamily": "formicinae",
             "tribe": "lasiini",
@@ -355,22 +465,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "mono",
+            "polimorph": "\n            Worker:\n            \n             Size: 3 - 5mm Colour: black with light brown shimmer\n            \n        ",
             "queen": {
+                "text": "",
                 "size": [9],
-                "colour": ["negro", "marron", "brillante"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [3, 5],
-                "colour": ["negro", "marron", "brillante"],
+                "color": ["negro", "marron", "brillante"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -378,31 +477,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [3, 5],
+                "color": ["negro", "marron", "brillante"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [],
-                "colour": []
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [],
         "habitat": {
             "zone": ["claros", "zonaSeca", "vegetacionBaja"],
             "nestForm": ["suelo", "piedras"],
+            "altitude": [],
             "text": "avoids sunexposed and xerothermic Areas, often found in open Pineforest with a humid climate"
         },
         "distribution": {
@@ -411,16 +539,19 @@
             "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares"]
         },
         "biology": {
-            "queen": ["monogina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina"],
+            "colonySize": [40000],
             "hibernation": [],
-            "nutrition": ["aguamiel", "insectos"],
+            "matingFlight": [],
+            "matingFlight_text": " -\n            founding:  claustral (without feeding) \n            colonysize: up to 40.000 Individuals\n            ",
+            "nutrition": ["mielato", "insectos"],
+            "nutrition_text": "Honeywater and insects e.g. Dipterans like flies or mosquitos",
             "description": "very aggressive and tough ants similar to lasius niger"
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["principiantes"]
+            "obj": ["principiantes"],
+            "text": "very easy in keeping"
         },
         "airhumidity": {
             "nest": [50, 60],
@@ -430,10 +561,17 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-        "images": []
-    }, 
+        "formicaria": {
+            "size": ["s", "m"],
+            "nest": ["arenaArcillosa", "arena"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to forest- and sandareas, moss, grass and other plants",
+            "decoration": "branches, roots, treeneedels, stones"
+        }
+    },
     {
-        "id": 91,
+        "id": 168,
+        "images": ["168_0.jpg"],
         "taxonomy": {
             "subfamily": "formicinae",
             "tribe": "formicini",
@@ -441,22 +579,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "mono",
+            "polimorph": "\n            Worker:\n            \n            Size: 6 - 8 mm Colour: black - grey,silver shine\n        ",
             "queen": {
+                "text": "",
                 "size": [12],
-                "colour": ["negro", "gris"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [6, 8],
-                "colour": ["negro", "gris"],
+                "color": ["negro", "gris"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -464,31 +591,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [6, 8],
+                "color": ["negro", "gris"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [],
-                "colour": []
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [5, 6],
         "habitat": {
             "zone": ["arena", "rio"],
             "nestForm": ["suelo", "piedras"],
+            "altitude": [],
             "text": "extremely thermophil, prefers sandy areas (e.g riverbeds, Forestedges)"
         },
         "distribution": {
@@ -496,16 +652,19 @@
             "country": ["españa", "francia"]
         },
         "biology": {
-            "queen": ["monogina", "poligina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina", "poligina"],
+            "colonySize": [10000],
             "hibernation": [10, 3],
-            "nutrition": ["aguamiel", "insectos"],
+            "matingFlight": [5, 6],
+            "matingFlight_text": " on warm days mid - may to the end of june at 22 - 28°C , \n            founding:  claustral (without feeding) \n            colonysize: up to 10.000 Individuals\n            ",
+            "nutrition": ["mielato", "insectos"],
+            "nutrition_text": "Honeywater and insects e.g. Dipterans like Flies or Mosquitos",
             "description": "formica cinerea is a very aggressive ant. as a adaption to their open range habitat they use visual orientation. they overwhelm and transport large prey in small cooperating groups."
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["acidoFormico"]
+            "obj": ["acidoFormico"],
+            "text": "however in small basins they make easily use of formic acid"
         },
         "airhumidity": {
             "nest": [50, 60],
@@ -515,11 +674,17 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-
-        "images": []
+        "formicaria": {
+            "size": ["m"],
+            "nest": ["arenaArcillosa", "arena"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "like grassland",
+            "decoration": "branches, roots, treeneedels"
+        }
     },
     {
-        "id": 175,
+        "id": 144,
+        "images": ["144_0.jpg"],
         "taxonomy": {
             "subfamily": "myrmicinae",
             "tribe": "solenopsidini",
@@ -527,22 +692,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "mono",
+            "polimorph": "\n\t\t\tWorker:\n\t\t\t\n\t\t\tSize: 1,5 - 3mm Colour: yellow to brownish yellow\n\t\t",
             "queen": {
+                "text": "",
                 "size": [6, 6.5],
-                "colour": ["negro", "marron"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [1.5, 3],
-                "colour": ["amarillo", "marron"],
+                "color": ["negro", "marron"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -550,31 +704,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [1.5, 3],
+                "color": ["amarillo", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [4, 4.8],
-                "colour": ["negro"]
+                "color": ["negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [8, 10],
         "habitat": {
             "zone": ["arena", "bosque", "arbusto"],
             "nestForm": ["suelo", "piedras"],
+            "altitude": [],
             "text": "Sand- and shrub areas"
         },
         "distribution": {
@@ -583,16 +766,19 @@
             "ca": ["madrid", "clm", "cantabria", "andalucia", "baleares", "canarias"]
         },
         "biology": {
-            "queen": ["monogina", "poligina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina", "poligina"],
+            "colonySize": [100000],
             "hibernation": [11, 2],
-            "nutrition": ["aguamiel", "insectos"],
+            "matingFlight": [8, 10],
+            "matingFlight_text": "  August - October\n\t\t\tfounding:  claustral (without feeding) \n\t\t\tcolonysize: up to 100.000 Individuals",
+            "nutrition": ["mielato", "insectos"],
+            "nutrition_text": "Honeywater, insects",
             "description": "this species is one of the smallest ants in germany. in their natural environment they collect brood from other ants. they are often associated with their host ants e.g. lasius spec. or serviformica spec. ."
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["alimentacion", "condicionesClimaticas", "escapistas"]
+            "obj": ["alimentacion", "condicionesClimaticas", "escapistas"],
+            "text": "Species from Southern Europe with higher requirements towards food and climate as well as escape prevention"
         },
         "airhumidity": {
             "nest": [50, 70],
@@ -602,11 +788,17 @@
             "nest": [21, 28],
             "arena": [25, 30]
         },
-
-        "images": []
+        "formicaria": {
+            "size": ["s"],
+            "nest": ["arenaArcillosa", "arena"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to Savanahareas with grass and other plants",
+            "decoration": "branches, roots, treeneedels, stones"
+        }
     },
     {
-        "id": 43,
+        "id": 167,
+        "images": ["167_0.jpg"],
         "taxonomy": {
             "subfamily": "formicinae",
             "tribe": "camponotini",
@@ -614,22 +806,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "poli",
+            "polimorph": "1",
             "queen": {
+                "text": "",
                 "size": [14, 16],
-                "colour": ["negro", "marron"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [6, 13],
-                "colour": ["rojo", "negro", "marron"],
+                "color": ["negro", "marron"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -637,31 +818,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [6, 13],
+                "color": ["rojo", "negro", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [8, 12],
-                "colour": ["negro"]
+                "color": ["negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [5, 6],
         "habitat": {
             "zone": ["bosque", "claros", "pastizal", "arbusto"],
-            "nestForm": ["maderaMuerta", "suelo"],
+            "nestForm": ["madera", "suelo"],
+            "altitude": [],
             "text": "prefers mixed woodland with a part of spruces also in xeric and halfxeric grassland partly with shrubs"
         },
         "distribution": {
@@ -669,16 +879,19 @@
             "country": ["españa", "francia"]
         },
         "biology": {
-            "queen": ["monogina", "poligina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina", "poligina"],
+            "colonySize": [10000],
             "hibernation": [10, 3],
-            "nutrition": ["aguamiel", "insectos"],
+            "matingFlight": [5, 6],
+            "matingFlight_text": " on warm days mid - may to the end of june at 22 - 28°C\n\t\t\tfounding:  claustral (without feeding) but also Pleometrosis or Adoptions are possible.\n\t\t\tfrom Egg to adult worker approx. 8 - 10 Weeks (Egg to Larvae: approx. 10 -16 days, Larvae to Pupae: approx. 10 -14 days, Pupae to worker :approx. 10 - 24 days, depending on temperature).\n\t\t\tThe main time of activity is between april to september.The lifespan of the queen can be up to 15 years (still not completely clear) . \n\t\t\tcolonysize: up to 10.000 Individuals",
+            "nutrition": ["mielato", "insectos"],
+            "nutrition_text": "Honeywater and insects e.g. Dipterans like Flies or Mosquitos",
             "description": "camponotus herculeanus is one of the biggest ant species in europe. very inactiv and tough! they attack only in case of nest disturbance. shows activity by day and night .they build their nests preferably underneath wood or stones. a radiant heater should heat a stone or an angle of the antfarm from time to time."
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["principiantes"]
+            "obj": ["principiantes"],
+            "text": "for beginners with a colony size of at least 10 workers"
         },
         "airhumidity": {
             "nest": [50, 60],
@@ -688,11 +901,17 @@
             "nest": [21, 24],
             "arena": [18, 28]
         },
-
-        "images": []
+        "formicaria": {
+            "size": ["m", "l"],
+            "nest": ["corcho", "madera"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to forest- and mountainareas with moss, grass and other plants",
+            "decoration": "branches, roots, treeneedels, stones"
+        }
     },
     {
-        "id": 33,
+        "id": 166,
+        "images": ["166_0.jpg"],
         "taxonomy": {
             "subfamily": "formicinae",
             "tribe": "camponotini",
@@ -700,22 +919,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "poli",
+            "polimorph": "1",
             "queen": {
+                "text": "",
                 "size": [14, 16],
-                "colour": ["gris", "negro", "naranja"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [6, 14],
-                "colour": ["gris", "negro", "naranja"],
+                "color": ["gris", "negro", "naranja"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -723,31 +931,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [6, 14],
+                "color": ["gris", "negro", "naranja"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [7, 8],
-                "colour": ["negro"]
+                "color": ["negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [5, 6],
         "habitat": {
             "zone": ["claros"],
-            "nestForm": ["maderaPodrida", "maderaMuerta", "suelo"],
+            "nestForm": ["madera", "suelo"],
+            "altitude": [],
             "text": "prefers open forest areas, Forestedges"
         },
         "distribution": {
@@ -756,16 +993,19 @@
             "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia"]
         },
         "biology": {
-            "queen": ["monogina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina"],
+            "colonySize": [10000],
             "hibernation": [11, 2],
-            "nutrition": ["aguamiel", "insectos"],
+            "matingFlight": [5, 6],
+            "matingFlight_text": " on warm days in May / June, \n            founding:  claustral (without feeding) \n            colonysize: up to 10.000 Individuals",
+            "nutrition": ["mielato", "insectos"],
+            "nutrition_text": "Honeywater and insects e.g. Dipterans like Flies or Mosquitos",
             "description": "camponotus cruentatus is one of the biggest ant species in europe. very tough! they attack only in case of nest disturbance. they defend themselves with their strong mandibles and their acidgland"
         },
         "keepingLevel": {
             "level": 1,
-            "obj": ["principiantes"]
+            "obj": ["principiantes"],
+            "text": "for beginners with a colonysize of at least 10 workers"
         },
         "airhumidity": {
             "nest": [50, 60],
@@ -775,11 +1015,17 @@
             "nest": [21, 24],
             "arena": [21, 28]
         },
-
-        "images": []
+        "formicaria": {
+            "size": ["m", "l"],
+            "nest": ["arenaArcillosa", "arena", "corcho"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to grass areas with grass and other plants",
+            "decoration": "branches, roots, treeneedels"
+        }
     },
     {
-        "id": 169,
+        "id": 171,
+        "images": ["171_0.jpg"],
         "taxonomy": {
             "subfamily": "myrmicinae",
             "tribe": "pheidolini",
@@ -787,22 +1033,11 @@
             "synonyms": ""
         },
         "identification": {
-            "morph": "poli",
+            "polimorph": "1",
             "queen": {
+                "text": "",
                 "size": [7, 8],
-                "colour": ["rojo", "marron"],
-                "body": {
-                    "antenna": [],
-                    "eye": [],
-                    "head": [],
-                    "leg": [],
-                    "thorax": [],
-                    "gaster": []
-                }
-            },
-            "worker": {
-                "size": [2, 4],
-                "colour": ["brillante", "negro", "rojo", "marron"],
+                "color": ["rojo", "marron"],
                 "body": {
                     "antenna": [],
                     "eye": [],
@@ -810,31 +1045,60 @@
                     "leg": [],
                     "thorax": [],
                     "gaster": [],
-                    "hair": ""
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [2, 4],
+                "color": ["brillante", "negro", "rojo", "marron"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
                 }
             },
             "soldier": {
                 "text": "6mm",
-                "antenna": [],
-                "eye": [],
-                "head": [],
-                "leg": [],
-                "thorax": [],
-                "gaster": []
+                "size": "",
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             },
             "male": {
+                "text": "",
                 "size": [4, 6],
-                "colour": ["negro"]
+                "color": ["negro"],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
             }
         },
         "confusions": {
             "text": "",
             "species": []
         },
-        "matingFlight": [5, 9],
         "habitat": {
             "zone": ["arena", "bosque", "arbusto", "claros", "zonaSeca", "vegetacionBaja"],
             "nestForm": ["suelo", "piedras"],
+            "altitude": [],
             "text": "Sand- and shrub areas, open xerothermous places"
         },
         "distribution": {
@@ -843,16 +1107,19 @@
             "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares"]
         },
         "biology": {
-            "queen": ["monogina", "poligina"],
-            "lifeSpan": [],
-            "colonySize": [],
+            "colonyType": ["monogina", "poligina"],
+            "colonySize": [10000],
             "hibernation": [11, 2],
-            "nutrition": ["aguamiel", "insectos", "semillas"],
+            "matingFlight": [5, 9],
+            "matingFlight_text": "  May - September\n\t\t\tfounding:  claustral (without feeding) \n\t\t\tcolonysize: up to 10.000 Individuals",
+            "nutrition": ["mielato", "insectos", "semillas"],
+            "nutrition_text": "Honeywater, insects, also small seeds",
             "description": "this species is a small ant from southeurope. they are very aggressive against other ants and can recrute quickly towards feeding places. they need a huge amount of food so with a lack they try to escape very soon. therefore it is nesseccary to have a good working escape prevention."
         },
         "keepingLevel": {
             "level": 2,
-            "obj": ["alimentacion", "condicionesClimaticas", "escapistas"]
+            "obj": ["alimentacion", "condicionesClimaticas", "escapistas"],
+            "text": "Species from Southern Europe with higher requirements towards food and climate as well as escape prevention"
         },
         "airhumidity": {
             "nest": [50, 70],
@@ -862,7 +1129,2653 @@
             "nest": [21, 28],
             "arena": [25, 30]
         },
-
-        "images": []
+        "formicaria": {
+            "size": ["s"],
+            "nest": ["arenaArcillosa", "arena"],
+            "arena": ["arenaArcillosa", "arena"],
+            "planting": "similar to savanah areas with grass and other plants",
+            "decoration": "branches, roots, treeneedels, stones"
+        }
+    },
+    {
+        "id": 267,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "hypoponera eduardi",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia", "baleares", "canarias"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 268,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "hypoponera ragusai",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": ["andalucia", "canarias"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 269,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "iberoformica gerardi",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "cantabria", "galicia", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 270,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius bicornis",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": []
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 271,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius carniolicus",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": ["madrid", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 272,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius cinereus",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": ["madrid"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 273,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius citrinus",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": ["galicia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 274,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius distinguendus",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": ["madrid", "cantabria"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 275,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius jensi",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": []
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 276,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius meridionalis",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 277,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius myops",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "cantabria", "galicia", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 278,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius piliferus",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "cantabria", "galicia", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 279,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius rabaudi",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": ["clm"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 280,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lasius sabularum",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": ["madrid"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 281,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lepisiota frauenfeldi",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa"],
+            "ca": ["andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 282,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "lepisiota nigra",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa"],
+            "ca": ["andalucia", "baleares"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 283,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "leptanilla charonea",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa"],
+            "ca": ["madrid", "clm", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 284,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "leptanilla ortunoi",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa"],
+            "ca": ["madrid", "clm", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 285,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "leptanilla plutonia",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa"],
+            "ca": ["madrid", "clm", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 286,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "leptanilla revelierii",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia", "portugal"],
+            "ca": ["madrid", "clm", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 287,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "leptanilla theryi",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa"],
+            "ca": ["madrid", "clm", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 288,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "leptanilla zaballosi",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa"],
+            "ca": ["madrid", "clm", "andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 289,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "leptothorax muscorum",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa", "francia"],
+            "ca": []
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
+    }, {
+        "id": 290,
+        "images": [],
+        "taxonomy": {
+            "subfamily": "",
+            "tribe": "",
+            "specie": "messor celiae",
+            "synonyms": ""
+        },
+        "identification": {
+            "polimorph": "",
+            "queen": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "worker": {
+                "text": "",
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "soldier": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            },
+            "male": {
+                "size": [],
+                "color": [],
+                "body": {
+                    "antenna": [],
+                    "eye": [],
+                    "head": [],
+                    "leg": [],
+                    "thorax": [],
+                    "gaster": [],
+                    "hair": []
+                }
+            }
+        },
+        "confusions": {
+            "text": "",
+            "species": []
+        },
+        "habitat": {
+            "zone": [],
+            "nestForm": [],
+            "text": ""
+        },
+        "distribution": {
+            "continent": ["europa"],
+            "country": ["españa"],
+            "ca": ["andalucia"]
+        },
+        "biology": {
+            "colonyType": [],
+            "lifeSpan": [],
+            "colonySize": [],
+            "hibernation": [],
+            "matingFlight": [],
+            "nutrition": [],
+            "nutrition_text": "",
+            "description": ""
+        },
+        "keepingLevel": {
+            "level": 1,
+            "obj": [],
+            "text": ""
+        },
+        "airhumidity": {
+            "nest": [],
+            "arena": []
+        },
+        "temperature": {
+            "nest": [],
+            "arena": []
+        },
+        "formicaria": {
+            "size": [],
+            "nest": [],
+            "arena": [],
+            "planting": "",
+            "decoration": ""
+        }
     }
 ]

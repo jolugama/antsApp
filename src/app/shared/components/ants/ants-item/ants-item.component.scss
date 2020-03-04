@@ -11,7 +11,7 @@ $size: 90px;
 
 
 
-::ng-deep {
+// ::ng-deep {
     ion-card-header,
     ion-card-content {
         // margin: 0px !important;
@@ -20,7 +20,10 @@ $size: 90px;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
-}
+    ion-card-title{
+        font-size: 1.4em;
+    }
+// }
 
 img {
     max-width: $size;
