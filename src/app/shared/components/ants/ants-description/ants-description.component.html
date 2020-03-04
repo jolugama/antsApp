@@ -9,6 +9,8 @@
         <ion-card-title>Taxonomía</ion-card-title>
         <p><b>Especie:</b> {{data.taxonomy.specie | titlecase}}</p>
         <p><b>Subfamilia:</b> {{data.taxonomy.subfamily | titlecase}}</p>
+        <p><b>Tribu:</b> {{data.taxonomy.tribe | titlecase}}</p>
+        <p *ngIf="data.taxonomy?.synonyms?.length>0"><b>Tribu:</b> {{data.taxonomy.synonyms | titlecase}}</p>
       </ion-card-header>
       <ion-card-content>
       </ion-card-content>
@@ -43,9 +45,9 @@
     <ion-card>
       <ion-card-header>
         <ion-card-title>Distribución</ion-card-title>
-        <p><b>Continentes:</b> {{data.distribution.continent.join(', ')}}</p>
-        <p><b>Países:</b> {{data.distribution.country.join(', ')}}</p>
-        <p *ngIf="data.distribution.country.includes('españa')"><b>Comunidades autónomas:</b> {{data.distribution.ca?.join(', ')}}</p>
+        <p><b>Continentes:</b> {{data.distribution.continent.join(', ')  | titlecase}}</p>
+        <p><b>Países:</b> {{data.distribution.country.join(', ')  | titlecase}}</p>
+        <p *ngIf="data.distribution.country.includes('españa')"><b>Comunidades autónomas:</b> {{data.distribution.ca?.join(', ')  | titlecase}}</p>
       </ion-card-header>
       <ion-card-content>
       </ion-card-content>
