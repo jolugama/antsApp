@@ -69,7 +69,7 @@ export class AntsService {
         };
         var fuse = new Fuse(items, options); // "list" is the item array
         var result = fuse.search(query);
-        // debugger;
+
         return result;
       }),
     );
@@ -93,7 +93,7 @@ export class AntsService {
 
   // @HostListener('window:resize', ['$event'])
   // onResize(event) {
-  //   debugger;
+
   //   this.innerWidth = window.innerWidth;
   // }
 

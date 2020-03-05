@@ -76,7 +76,6 @@ export class AntsDescriptionPageComponent implements OnInit, OnDestroy, AfterVie
 
         })
       } else {
-        // debugger;
         // si tiene cargado ants de redux -->
         console.log('xxxx', data);
         const { images, ...rest } = data;

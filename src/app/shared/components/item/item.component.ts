@@ -35,7 +35,7 @@ export class ItemComponent implements OnInit, AfterViewInit, OnDestroy {
     this.componentRef = this.compDynamicContainer.createComponent(
       this.resolver.resolveComponentFactory(AntsItemComponent)
     );
-    // debugger;
+
     this.componentRef.instance.setItem(this.item);
   }
 

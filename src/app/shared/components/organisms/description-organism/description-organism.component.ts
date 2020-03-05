@@ -44,12 +44,10 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
   }
   // TODO ngDoCheck ??? 
   ngOnChanges(changes: SimpleChanges): void {
-    // debugger;
     // this.pictureCarouselComponent.images = this.data.images;
   }
 
   ngDoCheck(): void {
-    //  debugger;
     // this.cdRef.detectChanges();
 
     if (this.data?.description && this.data?.images && this.data?.title?.length > 0) {
