@@ -53,24 +53,26 @@ export class ItemsService {
       map(([action, storeState]) => {
 
         const items = Object.values(storeState.ants.items.entities);
-        const result = [];
+       
         if (query === '') {
           return items;
         }
-        for (const item of items) {
-          let resultado = true;
+      
 
-          query.split('').map((d) => {
-            if (item.taxonomy.specie.includes(d) === false &&
-              item.taxonomy.subfamily.includes(d) === false) {
-              resultado = false;
-            }
-          });
-
-          if (resultado) {
-            result.push(item);
-          }
-        }
+        var options = {
+          shouldSort: true,
+          threshold: 0.4,
+          location: 0,
+          distance: 100,
+          maxPatternLength: 32,
+          minMatchCharLength: 1,
+          keys: [
+            "taxonomy.specie",
+            "taxonomy.subfamily"
+          ]
+        };
+        var fuse = new Fuse(items, options); // "list" is the item array
+        var result = fuse.search(query);
         // debugger;
         return result;
       }),
