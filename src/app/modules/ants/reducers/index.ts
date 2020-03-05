@@ -73,55 +73,6 @@ export const selectItemsState = createFeatureSelector<State, ItemsState>(
 
 
 
-
-// export const selectCollectionState = createSelector(
-//   selectItemsState,
-//   (state: ItemsState) => state.favorites
-// );
-
-export const selectItemsSearch = createSelector(
-  selectItemsState,
-  (state: ItemsState) => {
-    const arr = [];
-    for (const item of state.search.ids) {
-      arr.push(state.items.entities[item]);
-    }
-
-    const resp: fromSearch.State = {
-      items: arr,
-      loading: state.search.loading,
-      error: state.search.error,
-      query: state.search.query
-    };
-
-    return {
-      [itemsFeatureKey]: resp
-    };
-  }
-);
-
-// export const selectBookCollection = createSelector(
-//   selectItemsState,
-//   selectCollectionBookIds,
-//   (entities, ids) => {
-//     return ids
-//       .map(id => entities[id])
-//       .filter((book): book is Book => book != null);
-//   }
-// );
-
-
-// export const selectCollectionLoaded = createSelector(
-//   selectCollectionState,
-//   fromFavorites.getLoaded
-// );
-// export const getCollectionLoading = createSelector(
-//   selectCollectionState,
-//   fromFavorites.getLoading
-// );
-
-
-
 /**
  *  De Ants, solo items
  */
@@ -150,11 +101,44 @@ export const selectedItem = createSelector(
   (items, id) => items.entities[id]
 );
 
-// export const selectSelectedItem = createSelector(
-//   selectItemEntitiesState,
-//   selectSelectedItemId,
-//   (entities, selectedId) => {
-//     debugger;
-//     return selectedId && entities[selectedId];
-//   }
-// );
+
+
+/**
+ * Adapters created with @ngrx/entity generate
+ * commonly used selector functions including
+ * getting all ids in the record set, a dictionary
+ * of the records by id, an array of records and
+ * the total number of records. This reduces boilerplate
+ * in selecting records from the entity state.
+ */
+export const {
+  selectIds: selectItemsIds,
+  selectEntities: selectItemEntities,
+  selectAll: selectAllItems,
+  selectTotal: selectTotalItems,
+} = fromItems.adapter.getSelectors(selectItemEntitiesState);
+
+
+
+export const selectItemsSearch = createSelector(
+  selectItemsState,
+  selectTotalItems,
+  (state: ItemsState) => {
+    // debugger;
+    const arr = [];
+    for (const item of state.search.ids) {
+      arr.push(state.items.entities[item]);
+    }
+
+    const resp: fromSearch.State = {
+      items: arr,
+      loading: state.search.loading,
+      error: state.search.error,
+      query: state.search.query
+    };
+
+    return {
+      [itemsFeatureKey]: resp
+    };
+  }
+);
