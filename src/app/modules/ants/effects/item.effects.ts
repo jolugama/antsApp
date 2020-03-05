@@ -80,7 +80,7 @@ export class ItemEffects {
 
   // muestra un array de items con los filtros actuales aplicados
   search$ = createEffect(
-    () => ({ debounce = 100, scheduler = asyncScheduler } = {}) =>
+    () => ({ debounce = 300, scheduler = asyncScheduler } = {}) =>
       this.actions$.pipe(
         ofType(SearchActions.searchItems),
         debounceTime(debounce, scheduler),
@@ -105,7 +105,7 @@ export class ItemEffects {
           ];
 
 
-          return this.itemsService.getItems(filters, keys, 'ants').pipe(
+          return this.itemsService.getItems(filters, keys).pipe(
             tap(e => console.log('search$')),
             takeUntil(nextSearch$),
             tap(console.log),

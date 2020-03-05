@@ -10,21 +10,21 @@ import * as Fuse from 'fuse.js';
   providedIn: 'root'
 })
 export class ItemsService {
-  // query = '';
+  nameRedux='ants';
   constructor(
     private store$: Store<fromItems.State>,
   ) { }
 
 
 
- getItems(filters,keys,nameRedux) {
+ getItems(filters,keys) {
    let query=filters.query;
     query = this.removeTildes(query);
     return of(query).pipe(
       withLatestFrom(this.store$),
-      map(([action, storeState]) => {
+      map(([action, store]) => {
 
-        const items = Object.values(storeState[nameRedux].items.entities);
+        const items = Object.values(store[this.nameRedux].items.entities);
        
         if (query === '') {
           return items;
