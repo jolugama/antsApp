@@ -134,6 +134,7 @@ export const selectItemsSearch = createSelector(
   selectTotalItems,
   (items, ids, total) => {
     const arr = [];
+    debugger;
     for (const item of items) {
       if(ids.includes(item.id)){
         arr.push(item);

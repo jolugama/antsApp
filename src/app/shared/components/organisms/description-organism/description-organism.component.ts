@@ -51,6 +51,7 @@ export class DescriptionOrganismComponent implements OnInit, AfterViewInit, OnDe
   ngDoCheck(): void {
     //  debugger;
     // this.cdRef.detectChanges();
+
     if (this.data?.description && this.data?.images && this.data?.title?.length > 0) {
       this.sendData();
     }

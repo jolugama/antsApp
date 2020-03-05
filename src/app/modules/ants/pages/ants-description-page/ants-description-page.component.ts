@@ -43,7 +43,6 @@ export class AntsDescriptionPageComponent implements OnInit, OnDestroy, AfterVie
       .pipe(map(params => fromItemsActions.ItemsActions.selectItem({ id: Number(params.id) })))
       .subscribe(action => {
         storeItems$.dispatch(action);
-        // debugger;
       });
   }
 
@@ -71,7 +70,7 @@ export class AntsDescriptionPageComponent implements OnInit, OnDestroy, AfterVie
       if (!data) {
         this.antService.loadItems();
         this.antService.getFilteredItems().subscribe(data => {
-          if (data?.ants?.items?.length > 0) {
+          if (data?.items?.length > 0) {
             this._sendData();
           }
 
