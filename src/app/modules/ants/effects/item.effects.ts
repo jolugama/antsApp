@@ -25,7 +25,9 @@ import { HttpClient } from '@angular/common/http';
 import { Ant } from '../models';
 import * as fromItems from '../reducers';
 
-import { ItemsService } from '@modules/ants/services/items.service';
+
+import { AntsService } from '../services/ants.service';
+
 
 @Injectable()
 export class ItemEffects {
@@ -34,7 +36,7 @@ export class ItemEffects {
     private actions$: Actions,
     private store$: Store<fromItems.State>,
     public http: HttpClient,
-    private itemsService: ItemsService
+    private itemsService: AntsService
   ) {
 
   }

@@ -10,56 +10,11 @@ import * as Fuse from 'fuse.js';
   providedIn: 'root'
 })
 export class ItemsService {
-  nameRedux='ants';
+
   constructor(
     private store$: Store<fromItems.State>,
   ) { }
 
 
 
- getItems(filters,keys) {
-   let query=filters.query;
-    query = this.removeTildes(query);
-    return of(query).pipe(
-      withLatestFrom(this.store$),
-      map(([action, store]) => {
-
-        const items = Object.values(store[this.nameRedux].items.entities);
-       
-        if (query === '') {
-          return items;
-        }
-      
-        // parámetros para fuse, librería de búsqueda
-        var options = {
-          shouldSort: true,
-          threshold: 0.4,
-          location: 0,
-          distance: 100,
-          maxPatternLength: 32,
-          minMatchCharLength: 1,
-          keys
-        };
-        var fuse = new Fuse(items, options); // "list" is the item array
-        var result = fuse.search(query);
-        // debugger;
-        return result;
-      }),
-    );
-  }
-
-
-  removeTildes(input) {
-    const tittles = 'ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç';
-    const original = 'AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc';
-
-    for (let i = 0; i < tittles.length; i++) {
-      // tslint:disable-next-line:prefer-for-of
-      for (let j = 0; j < input.length; j++) {
-        input = input.replace(tittles.charAt(i), original.charAt(i)).toLowerCase();
-      }
-
-    }
-    return input;
-  }
 }
