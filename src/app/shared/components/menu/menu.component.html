@@ -23,7 +23,7 @@
 
 
 
-<ion-menu contentId="main" side="start" menuId="myNav" swipeGesture="false" class="my-custom-menu" (ionDidClose)="openCloseSidenav($event)"
+<ion-menu contentId="main" side="start" menuId="myNav" [swipeGesture]="swipeGest" class="my-custom-menu" (ionDidClose)="openCloseSidenav($event)"
 (ionDidOpen)="openCloseSidenav($event)">
   <ion-header>
     <ion-toolbar color="dark">

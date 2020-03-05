@@ -98,6 +98,19 @@ export class DataService {
   }
 
 
+  watchRoute(): Observable<string> {
+    return this.storeRoot$.pipe(
+      select(fromRootReducers.selectUrl),
+      map((value: string) => {
+       return value;
+      }),
+      catchError(() => {
+        return '';
+      })
+    );
+  }
+
+
   // ****** private zone ******
 
   /**

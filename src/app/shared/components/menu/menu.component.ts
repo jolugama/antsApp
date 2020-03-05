@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 // todo sobre ngrx redux
@@ -14,6 +14,7 @@ import * as fromRoot from '@redux/reducers';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
+  @Input() swipeGest: boolean
   appPages = [
     {
       title: 'Home',
