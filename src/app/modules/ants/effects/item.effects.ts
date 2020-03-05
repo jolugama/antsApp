@@ -96,7 +96,16 @@ export class ItemEffects {
             skip(1)
           );
 
-          return this.itemsService.getItems(query).pipe(
+            const filters= {
+              query
+            }
+            const keys= [
+              "taxonomy.specie",
+              "taxonomy.subfamily"
+            ];
+
+
+          return this.itemsService.getItems(filters,keys).pipe(
             tap(e => console.log('search$')),
             takeUntil(nextSearch$),
             tap(console.log),

@@ -15,38 +15,10 @@ export class ItemsService {
     private store$: Store<fromItems.State>,
   ) { }
 
-  // getItems(query) {
-  //   this.query = this.removeTildes(query);
-  //   return of(query).pipe(
-  //     withLatestFrom(this.store$),
-  //     map(([action, storeState]) => {
 
-  //       const items = Object.values(storeState.ants.items.entities);
-  //       const result = [];
-  //       if (this.query === '') {
-  //         return items;
-  //       }
-  //       for (const item of items) {
-  //         let resultado = true;
 
-  //         this.query.split('').map((d) => {
-  //           if (item.taxonomy.specie.includes(d) === false &&
-  //             item.taxonomy.subfamily.includes(d) === false) {
-  //             resultado = false;
-  //           }
-  //         });
-
-  //         if (resultado) {
-  //           result.push(item);
-  //         }
-  //       }
-  //       // debugger;
-  //       return result;
-  //     }),
-  //   );
-  // }
-
- getItems(query) {
+ getItems(filters,keys) {
+   let query=filters.query;
     query = this.removeTildes(query);
     return of(query).pipe(
       withLatestFrom(this.store$),
@@ -58,7 +30,7 @@ export class ItemsService {
           return items;
         }
       
-
+        // parámetros para fuse, librería de búsqueda
         var options = {
           shouldSort: true,
           threshold: 0.4,
@@ -66,10 +38,7 @@ export class ItemsService {
           distance: 100,
           maxPatternLength: 32,
           minMatchCharLength: 1,
-          keys: [
-            "taxonomy.specie",
-            "taxonomy.subfamily"
-          ]
+          keys
         };
         var fuse = new Fuse(items, options); // "list" is the item array
         var result = fuse.search(query);
