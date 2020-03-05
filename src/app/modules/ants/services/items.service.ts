@@ -4,33 +4,65 @@ import { map, withLatestFrom, distinctUntilChanged, debounceTime, tap } from 'rx
 
 import * as fromItems from '@modules/ants/reducers';
 import { Store } from '@ngrx/store';
+import * as Fuse from 'fuse.js';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemsService {
-  query = '';
+  // query = '';
   constructor(
     private store$: Store<fromItems.State>,
   ) { }
 
-  getItems(query) {
-    this.query = this.removeTildes(query);
+  // getItems(query) {
+  //   this.query = this.removeTildes(query);
+  //   return of(query).pipe(
+  //     withLatestFrom(this.store$),
+  //     map(([action, storeState]) => {
+
+  //       const items = Object.values(storeState.ants.items.entities);
+  //       const result = [];
+  //       if (this.query === '') {
+  //         return items;
+  //       }
+  //       for (const item of items) {
+  //         let resultado = true;
+
+  //         this.query.split('').map((d) => {
+  //           if (item.taxonomy.specie.includes(d) === false &&
+  //             item.taxonomy.subfamily.includes(d) === false) {
+  //             resultado = false;
+  //           }
+  //         });
+
+  //         if (resultado) {
+  //           result.push(item);
+  //         }
+  //       }
+  //       // debugger;
+  //       return result;
+  //     }),
+  //   );
+  // }
+
+ getItems(query) {
+    query = this.removeTildes(query);
     return of(query).pipe(
       withLatestFrom(this.store$),
       map(([action, storeState]) => {
 
         const items = Object.values(storeState.ants.items.entities);
         const result = [];
-        if (this.query === '') {
+        if (query === '') {
           return items;
         }
         for (const item of items) {
           let resultado = true;
 
-          this.query.split('').map((d) => {
+          query.split('').map((d) => {
             if (item.taxonomy.specie.includes(d) === false &&
-            item.taxonomy.subfamily.includes(d) === false ) {
+              item.taxonomy.subfamily.includes(d) === false) {
               resultado = false;
             }
           });
@@ -38,8 +70,6 @@ export class ItemsService {
           if (resultado) {
             result.push(item);
           }
-
-
         }
         // debugger;
         return result;
