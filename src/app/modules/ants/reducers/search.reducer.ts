@@ -15,6 +15,9 @@ export interface State {
   query: string;
 }
 
+export function sortBySpecie(a: Ant, b: Ant): number {
+  return a.taxonomy.specie.localeCompare(b.taxonomy.specie);
+}
 
 
 const initialState: State = {

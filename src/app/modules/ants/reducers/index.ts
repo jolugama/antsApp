@@ -129,42 +129,22 @@ export const {
 
 
 export const selectItemsSearch = createSelector(
-  selectItemEntities,
+  selectAllItems,
   selectSearchState,
   selectTotalItems,
-  (items, idsSelected, total) => {
+  (items, ids, total) => {
     const arr = [];
-    for (const id of idsSelected) {
-      arr.push(items[id]);
+    for (const item of items) {
+      if(ids.includes(item.id)){
+        arr.push(item);
+      }
     }
-debugger;
     return {
       items: arr,
       totalItems: total,
       filterItems: arr.length
-
       // [itemsFeatureKey]: items
     };
   }
 
-  // selectItemsState,
-  // selectTotalItems,
-  // (state: ItemsState) => {
-  //   debugger;
-  //   const arr = [];
-  //   for (const item of state.search.ids) {
-  //     arr.push(state.items.entities[item]);
-  //   }
-
-  //   const resp: fromSearch.State = {
-  //     items: arr,
-  //     loading: state.search.loading,
-  //     error: state.search.error,
-  //     query: state.search.query
-  //   };
-
-  //   return {
-  //     [itemsFeatureKey]: resp
-  //   };
-  // }
 );
