@@ -1,18 +1,29 @@
 ::ng-deep {
-    main{
+    main {
         display: grid;
     }
+
     body {
         background-color: black;
-        color:white;
-  
+        color: white;
+
     }
 
     ion-list {
         background: bisque !important;
         padding-bottom: 90px !important; // fix ionic
+
+       
     }
-    ion-router-outlet{
+
+    ion-menu ion-content{
+        ion-list {
+            background: white !important;
+         
+        }
+    }
+
+    ion-router-outlet {
         background: bisque;
         color: black;
         overflow-y: none;
@@ -20,7 +31,7 @@
         width: 100%;
         margin: 0 auto;
     }
-    
+
     .container-main {
         max-width: 830px;
         margin: 0 auto;
@@ -28,7 +39,7 @@
         display: block !important;
     }
 
-    app-ants{
+    app-ants {
         background: #e3c297c7;
         justify-content: flex-start !important;
     }
@@ -68,4 +79,3 @@
 ion-content ion-toolbar {
     --background: translucent;
 }
-
