@@ -27,7 +27,7 @@ export class AntsService {
     this.storeItems$.dispatch(fromItemsActions.ItemsActions.loadItems());
   }
 
-  getWidth(){
+  getWidth() {
     return this.innerWidth;
   }
 
@@ -35,7 +35,7 @@ export class AntsService {
   /**
    * devuelve observable de state search, con los items actuales filtrados
    */
-  getFilteredItems(): Observable<fromItemsReducers.SearchState> {
+  getFilteredItems(): Observable<any> {
     return this.storeItems$.pipe(
       select(fromItemsReducers.selectItemsSearch)
     );

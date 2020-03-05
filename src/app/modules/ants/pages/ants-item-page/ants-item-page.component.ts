@@ -63,8 +63,9 @@ export class AntsItemPageComponent implements OnInit, OnDestroy, AfterViewInit {
     // suscripción a los items filtrados
     this.antService.getFilteredItems().subscribe(data => {
       console.log(data);
-      console.log('ants', data.ants.items);
-      this.page.dataItems = data.ants.items;
+      console.log('ants', data);
+      // debugger;
+      this.page.dataItems = data.items;
       if (this.antService.getWidth() < 500) {
         this.page.data.title = 'AntsApp - Hormigas'
       }else{
