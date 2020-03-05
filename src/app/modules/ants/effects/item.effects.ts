@@ -85,7 +85,7 @@ export class ItemEffects {
         ofType(SearchActions.searchItems),
         debounceTime(debounce, scheduler),
         switchMap(({ query }) => {
-          // if (query === '') {
+          // if (query === '') { 
           //   return empty;
           // }
 
@@ -96,16 +96,16 @@ export class ItemEffects {
             skip(1)
           );
 
-            const filters= {
-              query
-            }
-            const keys= [
-              "taxonomy.specie",
-              "taxonomy.subfamily"
-            ];
+          const filters = {
+            query
+          }
+          const keys = [
+            "taxonomy.specie",
+            "taxonomy.subfamily"
+          ];
 
 
-          return this.itemsService.getItems(filters,keys).pipe(
+          return this.itemsService.getItems(filters, keys, 'ants').pipe(
             tap(e => console.log('search$')),
             takeUntil(nextSearch$),
             tap(console.log),

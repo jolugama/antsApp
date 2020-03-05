@@ -17,14 +17,14 @@ export class ItemsService {
 
 
 
- getItems(filters,keys) {
+ getItems(filters,keys,nameRedux) {
    let query=filters.query;
     query = this.removeTildes(query);
     return of(query).pipe(
       withLatestFrom(this.store$),
       map(([action, storeState]) => {
 
-        const items = Object.values(storeState.ants.items.entities);
+        const items = Object.values(storeState[nameRedux].items.entities);
        
         if (query === '') {
           return items;
