@@ -48,7 +48,7 @@ const DYNAMIC_PAGES = [
 const ORGANISM_PAGES = [
   ItemOrganismComponent,
   DescriptionOrganismComponent,
-  FilterOrganismComponent  
+  FilterOrganismComponent
 ];
 
 const COMPONENTS = [
