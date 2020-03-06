@@ -16,10 +16,12 @@ import { PictureCarouselComponent } from './components/picture-carousel/picture-
 // pages
 import { ItemOrganismComponent } from './components/organisms/item-organism/item-organism.component';
 import { DescriptionOrganismComponent } from './components/organisms/description-organism/description-organism.component';
+import { FilterOrganismComponent } from './components/organisms/filter-organism/filter-organism.component';
 
 // componentes dinámicos
 import { AntsItemComponent } from './components/ants/ants-item/ants-item.component';
 import { AntsDescriptionComponent } from './components/ants/ants-description/ants-description.component';
+import { AntsFilterComponent } from './components/ants/ants-filter/ants-filter.component';
 
 
 import { RouterModule } from '@angular/router';
@@ -39,12 +41,14 @@ import { RouterModule } from '@angular/router';
 
 const DYNAMIC_PAGES = [
   AntsItemComponent,
-  AntsDescriptionComponent
+  AntsDescriptionComponent,
+  AntsFilterComponent
 ];
 
 const ORGANISM_PAGES = [
   ItemOrganismComponent,
   DescriptionOrganismComponent,
+  FilterOrganismComponent  
 ];
 
 const COMPONENTS = [
