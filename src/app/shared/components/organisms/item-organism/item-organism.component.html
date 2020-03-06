@@ -2,7 +2,10 @@
   <ion-toolbar>
     <!-- (click)="openSidenav()" -->
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button > 
+        <ion-icon src="./svg/menu-sharp.svg"></ion-icon>
+      </ion-menu-button>
+
     </ion-buttons>
     <ion-title>
       {{data.title | titlecase}}
@@ -21,7 +24,7 @@
         </ion-col>
 
         <ion-col size="1" (click)="openFilter()">
-          <ion-icon name="options-outline"></ion-icon>
+          <ion-icon src="./svg/options-outline.svg"></ion-icon>
         </ion-col>
       </ion-row>
 

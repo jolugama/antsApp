@@ -2,7 +2,9 @@
     <ion-toolbar>
         <!-- (click)="openSidenav()" -->
         <ion-buttons slot="start">
-            <ion-back-button defaultHref="ants"></ion-back-button>
+            <ion-back-button defaultHref="ants">
+                <img src="./svg/menu-sharp.svg" alt="">
+            </ion-back-button>
         </ion-buttons>
         <ion-title>
             {{data.title | titlecase}}
